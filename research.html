@@ -1,0 +1,151 @@
+{{:Team:WashU_StLouis/Header}}
+<html>
+<body>
+  <div id=""page-content-wrapper"">
+
+    <div class="splash" id="researchsplash">
+      <div class="row splashyla">
+        <div class="col-md-12">
+          <a href="http://2015.igem.org/"><img src="http://2014.igem.org/wiki/images/9/94/Igemlogo_officiallogo.png" class="img-responsive igem-logo"></a>
+        </div>
+      </div>
+
+      <div class= "row splashesittely">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+          <h1>Research<br>
+            <small>Project Overview</small>
+            <img src="http://2015.igem.org/wiki/images/4/48/Nitrogenius.jpg" class="img-responsive omalogo center-block">
+            <p class="bigsplashtext">
+
+            </p>
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+
+        <div class= "row splashala">
+          <div class ="col-md-12 transp scroller">
+            <a href="#Abstract">
+              Scroll down to read more
+              <img src="http://2014.igem.org/wiki/images/3/3e/Aalto_Helsinki_Nuoli.png" class="img-responsive center-block transp nuoli">
+            </a>
+          </div>
+        </div>
+
+
+
+      </div>
+      <!-- Articles go here  -->
+      <article>
+        <h2>Project Overview</h2>
+
+        <p>Our project is currently one step in a larger endeavor.</p>
+
+        <p>Last year we were successfully able to take the nif cluster from a cynobacteria and get it to function in E. Coli. Unfortunately,  the amount of Nitrogen produced was minimal. This year we are dedicated to tweaking E. Coli so that it better promotes Nitrogen fixa	tion.
+        </p>
+
+        <p>In doing such, we hope to create a system for nitrogen fixation that operates exclusively in the absence of light in preparation for transformation into a photosynthetic system. After we come to a greater understanding of how the system works and perfect it, we can move on to working in a more complex organism, such as a cyanobacteria likeSynecosystis spp. 6803.
+        </p>
+
+        <p>The end goal is to create plants that can fix their own nitrogen by moving from the cyanobacteria into the chloroplast of the plant. Endosymbiotic theory postulates that cyanobacteria are the ancestors to chloroplasts, so this is the natural progression.
+        </p>
+
+        <p>Last summer, we were successful in transforming E. coli with the nif cluster from Cyanothece 51142, and ran an Acetylene Reduction Assay in order to test for the strains ability to fix nitrogen. For more information, please consult our Nitrogenase page.
+        </p>
+
+        <p>Be sure to check out our <a href="http://2015.igem.org/Team:WashU_StLouis/Cooperation"> Collaboration </a> and <a href="http://2015.igem.org/Team:WashU_StLouis/Parts"> Parts </a> pages as well!
+        </p>
+
+    </article>
+
+
+</div>
+
+
+<script>
+$(document).ready(function() {
+
+  if(location.pathname != "/Team:WashU_StLouis") {
+    $('#navigation a[href^="http://2015.igem.org' + location.pathname + '"]').addClass('active');
+  } else $('#navigation a.home').addClass('active');
+});
+</script>
+<script type="text/javascript">
+// Picture reference script
+/*
+USAGE:
+tag img with a ref that is connected to the image, such as:
+<img src="aaltohelsinki.com/testikuva.png" ref="varioskan" />
+When you insert a reference in text, put a tag with a ref attribute:
+<a ref="varioskan"></a>
+Do not put href attribute, it will be replaced with a link to the image.
+Moreover, inner html of the anchor tag will be "figure x" where x is the
+correct figure number. If span or anchor has "." as the inner html, the
+caption will be capitalized.
+*/
+var images = $('img[ref]');
+$.each(images, function(index, e){
+  var referenceName = e.getAttribute("ref");
+  if (!e.id){
+    e.setAttribute("id","figure"+(index+1));
+  }
+  $.each($('a[ref="'+referenceName+'"]'), function(j, e2){
+    e2.setAttribute("href","#"+e.id);
+    if (e2.innerHTML == "."){
+      e2.innerHTML = "Figure " + (index+1);
+    } else {
+      e2.innerHTML = "figure " + (index+1);
+    }
+  });
+  $.each($('span[ref="'+referenceName+'"]'), function(j, e2){
+    e2.setAttribute("href","#"+e.id);
+    if (e2.innerHTML == "."){
+      e2.innerHTML = "Figure " + (index+1);
+    } else {
+      e2.innerHTML = "figure " + (index+1);
+    }
+  });
+}
+);
+
+// Table reference script
+/*
+USAGE:
+tag table with a tab that is connected to the table, such as:
+<table ref="intensities" />
+When you insert a reference in text, put a tag with a ref attribute:
+<a tab="intensities"></a>
+Do not put href attribute, it will be replaced with a link to the image.
+Moreover, inner html of the anchor tag will be "table x" where x is the
+correct table number. If span or anchor has "." as the inner html, the
+caption will be capitalized.
+*/
+var tables = $('table[tab], img[tab]');
+$.each(tables, function(index, e){
+  var tableName = e.getAttribute("tab");
+  if (!e.id){
+    e.setAttribute("id","table"+(index+1));
+  }
+  $.each($('a[tab="'+tableName+'"]'), function(j, e2){
+    e2.setAttribute("href","#"+e.id);
+    if (e2.innerHTML == "."){
+      e2.innerHTML = "Table " + (index+1);
+    } else {
+      e2.innerHTML = "table " + (index+1);
+    }
+  });
+  $.each($('span[tab="'+tableName+'"]'), function(j, e2){
+    e2.setAttribute("href","#"+e.id);
+    if (e2.innerHTML == "."){
+      e2.innerHTML = "Table " + (index+1);
+    } else {
+      e2.innerHTML = "table " + (index+1);
+    }
+  });
+}
+);
+</script>
+</html>
+{{:Team:WashU_StLouis/Footer}}

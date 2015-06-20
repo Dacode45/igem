@@ -1,0 +1,92 @@
+<html>
+</div>
+<footer>
+	<div id="logorow">
+		<div class="footerlogo">
+			<a href="http://wustl.edu/">
+				<img src="http://2015.igem.org/wiki/images/f/fb/Washington_University_in_St._Louis_logo.png" class="img-responsive footerimg on">
+				<img src="http://2015.igem.org/wiki/images/f/fb/Washington_University_in_St._Louis_logo.png" class="img-responsive footerimg off">
+			</a>
+		</div>
+
+		<div class="footerlogo">
+			<a href="https://icares.wustl.edu/Pages/Home.aspx">
+				<img src="http://2015.igem.org/wiki/images/6/6f/ICARES_logo.png" class="img-responsive footerimg on">
+				<img src="http://2015.igem.org/wiki/images/6/6f/ICARES_logo.png" class="img-responsive footerimg off">
+			</a>
+		</div>
+
+		<div class="footerlogo">
+			<a href="http://artsci.wustl.edu/">
+				<img src="http://2015.igem.org/wiki/images/e/e2/WashU_Arts_Logo.jpg" class="img-responsive footerimg on">
+				<img src="http://2015.igem.org/wiki/images/e/e2/WashU_Arts_Logo.jpg" class="img-responsive footerimg off">
+			</a>
+		</div>
+
+
+		<div class="footerlogo">
+			<a href="http://www.snapgene.com/">
+				<img src="http://2015.igem.org/wiki/images/a/a7/SnapGene_Logo.png" class="img-responsive footerimg on">
+				<img src="http://2015.igem.org/wiki/images/a/a7/SnapGene_Logo.png" class="img-responsive footerimg off">
+			</a>
+		</div>
+
+
+		<div class="footerlogo">
+			<a href="http://www.monsanto.com/pages/default.aspx">
+				<img src="http://2015.igem.org/wiki/images/7/78/Monsanto_logo.png" class="img-responsive footerimg on">
+				<img src="http://2015.igem.org/wiki/images/7/78/Monsanto_logo.png" class="img-responsive footerimg off">
+			</a>
+		</div>
+
+		<div class="footerlogo">
+			<a href="https://www.sigmaaldrich.com/">
+				<img src="http://2015.igem.org/wiki/images/8/8a/Sigma-Aldrich_Logo.jpg" class="img-responsive footerimg on">
+				<img src="http://2015.igem.org/wiki/images/8/8a/Sigma-Aldrich_Logo.jpg" class="img-responsive footerimg off">
+			</a>
+		</div>
+
+
+		<div id="yhteystiedot">
+			<p>
+				This wiki is designed and constructed by Washington University in St. Louis.<br>
+			</p>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('a[href^="#"]').on('click',function (e) {
+		e.preventDefault();
+
+		var target = this.hash,
+		$target = $(target);
+
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top
+		}, 900, 'swing', function () {
+			window.location.hash = target;
+		});
+	});
+});
+</script>
+<script type="text/javascript">
+if($('.extrabar').affix != undefined){
+	$('.extrabar').affix({
+		offset: {
+			top: $('.splash').height() * 1.115
+		}
+	}
+)};
+</script>
+<script type="text/javascript">
+if($('.update').waypoint != undefined){
+	$('.update').waypoint(function(direction) {
+		var selector = "#" + ($(this)[0].classList[1]) + "-submenu";
+		$('.extrabar a.active').removeClass("active");
+		$(selector).addClass("active");
+	}
+)};
+</script>
+
+</html>

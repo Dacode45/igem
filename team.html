@@ -1,0 +1,168 @@
+{{:Team:WashU_StLouis/Header}}
+<html>
+<body>
+  <div id=""page-content-wrapper"">
+
+    <div class="splash" id="teamsplash">
+      <div class="row splashyla">
+        <div class="col-md-12">
+          <a href="http://2015.igem.org/"><img src="http://2014.igem.org/wiki/images/9/94/Igemlogo_officiallogo.png" class="img-responsive igem-logo"></a>
+        </div>
+      </div>
+
+      <div class= "row splashesittely">
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+          <h1>Team<br>
+            <small>There's no I in TEAM</small>
+            <img src="http://2015.igem.org/wiki/images/4/48/Nitrogenius.jpg" class="img-responsive omalogo center-block">
+            <p class="bigsplashtext">
+
+            </p>
+          </div>
+          <div class="col-md-3">
+          </div>
+        </div>
+
+        <div class= "row splashala">
+          <div class ="col-md-12 transp scroller">
+            <a href="#Abstract">
+              Scroll down to read more
+              <img src="http://2014.igem.org/wiki/images/3/3e/Aalto_Helsinki_Nuoli.png" class="img-responsive center-block transp nuoli">
+            </a>
+          </div>
+        </div>
+
+        <div class="splashalavalikko">
+          <a href="#About">About the Team</a><br>
+          <a href="#Members">Members</a><br>
+          <a href="#Advisors">Advisors and Mentors</a><br>
+          <a href="#Attributions">Attributions</a><br>
+          <a href="#Sponsors">Sponsors</a><br>
+        </div>
+
+
+      </div>
+      <!-- Articles go here  -->
+      <article>
+        <div class="link" id="About"></div>
+        <h2>The Team</h2>
+
+    </article>
+
+    <article>
+      <div class="link" id="Members"></div>
+      <h2>Members</h2>
+
+  </article>
+
+</article>
+
+<article>
+  <div class="link" id="Advisors"></div>
+  <h2>The Advisors</h2>
+
+
+</article>
+
+<article>
+  <div class="link" id="Attributions"></div>
+  <h2>Thanks To</h2>
+
+</article>
+
+<article>
+  <div class="link" id="Sponsors"></div>
+  <h2>The Sponsors</h2>
+
+</article>
+
+</div>
+
+
+<script>
+$(document).ready(function() {
+
+  if(location.pathname != "/Team:WashU_StLouis") {
+    $('#navigation a[href^="http://2015.igem.org' + location.pathname + '"]').addClass('active');
+  } else $('#navigation a.home').addClass('active');
+});
+</script>
+<script type="text/javascript">
+// Picture reference script
+/*
+USAGE:
+tag img with a ref that is connected to the image, such as:
+<img src="aaltohelsinki.com/testikuva.png" ref="varioskan" />
+When you insert a reference in text, put a tag with a ref attribute:
+<a ref="varioskan"></a>
+Do not put href attribute, it will be replaced with a link to the image.
+Moreover, inner html of the anchor tag will be "figure x" where x is the
+correct figure number. If span or anchor has "." as the inner html, the
+caption will be capitalized.
+*/
+var images = $('img[ref]');
+$.each(images, function(index, e){
+  var referenceName = e.getAttribute("ref");
+  if (!e.id){
+    e.setAttribute("id","figure"+(index+1));
+  }
+  $.each($('a[ref="'+referenceName+'"]'), function(j, e2){
+    e2.setAttribute("href","#"+e.id);
+    if (e2.innerHTML == "."){
+      e2.innerHTML = "Figure " + (index+1);
+    } else {
+      e2.innerHTML = "figure " + (index+1);
+    }
+  });
+  $.each($('span[ref="'+referenceName+'"]'), function(j, e2){
+    e2.setAttribute("href","#"+e.id);
+    if (e2.innerHTML == "."){
+      e2.innerHTML = "Figure " + (index+1);
+    } else {
+      e2.innerHTML = "figure " + (index+1);
+    }
+  });
+}
+);
+
+// Table reference script
+/*
+USAGE:
+tag table with a tab that is connected to the table, such as:
+<table ref="intensities" />
+When you insert a reference in text, put a tag with a ref attribute:
+<a tab="intensities"></a>
+Do not put href attribute, it will be replaced with a link to the image.
+Moreover, inner html of the anchor tag will be "table x" where x is the
+correct table number. If span or anchor has "." as the inner html, the
+caption will be capitalized.
+*/
+var tables = $('table[tab], img[tab]');
+$.each(tables, function(index, e){
+  var tableName = e.getAttribute("tab");
+  if (!e.id){
+    e.setAttribute("id","table"+(index+1));
+  }
+  $.each($('a[tab="'+tableName+'"]'), function(j, e2){
+    e2.setAttribute("href","#"+e.id);
+    if (e2.innerHTML == "."){
+      e2.innerHTML = "Table " + (index+1);
+    } else {
+      e2.innerHTML = "table " + (index+1);
+    }
+  });
+  $.each($('span[tab="'+tableName+'"]'), function(j, e2){
+    e2.setAttribute("href","#"+e.id);
+    if (e2.innerHTML == "."){
+      e2.innerHTML = "Table " + (index+1);
+    } else {
+      e2.innerHTML = "table " + (index+1);
+    }
+  });
+}
+);
+</script>
+</html>
+{{:Team:WashU_StLouis/Footer}}
