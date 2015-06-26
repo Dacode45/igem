@@ -1,0 +1,40 @@
+Convert all journals into json format
+
+Every person gets a file with their name
+
+File is structured like this
+[
+ //Array of events
+ {//Event
+ "when":"6/1/2015",
+ "what":[//Array of stuff done that day
+ {
+ "lead"
+  "id"
+  "group":"same group as this experiment"
+  "from"
+  "goto"
+  "type":"R" //Can Be R: Recipe, P: Protocol, E: Experiment, D: Design
+  "description":"Made LB"
+  "result":"",
+  "steps":[// Array of steps, should be recursive
+{
+  "what":"Poured 30g of Tryptophan into this."
+  "why":"//Optional Why",
+  "precaution":"//Opitional Anything you need to make sure you do"
+  "started":"Time",
+  "ended":"time",
+  "result":[{
+  "what":
+  "so"://GOTO or text// will create a different arrow from the typical ones
+}],
+  "steps":[]
+},
+  "why":"Why you did this"
+]
+}
+
+]
+
+}
+]
