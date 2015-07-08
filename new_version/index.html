@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Washington University - Penn State IGEM</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="css/igem.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Background Req -->
+  <script src="js/underscore-min.js"></script>
+  <script src="js/backbone-min.js"></script>
+  <script src="js/d3.min.js" charset="utf-8"></script>
+  <script src="js/module-manager.js"></script>
+
+
+</head>
+
+<body  id="page-top" class="index" unresolved>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">Nitrogenius</a>
+        <a class="navbar-brand" href="http://2015.igem.org">
+          <img id="igemLogo" class="img-responsive" src="http://2014.igem.org/wiki/images/0/09/Aalto_Helsinki_Logov_iGEM.png" alt="Igem Logo">
+        </a>
+
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#Overview">Overview</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#Team">Team</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#collaboration">Collaboration</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#sponsors">sponsors</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#contact">Contact</a>
+          </li>
+          <li>
+            <a href="mailto:ayekedavidr@wustl.edu?subject=Bug">Report Bugs</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Igem Logo -->
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <!-- Background Canvas -->
+  <div id = "background-canvas"></div>
+
+
+  <!-- Header -->
+  <header class="row">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Welcome To Our Website!</div>
+        <div class="intro-heading">It's Nice To Meet You</div>
+        <a href="#contact" class="page-scroll btn btn-xl">It's Nice To Meet You Too</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+
+
+
+  <!-- Project Overview -->
+  <!-- Main container -->
+    <section id="overview" class="bg-light-gray row sectionNum1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Project Overview</h2>
+            <h3 class="section-subheading text-muted">Washington University and Penn State IGEM</h3>
+          </div>
+        </div>
+        <div class="row">
+          <!-- Previously on Wustl Igem -->
+          <div class="col-md-4 col-sm-6 overview-item">
+            <a href="#overviewModal1" class="overview-link" data-toggle="modal">
+              <div class="overview-hover">
+                <div class="overview-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+
+              <img src="http://placehold.it/400x300" class="img-responsive" alt="">
+            </a>
+            <div class="overview-caption">
+              <h4>Last Year</h4>
+              <p class="text-muted">Learn from History</p>
+            </div>
+          </div>
+          <!-- Mission statement -->
+          <div class="col-md-4 col-sm-6 overview-item">
+            <a href="#overviewModal2" class="overview-link" data-toggle="modal">
+              <div class="overview-hover">
+                <div class="overview-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="http://placehold.it/400x300" class="img-responsive" alt="">
+            </a>
+            <div class="overview-caption">
+              <h4>Mission Statement</h4>
+              <p class="text-muted">The Goal in a sentance</p>
+            </div>
+          </div>
+          <!-- Nitrogen Project -->
+          <div class="col-md-4 col-sm-6 overview-item">
+            <a href="#overviewModal3" class="overview-link" data-toggle="modal">
+              <div class="overview-hover">
+                <div class="overview-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="http://placehold.it/400x300" class="img-responsive" alt="">
+            </a>
+            <div class="overview-caption">
+              <h4>Nitrogen Project</h4>
+              <p class="text-muted">Ain't broke, but we got to fix it.</p>
+            </div>
+          </div>
+          <!-- The Big picture -->
+          <div class="col-md-4 col-sm-6 overview-item">
+            <a href="#overviewModal4" class="overview-link" data-toggle="modal">
+              <div class="overview-hover">
+                <div class="overview-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="http://placehold.it/400x300" class="img-responsive" alt="">
+            </a>
+            <div class="overview-caption">
+              <h4>The Big Picture</h4>
+              <p class="text-muted">Why did we do this?</p>
+            </div>
+          </div>
+          <!-- Methods and Materials -->
+          <div class="col-md-4 col-sm-6 overview-item">
+            <a href="#overviewModal5" class="overview-link" data-toggle="modal">
+              <div class="overview-hover">
+                <div class="overview-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="http://placehold.it/400x300" class="img-responsive" alt="">
+            </a>
+            <div class="overview-caption">
+              <h4>Methods and Materials</h4>
+              <p class="text-muted">Immitation is the best form of flattery.</p>
+            </div>
+          </div>
+          <!-- Discussion -->
+          <div class="col-md-4 col-sm-6 overview-item">
+            <a href="#overviewModal6" class="overview-link" data-toggle="modal">
+              <div class="overview-hover">
+                <div class="overview-hover-content">
+                  <i class="fa fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img src="http://placehold.it/400x300" class="img-responsive" alt="">
+            </a>
+            <div class="overview-caption">
+              <h4>Discussion</h4>
+              <p class="text-muted">Explaining the Results</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team"  class="bg-white row sectionNum2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading">Team</h2>
+            <h3 class="section-subheading text-muted">NitroGeniuses</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <ul class="timeline">
+              <li class="row">
+                <div class="timeline-image">
+                  <img class="img-circle img-responsive" src="http://placehold.it/200x200" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Jessica O'Callaghan</h4>
+                    <h4 class="subheading">Chemical Engineering</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <!-- lead -->
+                    <p class="text-muted">Penn State</p>
+                  </div>
+                </div>
+              </li>
+              <li class="row timeline-inverted">
+                <div class="timeline-image">
+                  <img class="img-circle img-responsive" src="http://placehold.it/200x200" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Laura Beebe</h4>
+                    <h4 class="subheading">Biochemistry and Molecular Biology</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <!-- Lead -->
+                    <p class="text-muted">Penn State</p>
+                  </div>
+                </div>
+              </li>
+              <li class="row ">
+                <div class="row timeline-image">
+                  <img class="img-circle img-responsive" src="http://placehold.it/200x200" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Blake Atckinson</h4>
+                    <h4 class="subheading">Biomedical Engineering</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Washington University in St. Louis</p>
+                  </div>
+                </div>
+              </li>
+              <li class="row timeline-inverted">
+                <div class="row timeline-image">
+                  <img class="img-circle img-responsive" src="http://placehold.it/200x200" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>Charlotte Bourg</h4>
+                    <h4 class="subheading">Biochemistry and Spanish</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Washington University in St. Louis</p>
+                  </div>
+                </div>
+              </li>
+              <li class="row ">
+                <div class="row timeline-image">
+                  <img class="img-circle img-responsive" src="http://placehold.it/200x200" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4>David Ayeke</h4>
+                    <h4 class="subheading">Computer Engineering</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p class="text-muted">Washington University in St. Louis</p>
+                  </div>
+                </div>
+              </li>
+              <li class="row">
+                <div class=" col-lg-12" style="text-align:center;" >
+                  <br>
+                  <h4>Be Part
+                    <br>Of Our
+                    <br>Story!</h4>
+                    <a href="Team" class="page-scroll btn btn-sm btn-warning">Collaboration</a>
+                  </div>
+
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Collaboration Section -->
+      <section id="collaborations" class="bg-light-gray row  sectionNum3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12 text-center">
+              <h2 class="section-heading">Collaboration</h2>
+              <h3 class="section-subheading text-muted"><a class="page-scroll" href="#contact">:{ Looking for Collaborators</a></h3>
+
+              </div>
+            </div>
+            <div class="row text-center">
+              <div class="col-lg-12">
+                <span class="fa-stack fa-4x">
+                  <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                  <i class="fa fa-gears fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="collaboration-heading">Nothing</h4>
+                <p class="text-muted"><sup data-text="Remove this!"></sup>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- Team Section aka grad students-->
+        <section id="advisors" class="bg-white row sectionNum4">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Our Amazing P.I's</h2>
+                <h3 class="section-subheading text-muted">The people that made it all possible</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="team-member">
+                  <img src="http://placehold.it/255x255" class="img-responsive img-circle" alt="">
+                  <h4>Tae Seok Moon</h4>
+                  <p class="text-muted">Faculty Advisors</p>
+                  <ul class="list-inline social-buttons">
+
+                    <li><a href="http://moon.eece.wustl.edu/"><i class="fa fa-mail-forward"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="team-member">
+                  <img src="http://placehold.it/255x255" class="img-responsive img-circle" alt="">
+                  <h4>Fuzhong Zhang</h4>
+                  <p class="text-muted">Faculty Advisor</p>
+                  <ul class="list-inline social-buttons">
+                    <li><a href="http://zhang.eece.wustl.edu/"><i class="fa fa-mail-forward"></i></a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="team-member">
+                  <img src="http://placehold.it/255x255" class="img-responsive img-circle" alt="">
+                  <h4>Cheryl Immethun</h4>
+                  <p class="text-muted">Washington University IGEM Advisor</p>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="team-member">
+                  <img src="http://placehold.it/255x255" class="img-responsive img-circle" alt="">
+                  <h4>Thomas Mueller</h4>
+                  <p class="text-muted">Penn State IGEM Advisor</p>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 text-center">
+                <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact"  class="bg-white row  sectionNum6 sectionNum7">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Contact Us</h2>
+                <h3 class="section-subheading text-muted">We can't do this alone</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <form action="mailto:ayekedavidr@wustl.edu" method="post" enctype="text/plain" name="sentMessage" id="contactForm" novalidate>
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address.">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                      <div class="form-group">
+                        <input type="tel" class="form-control" placeholder="Your Team" id="igemTeam" required data-validation-required-message="Please enter your Igem Team">
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-group">
+                        <textarea class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message."></textarea>
+                        <p class="help-block text-danger"></p>
+                      </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="col-lg-12 text-center">
+                      <div id="success"></div>
+                      <input type="submit" class="btn btn-xl" value="Send Message"/>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <!-- overview Modals -->
+      <!-- Use the modals below to showcase details team your overview projects! -->
+
+      <!-- overview Modal 1 -->
+      <div class="overview-modal modal fade" id="overviewModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2">
+                <div class="modal-body">
+                  <!-- Project Details Go Here -->
+                  <h2>2014 Igem Project</h2>
+                  <p class="item-intro text-muted">Fixing Nitrogen and Sensing Light</p>
+                  <img class="img-responsive img-centered" src="http://placehold.it/1200x1200" alt="">
+                  <h4> What was our goal?</h4>
+                  <p>There were two key components of our project: </p>
+                  <p>Richard and Caroline were working in the <a href="https://pages.wustl.edu/photo.synth.bio">Pakrasi </a> lab, and had been using genes from cyanobacteria to get nitrogen fixation working in <em> E. coli</em>. They were testing nitrogen fixation by running acetylene reduction assays and designing experiments to test the optimal criteria (ie. <em> E. coli</em> strains, temperature, pH, nitrogen source) to get maximal results.
+                  </p>
+                  <strong> Read more <a href="http://2014.igem.org/Team:WashU_StLouis/Project/nif"> here </a> </strong>
+
+                  <p>Ben and Jeffery have been working in the <a href="http://moon.eece.wustl.edu/"> Moon </a> lab, and have been busy cloning plasmids to create a system that represses and expresses a fluorescent protein with the presence and absense of light, and were running experiments to test the induction levels compared to various positive and negative controls.</p>
+
+                  <strong> Read more <a href="http://2014.igem.org/Team:WashU_StLouis/Project/light"> here </a> </strong>
+                  <br>
+                  <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- overview Modal 2 -->
+      <div class="overview-modal modal fade" id="overviewModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+          <div class="close-modal" data-dismiss="modal">
+            <div class="lr">
+              <div class="rl">
+              </div>
+            </div>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-8 col-lg-offset-2">
+                <div class="modal-body">
+                  <h2>Mission Statement</h2>
+                  <p class="item-intro text-muted">tl;dr Fix Nitrogen</p>
+                  <div class="embed-responsive embed-responsive-16by9">
+                    <video controls class="embed-responsive-item">
+                      <source src="http://2015.igem.org/wiki/images/7/7f/Nitrogenius_intro.mp4" type=video/mp4>
+                      </video>
+                    </div>
+                    <p> The goal of this year's project is to take the nitrogen fixing nif cluster from cyanotheses, a cyanobacteria, minify it, and make it work in E. Coli. </p>
+                    <ul style="text-align:left;">
+                      <li><a href="#">Designing the plasmid </a>
+                        <li><a href="#">Making it work in E. Coli</a>
+                        </ul>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- overview Modal 3 -->
+            <div class="overview-modal modal fade" id="overviewModal3" tabindex="-1" role="dialog" aria-hidden="true">
+              <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                  <div class="lr">
+                    <div class="rl">
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                      <div class="modal-body">
+                        <!-- Project Details Go Here -->
+                        <h2>Summary of the project to date</h2>
+                        <h3> Phase 1: Electro-Transformation of plasmid pNif51142 into E. Coli strains</h3><em> - 2014 </em>
+                        <img class="img-responsive img-centered" src="img/overview/WashU_nifcluster_size.png" alt="Nif Cluster"/>
+                        <p>To successfully transform pNif51142, we used Electro-Transformation, also known as Electroporation.  Electroporation provides a method of transforming E. coli to efficiencies greater than are possible with the best chemical methods. By subjecting mixtures of cells and DNA to exponentially decaying fields of very high initial amplitude, we were able to deliver the plasmid into all of E. coli strains that were tested in the project.</p>
+                        <strong>Results</strong><p>According to the gel running and antibiotic testing, bands in the gel and the survival of all strains transformed in antibiotic Kanamycin (there was an cluster of Kanamycin-resistant marker gene in sequence of pNif51142) both prove that the Electro-Transformation was successful.</p>
+                        <h3> Phase 2: Determine the optimal conditions for cell survival with plasmid pNif51142 in <em>E. Coli</em></h3><em> - 2014</em>
+                        <p>Due to the oxidative properties of oxygen, most nitrogenases are irreversibly inhibited by dioxygen, which degradatively oxidizes the Fe-S cofactors. This requires mechanisms for nitrogen fixers to protect nitrogenase from oxygen in vivo. Hence in our experiment, we firstly selected anaerobic condition as part of preparation step for the nitrogenase activity testing</p>
+                        <ul>
+                          <li><strong>Testing Media</strong>: Minimal M9</li>
+
+                          <li> <strong> Carbon Source:</strong> Glucose(1mM, 10mM, 100mM)</li>
+                          <li><strong> Nitrogen Source:</strong> Glutamine(1mM, 10mM, 100mM), Glutamate(1mM, 10mM, 100mM), NH4Cl(1mM, 10mM, 100mM)</li>
+                          <li><strong> Temperature:</strong> 30&#176;C, 37&#176;C, 40&#176;C</li>
+                          <li><strong>pH:</strong>6,7,8</li>
+                          <li><strong>O<sub>2</sub> level:</strong>Anaerobic or Aerobic </li>
+                          <li><strong>Strains of <em>e. Coli</em>:</strong> JM109, BL21(DE3), WM1788, Top 10 DH5&#913;</li>
+
+
+                        </ul>
+
+                        <table class="table table-bordered table-hover table-responsive">
+                          <tbody>
+                            <tr>
+                              <th>Target Strain</th>
+                              <th>JM109</th>
+                              <th>BL21(DE3)</th>
+                              <th>WM1788</th>
+                              <th>Top 10 </th>
+                              <th>DH5&#913;</th>
+                            </tr>
+                            <tr>
+
+                              <td>Experimental Plates <br>
+                              </td>
+                              <td>JM 109 strain w/ plasmid<br>
+                                <br>
+                                Antibiotic <br>
+                              </td>
+                              <td>BL21(DE3) strain w/ plasmid<br>
+                                <br>
+                                Antibiotic
+                              </td>
+                              <td>WM1788 strain w/ plasmid<br>
+                                <br>
+                                Antibiotic <br>
+                              </td>
+                              <td>Top 10 strain w/ plasmid<br>
+                                <br>
+                                Antibiotic<br>
+                              </td>
+                              <td>DH5α strain w/ plasmid<br>
+                                <br>
+                                Antibiotic
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>Positive Control</td>
+                              <td>JM 109 strain w/o plasmid<br>
+                                <br>
+                                No antibiotic
+                              </td>
+                              <td>BL21(DE3) strain w/o plasmid<br>
+                                <br>
+                                No antibiotic
+                              </td>
+                              <td> WM1788 strain w/o plasmid<br>
+                                <br>
+                                No antibiotic
+                              </td>
+                              <td>Top 10 straing w/o plasmid<br>
+                                <br>
+                                No Antibiotic<br>
+                              </td>
+                              <td>DH5α strain w/o plasmid<br>
+                                <br>
+                                No antibiotic</td>
+                              </tr>
+                              <tr>
+                                <td>Negative Control <br>
+                                </td>
+                                <td> JM 109 strain w/o plasmid<br>
+                                  <br>
+                                  Antibiotic
+                                </td>
+                                <td>BL21(DE3) strain w/o
+                                  plasmid <br>
+                                  <br>
+                                  Antibiotic
+                                </td>
+                                <td>WM1788 strain w/o plasmid<br>
+                                  <br>
+                                  Antibiotic
+                                </td>
+                                <td>Top 10 strain w/o plasmid<br>
+                                  <br>
+                                  Antibiotic<br>
+                                </td>
+                                <td>DH5α strain w/out plasmid<br>
+                                  <br>
+                                  Antibiotic
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <strong>Results</strong>
+                          <p>In the minimal M9 media, all possible combinations of parameters listed above were tested.
+                            None of the concentrations of glucose had any aﬀect on the growth of E. coli. It was expected that as the concentration of glucose increased, the growth of E. coli also increased. However, the variation between the concentrations of glucose may have been too small for a noticeable increase in E. coli growth as the concentration of glucose increased. Also, even the maximum concentration of glucose tested, 100mM, may have been too low to aﬀect the growth of E. coli to an observable extent. Eventually, 10mM was determined to be the optimal glucose concentration for the purpose of least interference possible in solution.
+                            NH4Cl as minimal nitrogen source was proven to be not suitable for E. coli growth at any concentration as the OD600 testing results showed that cell density didn’t change throughout the time. It was probably due to the permeability of cell membrane was limited for NH4+ and Cl- ions. Eventually Glutamate at concentration of 10mM supported cell growth the best and thus chosen as part of optimal environment condition.
+
+                            With CASAmino solution’s buffering utility, the pH was controlled little bit below 7 but close to 7.
+
+                            To protect the iron core of the nitrogenase, temperature of 30°C and Anaerobic were both determined not for cell growth but for nitrogenase activity testing, which is the next phase.
+                          </p>
+                          <h3>Phase 3: Measurign nitrogen fixation activity under determined optimal conditions in <em>E. Coli</em> Strains. </h3><em>-2014</em>
+                          <p>
+                            We used  an Acetylene Reduction Assay to examine the nitrogenase activity for JM109, BL21(DE3), Top10, DH5α at different cell density referred by OD600 values.
+
+                            Acetylene (C2H2) has an triple bond similar to that of atmospheric nitrogen (N2). Because of this structural similarity, the nitrogenase enzyme can cleave the triple bond in acetylene just as it would cleave the triple bond in N2. Ethylene (C2H4) is produced from this enzymatic activity, so a gas chromatograph can be used to detect the presence of ethylene and, consequently, nitrogenase activity.
+                          </p>
+                          <strong>Results</strong>
+                          <ol>
+                            <li>Of the five E. coli strains tested, JM109 and WM1788 showed strongest nitrogenase activity.</li>
+                            <li>The linear relationship between nitrogen fixation activity and time matches that seen in nature. </li>
+                            <li>Optimal conditions determined:
+                              <ul>
+                                <li>Glucose as carbon-source</li>
+                                <li>glutamate as nitrogen source </li>
+                                <li>LB as inoculating media </li>
+                                <li>minimal M9 as testing media for GC assay</li>
+                                <li>anaerobic enviornment</li>
+                                <li> 30&#176;C during the overnight preperation<li>
+
+                                </ul>
+                              </li>
+                            </ol>
+
+                            <h3> Phase 4/5 Computationally Modelling an E. Coli system that has Nitrogen Fixation (Penn) and Targeting Nif genes for Overexpression and Silencing (WashU)</h3><em>-2015</em>
+                            TODO write up this section.
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- overview Modal 4 -->
+                <div class="overview-modal modal fade" id="overviewModal4" tabindex="-1" role="dialog" aria-hidden="true">
+                  <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                      <div class="lr">
+                        <div class="rl">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="container">
+                      <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                          <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>The Big Picture</h2>
+                            <p class="item-intro text-muted">Haber-Bosch is so 1909</p>
+                            <img class="img-responsive img-centered" src="http://placehold.it/1200x1200" alt="">
+                            <h3>Why are we doing this project</h3>
+                            Synthetic biology is an exciting area of research that aims to genetically improve organisms to make them more efficient and hopefully more useful to us as well. The human population in 1950 was 2.5 billion, yet it is predicted to surpass 9 billion by 2050. Even with population growth slowing, increasing life spans and standards of living will soon tax our natural resources. One of the most concerning is our food supply. The agriculture industry needs a revolution in order to keep up with our expected growth rates. Currently about 80% of chemically fixated nitrogen is used as agricultural fertilizers, the majority in developed lands [1]. Intracellular nitrogen fixation in crops could help to sustain the burgeoning world population, especially in areas with less fertile soil without taxing the planet’s waterways. The exponential increase in nitrogen fertilizer has led to more runoff into rivers and oceans. Fertilizers then provide nutrition for algal blooms that result in hypoxia and form oceanic dead zones. These dead zones lead to the death of marine species and have potentially large economic consequences.
+
+                            The ramifications of nitrogen fertilizer runoff can be averted by genetically engineering plant crops to fix their own nitrogen. Some cyanobacteria fix nitrogen for nutritional needs, while most organisms can only acquire it from the food it consumes. Synthetic biology allows us to transfer this ability to fix nitrogen to a heterologous host that has many genetic tools, Escherichia coli, so that we can learn how to give single cell organisms, and eventually chloroplasts the ability to create their own nitrogen fertilizer.
+
+                            Diazotrophic (organisms that fix nitrogen) cyanobacteria such Nostoc Punctiforme or Anabaena use heterocysts (specialized nitrogen fixing cells) to create a mini-anaerobic environment to aid nitrogen fixation. However, Cyanothece 51142, a non-heterocyst, fixes nitrogen in the same cell as photosynthesis by relying on a circadian metabolic process, when there is less oxygen byproduct from photosynthesis. This process is both fascinating and necessary since the key enzyme in nitrogen fixation, nitrogenase, is poisoned by oxygen. Our goal this summer is to engineer the regulation of the proteins necessary for nitrogen fixation so that they are highly repressed when activated by broad spectrum light (such as the sun), and are highly active when there is no light around, mimicking the cycle where photosynthesis occurs during the day and nitrogen fixation occurs at night.
+
+                            <div class="embed-responsive embed-responsive-16by9">
+                              <video controls class="embed-responsive-item">
+                                <source src="http://2015.igem.org/wiki/images/7/7f/Nitrogenius_intro.mp4" type=video/mp4>
+                                </video>
+                              </div>
+                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- overview Modal 5 -->
+                  <div class="overview-modal modal fade" id="overviewModal5" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-content">
+                      <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                          <div class="rl">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                              <!-- Project Details Go Here -->
+                              <h2>Methods and Materials</h2>
+                              <p class="item-intro text-muted">How we did what we did</p>
+                              <img class="img-responsive img-centered" src="http://placehold.it/1200x1200" alt="">
+                              TODO impement this page
+                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- overview Modal 6 -->
+                  <div class="overview-modal modal fade" id="overviewModal6" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-content">
+                      <div class="close-modal" data-dismiss="modal">
+                        <div class="lr">
+                          <div class="rl">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                              <!-- Project Details Go Here -->
+                              <h2>Discussion</h2>
+                              <p class="item-intro text-muted">Where do we go from here</p>
+                              <img class="img-responsive img-centered" src="img/overview/dreams-preview.png" alt="">
+                              TODO implement this
+                              <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Project</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+
+      <footer  class="bg-white row">
+        <div class="container">
+          <!-- Site Map -->
+          <section class="row sectionNum5" id="sitemap">
+            <h2>Discover</h2>
+            <table class="table">
+            <tr>
+              <td>Parts</td>
+              <td><a href="./basic_part.html">Basic Parts</a></td>
+              <td><a href="./part_collection.html">Parts Collection</a></td>
+              <td><a href="./parts.html">Parts</a></td>
+              <td><a href="./composite_part.html">Composite Part</a></td>
+            </tr>
+            <tr>
+              <td>Team</td>
+              <td><a href="./team.html">Members</a></td>
+              <td><a href="./notebook.html">Journals</a></td>
+              <td><a href="./attributions.html">Attributions</a></td>
+            </tr>
+            <tr>
+              <td>Project</td>
+              <td><a href="./description.html">Description</a></td>
+              <td><a href="./design.html">Design</a></td>
+              <td><a href="./modeling.html">Modeling</a></td>
+              <td><a href="./measurment.html">Measurment</a></td>
+              <td><a href="./project.html">Project</a></td>
+            </tr>
+            <tr>
+              <td>Policies and Practices</td>
+              <td><a href="./human_practices.html">Human Practices</a></td>
+              <td><a href="./practices.html">Practices</a></td>
+              <td><a href="./safety.html">Safety</a></td>
+            </tr>
+            <tr>
+              <td>Misc.</td>
+              <td><a href="./entrepreneurship.html">Entrepreneurship</a></td>
+              <td><a href="./software.html">Software</a></td>
+            </tr>
+            </table>
+
+          </section>
+          <!-- sponsors Aside -->
+          <section id="sponsors" class="row  sectionNum6">
+            <div class="container">
+              <div class="row">
+                <h2>Sponsors</h2>
+              </div>
+
+              <div class="row">
+                <div class="col-md-4 col-sm-6 col-xs-6 col-xs-offset-3">
+
+                  <div id="WashULogo" class="logo"></div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 col-xs-offset-3">
+                  <div id="ICaresLogo" class="logo"></div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 col-xs-offset-3">
+                  <div id="WashUArtLogo" class="logo"></div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 col-xs-offset-3">
+                  <div id="SnapGeneLogo" class="logo"></div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 col-xs-offset-3">
+                  <div id="Monsanto" class="logo"></div>
+                </div>
+                <div class="col-md-4 col-sm-6 col-xs-6 col-xs-offset-3">
+                  <div id="SigmaAldrichLogo" class="logo"></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <div class="row">
+            <div class="col-md-4">
+              <span class="copyright">Copyright &copy; Washington University in St. Louis Igem 2015</span>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-inline social-buttons">
+                <li><a href="http://twitter.com/WashUiGEM"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li><a href="http://www.facebook.com/WashuIgem"><i class="fa fa-facebook"></i></a>
+                </li>
+                <li><a href="http://www.youtube.com/channel/UCjO_tMiJdx6hCyCREsMBYUQ"><i class="fa fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+      </div>
+
+                  <!-- jQuery -->
+                  <script src="js/jquery.js"></script>
+
+                  <!-- Bootstrap Core JavaScript -->
+                  <script src="js/bootstrap.min.js"></script>
+
+                  <!-- Plugin JavaScript -->
+                  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+                  <script src="js/classie.js"></script>
+                  <script src="js/cbpAnimatedHeader.js"></script>
+
+                  <!-- Contact Form JavaScript -->
+                  <script src="js/jqBootstrapValidation.js"></script>
+                  <script src="js/contact_me.js"></script>
+
+                  <!-- Footnotes -->
+                  <script src="js/bootstrap.footnotes.js"></script>
+
+                  <!-- Custom Theme JavaScript -->
+                  <script src="js/agency.js"></script>
+
+
+
+                  <!-- Background Script -->
+                  <script src="js/background.js"></script>
+
+                  <!-- Inline script -->
+                  <script>
+                  // Activate Footnotes
+                  $.footnotes();
+                  </script>
+                </body>
+
+                </html>
