@@ -1,0 +1,292 @@
+[
+  {
+    "when":"6/1/2015",
+    "what":[
+      {
+        "lead":"Find a method of calculating NAD/NADH",
+        "id":"L_exp1",
+        "description":"Searched literature for a method of calculating NAD/NADH reaction
+        Identified NAD formation reaction in model and used GAMS to maximize false NAD/NADHequations with no biomass constraints.
+        ",
+        "result":"found incorrect ratio according to literature.  Need new method to calculate this"
+      }
+    ]
+  },
+  {
+    "when":"6/2/2015",
+    "what":[
+      {
+        "lead":"Find Relatives of JM109 and WM1788",
+        "id":"L_exp2",
+        "description":"Literature/database search for relatives of JM109 and WM1788 to construct models.",
+        "result":"  Learned they are K-12 derivatives."
+      }
+    ]
+  },
+  {
+    "when":"6/3/2015",
+    "what":[
+      {
+        "lead":"Researched K-12 model",
+        "id":"L_exp3",
+        "description":" Researched which reactions to remove from K-12 model in order to construct WM1788 and JM109 models using genotypes provided by Wash U",
+      }
+    ]
+  },
+  {
+    "when":"6/5/2015",
+    "what":[
+      {
+        "lead":"Checked ATP production",
+        "id":"L_exp4",
+        "description":" Made final WM1788 model, found max biomass and ATP production.  Made K-12 model from Monk paper, found max biomass and ATP production. Made additional corrections to DH10B model, found new max biomass and ATP.   Had lower biomass (growth) than K-12 derivatives.  Continued work on JM109 model with help from Jess.",
+        "result":"ound new max biomass and ATP.   Had lower biomass (growth) than K-12 derivatives.  Continued work on JM109 model with help from Jess."
+      }
+    ]
+  },
+  {
+    "when":"6/8/2015",
+    "what":[
+      {
+        "lead":"Compared Carbon Sources",
+        "id":"L_exp5",
+        "description":"Compared strain growth and ATP production on various carbon sources. ",
+        "result":" Noticed high biomass/high ATP when using galactose as a carbon source.  Need a literature search to explore this finding. "
+      }
+    ]
+  },
+  {
+    "when":"6/9/2015",
+    "what":[
+      {
+        "lead":"Compared Carbon Sources",
+        "from":"L_exp5",
+        "id":"L_exp6",
+        "description":"Continued comparing strains based on nutrient differences.  Started researching differences in E. coli metabolism for glucose vs. galactose.",
+
+      }
+    ]
+  },
+  {
+    "when":"6/10/2015",
+    "what":[
+      {
+        "lead":"Added N2 fixation to WM1788",
+        "id":"L_exp7",
+        "description":"Added N2 fixation reactions to WM1788 model, using flavodoxin as electron donor.  Created a set of nutrients for the N2 fixing strain (contains free nitrogen and lacks fixed nitrogen).  Found max biomass (2.52) and max ATP (391.3) for N2 fixing WM1788. ",
+        "result":" Normalizing wild type biomass indicates a difference in ATP production of 202 mmol ATP/(g cell dry weight x hr) between WT and N2 fixing cells.  This value makes sense according to nitrogenase flux range. "
+      }
+    ]
+  },
+  {
+    "when":"6/11/2015",
+    "what":[
+      {
+        "lead":"Ran FVA on WT WM1788",
+        "id":"L_exp8",
+        "description":"Ran FVA on WT WM1788 and N2 fixing WM1788.  Starting comparing the flux range overlaps between the two outputs using Excel.",
+
+      }
+    ]
+  },
+  {
+    "when":"6/12/2015",
+    "what":[
+      {
+        "lead":"Strange Results",
+        "id":"L_exp9",
+        "description":"Observed CO2 and H2O export fixed for N2 fixing WM1788.  Started checking pathways (glycolysis, PPP, TCA cycle, pyruvate metabolism, reactions involving flavodoxin) to find out why."
+
+      }
+    ]
+  },
+  {
+    "when":"6/15/2015",
+    "what":[
+      {
+        "lead":"Compared flux of N2 fixing of WM1788",
+        "id":"L_exp10",
+        "description":"Compared flux ranges of N2 fixing and wild type WM1788 within main metabolic pathways (glycolysis, PPP, TCA cycle, pyruvate metabolism) as well as within reactions that included oxidized or reduced flavodoxin. ",
+        "result":"Main results- pyruvate synthase (produces acetyl coA from pyruvate) in the N2 fixing strain has a higher flux than in wild type.  Additionally, many reactions within TCA cycle have a lower flux in the N2 fixing strain than in wild type (this is expected- N2 fixing WM1788 should have a depressed metabolism), except for malate dehydrogenase (produces oxaloacetate from malate). "
+      }
+    ]
+  },
+  {
+    "when":"6/16/2015",
+    "what":[
+      {
+        "lead":"Continued analysis of WM1788",
+        "id":"L_exp11",
+        "description":" Continued analysis of differences between wild type and N2 fixing WM1788.",
+        "result":"  Determined neither strain is using the glyoxylate shunt.  Performed comparisons of all reactions involving malate, oxaloacetate, acetyl coA, and pyruvate.  Malate oxidase (reaction at equilibrium) has a much more negative flux in N2 fixing WM1788 than in wild type.  Seems that oxaloacetate from malate dehydrogenase (higher flux in N2) feeds malate oxidase reaction to produce more malate and oxygen in the N2 fixing strain."
+      }
+    ]
+  },
+  {
+    "when":"6/17/2015",
+    "what":[
+      {
+        "lead":" Exploring relationship between pyruvate and acetyl coA in N2 fixing strain versus wild type",
+        "id":"L_exp12",
+        "description":" Continued analysis of differences between wild type and N2 fixing WM1788.",
+        "result":" Identified two other reactions containing both acetyl coA and pyruvate (besides pyruvate synthase), however both have the same flux in both N2 fixing and wild type.  The flux is 0-10,000, meaning they are cycling.  Jess explored deletion of these two reactions to see if removing them would help to push flux through pyruvate synthase and aid nitrogen fixation. Also looked at other ways to produce acetyl coA and other ways to spend pyruvate; however, no results yet for viable knockouts. "
+      }
+    ]
+  },
+  {
+    "when":"6/18/2015",
+    "what":[
+      {
+        "lead":" Exploring relationship between pyruvate and acetyl coA in N2 fixing strain versus wild type",
+        "id":"L_exp13",
+        "description":"Continued identifying reactions that involve either the production of acetyl coA or the expenditure of pyruvate.  Looked for other ways to make products in reactions that spend pyruvate, indicating the potential for a knockout.  No conclusive results.",
+
+      }
+    ]
+  },
+  {
+    "when":"6/19/2015",
+    "what":[
+      {
+        "lead":"Created a flavodoxin expenditure reaction ",
+        "id":"L_exp14",
+        "description":"Created a flavodoxin expenditure reaction (analogous to ATP maintenance reaction) in order to determine maximum possible flavodoxin production in the cell.  Compared FVA outputs for N2 fixing WM1788 at fixed max biomass producing maximum flavodoxin and regular N2 fixing WM1788 at fixed max biomass. ",
+        "result":"Created a flavodoxin expenditure reaction (analogous to ATP maintenance reaction) in order to determine maximum possible flavodoxin production in the cell.  Compared FVA outputs for N2 fixing WM1788 at fixed max biomass producing maximum flavodoxin and regular N2 fixing WM1788 at fixed max biomass. "
+      }
+    ]
+  },
+  {
+    "when":"6/22/2015",
+    "what":[
+      {
+        "lead":"Made comparisons between N2 fixing WM1788 at fixed biomass and N2 fixing WM1788 with maximized flavodoxin at fixed biomass.",
+        "id":"L_exp15",
+        "description":"Made comparisons between N2 fixing WM1788 at fixed biomass and N2 fixing WM1788 with maximized flavodoxin at fixed biomass. Had to spend some time troubleshooting when the comparison didn’t yield values that we expected.",
+        "result":" Did not notice any large differences between values at max flavodoxin and values without max flavodoxin-- ie. can conclude that maximizing flavodoxin as much as possible is already a way for the cell to maximize biomass."
+      }
+    ]
+  },
+  {
+    "when":"6/23/2015",
+    "what":[
+      {
+        "lead":"Research malate dehydrogenase and malate oxidase",
+        "id":"L_exp16",
+        "description":"Based on information that malate dehydrogenase and malate oxidase reactions had a much higher flux in the N2 fixing cells than in wild type, did a database search to find information about ∆G values for these reactions in order to potentially change their directionality in the model.",
+        "result":"Malate dehydrogenase directionality could not be changed.  After some searching, found malate oxidase reaction had been deleted from major E. coli databases in the past year.  Determined that the reaction should be removed from the model."
+      }
+    ]
+  },
+  {
+    "when":"6/24/2015",
+    "what":[
+      {
+        "lead":"New maximum biomass and maximum ATP",
+        "id":"L_exp17",
+        "from":"L_exp11",
+        "description":"Obtained new maximum biomass and maximum ATP production values for all strains after removing the malate oxidase reaction from the model.  ",
+        "result":"Values were significantly smaller than before, but are more logically consistent with the model.  Strain DH10B now had the highest biomass and ATP production, but only by .0002 mmol/(g cell dry weight X hour).  "
+      }
+    ]
+  },
+  {
+    "when":"6/25/2015",
+    "what":[
+      {
+        "lead":"Ran FVA and began comparing flux ranges",
+        "id":"L_exp18",
+        "description":"Ran FVA and began comparing flux ranges at maximum biomass for N2 fixing WM1788 and WT WM1788. Looked for differences in pathways between the N2 fixing and wild type strains.  Also ran FVA for N2 fixing WM1788 at fixed biomass with maximum flavodoxin production, and N2 fixing WM1788 at mixed biomass without maximum flavodoxin (did not find many differences in flux ranges, as before). "
+      }
+    ]
+  },
+  {
+    "when":"6/26/2015",
+    "what":[
+      {
+        "lead":"Compared flux ranges between N2 fixing and WT WM1788 at a fixed max biomass",
+        "id":"L_exp19",
+        "description":"Compared flux ranges between N2 fixing and WT WM1788 at a fixed max biomass, looking particularly for reactions whose directionality changes between the N2 fixing and wild type strains.  Assembled a list of these reactions, how much they changed by, and the metabolic systems they belong to.  Next week will need to perform the same comparisons with both strains set at maximum biomass, in order to eliminate wide flux variations in the wild type WM1788 for reactions that contribute directly to biomass."
+      }
+    ]
+  },
+  {
+    "when":"6/29/2015",
+    "what":[
+      {
+        "lead":"Continuing flux range comparisons",
+        "id":"L_exp20",
+        "description":"Compared directionality of fluxes for N2 fixing and wild type WM1788 at maximum biomass.  This eliminates potentially large changes in reactions which are not a component of biomass.",
+        "result":"Major results<br>Comparison at fixed biomass<br>-1460 reactions changed flux ranges by more than .001<br>-The largest change was 137.262.  Reactions changing this much produce various components of biomass<br>-49 reactions changed directionality from wt.  Seems mostly to be due to fixed biomass (ie. this is not helpful/relevant). <br><br>Comparisons at max biomass<br>-428 reactions changed flux ranges by more than .001<br>-The largest change was 14.606: H2Otpp (h2o transport via diffusion- periplasm.   It changed from (7.289 - 7.384) in wt to (21.895 - 21.948) in N2 fixing<br>-POR5 (pyruvate synthase) had the 4th largest change, after H2Otpp, H2Otex, and EX_h2o(e).  It changed by 9.11<br>-4 reactions changed directionality from WT. 3 were related to NH4 (NH4 in N2 fixing is exported from the cell rather than taken in, as expected). The other was ATP synthase, which changed from running in the reverse in wild type to running in the forward direction for the N2 fixing strain.  We’re not entirely sure why this happened. "
+      }
+    ]
+  },
+  {
+    "when":"6/30/2015",
+    "what":[
+      {
+        "lead":"Finish flux range comparisons",
+        "id":"L_exp21",
+        "description":"Finished up comparisons.  Looked through fluxes of transporter reactions in search of an explanation for ATP synthase directionality change in N2 fixing WM1788 vs. wild type.  Did not find any conclusive results.",
+      }
+    ]
+  },
+  {
+    "when":"7/2/2015",
+    "what":[
+      {
+        "lead":"Finished flux range comparisons",
+        "id":"L_exp22",
+        "description":" Did a flux range comparison of N2 fixing WM1788 at maximum ATP production vs normal N2 fixing WM1788.  Many reactions changed their directionalities, but the largest change was .02.  Can determine from this that the N2 fixing strain is already ATP limiting-- ie. there are no major differences when ATP is maximized.",
+      }
+    ]
+  },
+  {
+    "when":"7/6/2015",
+    "what":[
+      {
+        "lead":"Performed an analysis on all reactions with non-overlapping flux ranges between N2 fixing WM1788 and the wild type",
+        "id":"L_exp23",
+        "description":" Performed an analysis on all reactions with non-overlapping flux ranges between N2 fixing WM1788 and the wild type.  Determined which metabolic system each reaction was in and what percentage of the non-overlaps each system made up.",
+        "result":" Amino acid metabolism was the system with the most non-overlaps, but it had the smallest changes.  Ion transport, exchange, and inner/outer membrane transport made up a little over 15% of the non-overlaps together, but had the highest changes."
+      }
+    ]
+  },
+  {
+    "when":"7/7/2015",
+    "what":[
+      {
+        "lead":"Analyzed ATP production/consumption in N2 fixing WM1788.  ",
+        "id":"L_exp24",
+        "description":"Analyzed ATP production/consumption in N2 fixing WM1788.  Compiled a ranked list of reactions which produce ATP.  Jess compiled a list of the top 10 reactions in the model which consume ATP.",
+      }
+    ]
+  },
+  {
+    "when":"7/8/2015",
+    "what":[
+      {
+        "lead":"Started working on the Python script ",
+        "id":"L_exp25",
+        "description":" Started working on the Python script for knocking out all of the genes in the N2 fixing model.  Started by writing a code which takes the GPRs (gene protein relationships) present in the model and creates a list of all the unique genes.  ",
+      }
+    ]
+  },
+  {
+    "when":"7/9/2015",
+    "what":[
+      {
+        "lead":"Started working on the Python script ",
+        "id":"L_exp26",
+      }
+    ]
+  },
+  {
+    "when":"7/10/2015",
+    "what":[
+      {
+        "lead":"Started working on the Python script ",
+        "id":"L_exp27",
+      }
+    ]
+  },
+]

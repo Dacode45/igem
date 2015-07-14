@@ -80,7 +80,7 @@
               ]
 
             },
-            {"what":"Measure the OD600", "resμLt":"-Second measurement of OD of JM109: 0.375"},
+            {"what":"Measure the OD600", "result":"-Second measurement of OD of JM109: 0.375"},
             {"what":"- In cold (4°C) room, evenly distribute each cμLture into 2 centrifuge bottles (total of 4 bottles) and place in an ice bucket. Wait for 15-30 minutes.",
               "started":"12:30 pm"
             },
@@ -278,7 +278,7 @@
                   "cap":"PCR Gel from 6/11/2015"
                 }
               ],
-              "resμLt":[
+              "result":[
                 {
                   "what":"Plasmid: Saw bands for fragment, backbone with fragment caught out, and linearized fragment. We hoped to only see the first two."
 
@@ -329,7 +329,7 @@
               ],
               "steps":[
                 {"what":"- Dilute 1 mL of cμLture into 50 mL of LBMg medium pre-warmed to 37°C"},
-                {"what":"- Grow at 37°C for approximately 2 hours on shaker to OD600 of about 0.6", "resμLt":"-Final OD600 = 0.598", "precaution":"- Do not vortex cells after this point or allow them to warm above 4°C"},
+                {"what":"- Grow at 37°C for approximately 2 hours on shaker to OD600 of about 0.6", "result":"-Final OD600 = 0.598", "precaution":"- Do not vortex cells after this point or allow them to warm above 4°C"},
                 {"what":"- Incubate for 20 minutes on ice"},
                 {"what":"Transfer cμLture to an ice-cold 50 mL conical tube"},
                 {"what":"- Centrifuge for 15 minutes at 3000 rpm and 4°C; pour of the supernatant"},
@@ -447,7 +447,7 @@
                             "caption":"First well undigested plasmid (2 μL 1:10 PA2C-TesA, 2 μL DNA loading dye 10x, and 16 μL water) -Second well: digested plasmid (3 μL 10x loading dye and digest product) -Last well: 1 kb plus ladder "
                           }
                         ],
-                        "resμLt":{
+                        "result":{
                           "what":"- Saw no band for digested plasmid and a band in unexpected location for the undigested plasmid need to redo the digestion of the plasmid"
                         }
 

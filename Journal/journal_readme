@@ -12,7 +12,7 @@ File is structured like this
  "lead"
   "id"
   "group":"same group as this experiment"
-  "from"
+  "from" //if none is given assume previous experiment
   "goto"
   "type":"R" //Can Be R: Recipe, P: Protocol, E: Experiment, D: Design
   "description":"Made LB"
