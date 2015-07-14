@@ -5,9 +5,7 @@
       {
         "lead":"Find a method of calculating NAD/NADH",
         "id":"L_exp1",
-        "description":"Searched literature for a method of calculating NAD/NADH reaction
-        Identified NAD formation reaction in model and used GAMS to maximize false NAD/NADHequations with no biomass constraints.
-        ",
+        "description":"Searched literature for a method of calculating NAD/NADH reaction<br>Identified NAD formation reaction in model and used GAMS to maximize false NAD/NADHequations with no biomass constraints.<br>",
         "result":"found incorrect ratio according to literature.  Need new method to calculate this"
       }
     ]
@@ -29,7 +27,7 @@
       {
         "lead":"Researched K-12 model",
         "id":"L_exp3",
-        "description":" Researched which reactions to remove from K-12 model in order to construct WM1788 and JM109 models using genotypes provided by Wash U",
+        "description":" Researched which reactions to remove from K-12 model in order to construct WM1788 and JM109 models using genotypes provided by Wash U"
       }
     ]
   },
@@ -62,7 +60,7 @@
         "lead":"Compared Carbon Sources",
         "from":"L_exp5",
         "id":"L_exp6",
-        "description":"Continued comparing strains based on nutrient differences.  Started researching differences in E. coli metabolism for glucose vs. galactose.",
+        "description":"Continued comparing strains based on nutrient differences.  Started researching differences in E. coli metabolism for glucose vs. galactose."
 
       }
     ]
@@ -84,7 +82,7 @@
       {
         "lead":"Ran FVA on WT WM1788",
         "id":"L_exp8",
-        "description":"Ran FVA on WT WM1788 and N2 fixing WM1788.  Starting comparing the flux range overlaps between the two outputs using Excel.",
+        "description":"Ran FVA on WT WM1788 and N2 fixing WM1788.  Starting comparing the flux range overlaps between the two outputs using Excel."
 
       }
     ]
@@ -139,7 +137,7 @@
       {
         "lead":" Exploring relationship between pyruvate and acetyl coA in N2 fixing strain versus wild type",
         "id":"L_exp13",
-        "description":"Continued identifying reactions that involve either the production of acetyl coA or the expenditure of pyruvate.  Looked for other ways to make products in reactions that spend pyruvate, indicating the potential for a knockout.  No conclusive results.",
+        "description":"Continued identifying reactions that involve either the production of acetyl coA or the expenditure of pyruvate.  Looked for other ways to make products in reactions that spend pyruvate, indicating the potential for a knockout.  No conclusive results."
 
       }
     ]
@@ -226,7 +224,7 @@
       {
         "lead":"Finish flux range comparisons",
         "id":"L_exp21",
-        "description":"Finished up comparisons.  Looked through fluxes of transporter reactions in search of an explanation for ATP synthase directionality change in N2 fixing WM1788 vs. wild type.  Did not find any conclusive results.",
+        "description":"Finished up comparisons.  Looked through fluxes of transporter reactions in search of an explanation for ATP synthase directionality change in N2 fixing WM1788 vs. wild type.  Did not find any conclusive results."
       }
     ]
   },
@@ -236,7 +234,7 @@
       {
         "lead":"Finished flux range comparisons",
         "id":"L_exp22",
-        "description":" Did a flux range comparison of N2 fixing WM1788 at maximum ATP production vs normal N2 fixing WM1788.  Many reactions changed their directionalities, but the largest change was .02.  Can determine from this that the N2 fixing strain is already ATP limiting-- ie. there are no major differences when ATP is maximized.",
+        "description":" Did a flux range comparison of N2 fixing WM1788 at maximum ATP production vs normal N2 fixing WM1788.  Many reactions changed their directionalities, but the largest change was .02.  Can determine from this that the N2 fixing strain is already ATP limiting-- ie. there are no major differences when ATP is maximized."
       }
     ]
   },
@@ -257,7 +255,7 @@
       {
         "lead":"Analyzed ATP production/consumption in N2 fixing WM1788.  ",
         "id":"L_exp24",
-        "description":"Analyzed ATP production/consumption in N2 fixing WM1788.  Compiled a ranked list of reactions which produce ATP.  Jess compiled a list of the top 10 reactions in the model which consume ATP.",
+        "description":"Analyzed ATP production/consumption in N2 fixing WM1788.  Compiled a ranked list of reactions which produce ATP.  Jess compiled a list of the top 10 reactions in the model which consume ATP."
       }
     ]
   },
@@ -267,7 +265,7 @@
       {
         "lead":"Started working on the Python script ",
         "id":"L_exp25",
-        "description":" Started working on the Python script for knocking out all of the genes in the N2 fixing model.  Started by writing a code which takes the GPRs (gene protein relationships) present in the model and creates a list of all the unique genes.  ",
+        "description":" Started working on the Python script for knocking out all of the genes in the N2 fixing model.  Started by writing a code which takes the GPRs (gene protein relationships) present in the model and creates a list of all the unique genes.  "
       }
     ]
   },
@@ -276,7 +274,7 @@
     "what":[
       {
         "lead":"Started working on the Python script ",
-        "id":"L_exp26",
+        "id":"L_exp26"
       }
     ]
   },
@@ -285,8 +283,8 @@
     "what":[
       {
         "lead":"Started working on the Python script ",
-        "id":"L_exp27",
+        "id":"L_exp27"
       }
     ]
-  },
+  }
 ]

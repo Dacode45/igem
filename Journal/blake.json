@@ -1,0 +1,153 @@
+[
+  {
+    "when":"6/1/205",
+    "what":[
+      {
+        "lead":"Preparation of Electrocompetent Cells",
+        "description":"Prepare cultures of DH10B",
+        "why":"These are the strains we put the nif cluster in this summer.",
+        "id":"B_exp1",
+        "type":"P",
+        "steps":[
+          {"what":"25 ml of each culture were transferred into 500 mL of LB"},
+          {"what":"-These flasks were then grown at 37 deg C, 250 rpm for 1 hour, 30 min in incubator"},
+          {"what":"Measure absorbance", "results":"Cuv1-.1055, Cuv2-.1084"},
+          {"what":"After absorbances were measured, cultures were added to ice bucket and allowed to cool for 15 minutes."},
+          {"what":"-Centrifuge bottles were centrifuged for 25 min. at 4 deg. "},
+          {"what":"After centrifuge, bottles were taken to cold room",
+          "steps":[
+            {"what":"Chilled 10% glycerol was added, 55 ml each, into each bottle","precaution":"It’s worth noting that % glycerol in each bottle is roughly 4.4%"},
+            {"what":"70 Ml of water were added to each bottle"}
+            ]},
+          {"what":"-Bottles were placed back into centrifuge for another 256 minutes at 4 deg C-After centrifuge, bottles were taken to cold room once more"},
+          {"what":"Supernatant was drained", "steps":[
+            {"what":"10% glycerol was added to 4 tubes"},
+            {"what":"Roughly 15 mL were allotted to each tube"},
+            {"what":" Tubes were taken and centrifuged"}
+            ]},
+          {"what":"After centrifuge, conical tubes were taken to cold room", "steps":[
+            {"what":"Supernatant was drained"},
+            {"what":"1 mL of 10% glycerol was added to each tube, pellet allowed to resuspend"},
+            {"what":"Tubes were taken to centrifuge again, 3000 RPM @ 4deg C"}
+            ]}
+        ]
+
+      }
+    ]
+  },
+  {
+    "when":"6/2/2015",
+    "what":[
+      {
+        "lead":"Designed program to find sgRNAs in Java,",
+        "id":"B_exp2",
+        "description":"Designed program to find sgRNAs in Java, key feature is finding the PAM sequence",
+        "why":"Need to find a place for dCAS9 to bind"
+      }
+    ]
+  },
+  {
+    "when":"6/3/2015",
+    "what":[
+      {
+        "lead":"More electrocompetent cell prep",
+        "description":"EC cell prep for Strains: MG1655 and JM109",
+        "type":"P",
+        "id":"B_exp3",
+        "steps":[
+          {"what":"Two culture were incubated overnight"},
+          {"what":"-In the morning, 26 mL of culture were placed into 500 mL of LB"},
+          {"what":"-These flasks were incubated for an hour beginning at 10:34"},
+          {"what":"-Both flasks were taken out around 11:35 P.M."},
+          {"what":"-Optical measurements were performed on both colonies using a 10x dilution factor", "result":"i. The optical density of JM109 was 0.287 ii. The optical density of MG1655 was 0.39"},
+          {"what":"-JM109 went back to be incubated at 11:56 A.M."},
+          {"what":"-Optical measurement performed on JM109 once again", "result":"Optical density was 0.38"},
+          {"what":"    -Optical density for both strains was determined to be satisfactory -Thus, each flask was equally partitioned into two centrifuge bottles"},
+          {"what":"-Centrifuge bottles were left to sit for 20 minutes"},
+          {"what":"-After sitting for 30 minutes, bottles were centrifuged at 3000 RPM for 25 minutes"},
+          {"what":"-Upon centrifugation, supernatant was drained, pellet was resuspended in 125 mL of water"},
+          {"what":"    -Bottles were centrifuged again for another 25 minutes"},
+          {"what":"-Upon centrifugation, supernatant was drained and 55 mL of 10% glycerol were added to each bottles"},
+          {"what":"    -Pellet was resuspended in each bottles"},
+          {"what":"    -After resuspension, each bottles was partitioned into 4 15 mL conical tubes"},
+          {"what":"    -Conical tubes were centrifuged under same conditions"},
+          {"what":"    -From a combined conical tube, 40uL aliquots were created for JM109 and MG1655"},
+          {"what":"    -These aliquots were stored in -80 deg C conditions Electroporation"},
+          {"what":"    -We transformed MG1655 and WM1788"},
+          {"what":"-To do this, we obtained copies of pSL2397 plasmids"},
+          {"what":"    -2.5 uL of this plamsmid DNA was collected and mixed with pipettor"},
+          {"what":"-After this, the plasmid DNA was inserted into a cuvette"},
+          {"what":"    -The entirety of the aliquot containing the E.Coli strains was dumped into the cuvette"},
+          {"what":"    -The plasmid was shocked into the strain for 5.5s"},
+          {"what":"    -Strain was taken out and put into conical tube for an hour"},
+          {"what":"    -The same process was repeated with MG1655 strain"}
+        ]
+      }
+    ]
+  },
+  {
+    "when":"6/4/2015",
+    "what":[
+      {
+        "lead":"-We finalized sgRNA sequences ",
+        "from":"B_exp2",
+        "description":"-In picking sgRNA sequences, we determined that sequences close to the beginning of the strand would be the most effective -Using a computer program, we ran gene sequences through and found the most effective sgRNA sequences i. Java program that predicates itself on finding the PAM sequence",
+        "type":"D",
+        "id":"B_exp4"
+      },
+      {
+        "lead":"Picked Colonies",
+        "from":"B_exp3",
+        "id":"B_exp5",
+        "description":"Picked colonies from yesterday's prep"
+      }
+    ]
+  },
+  {
+    "when":"6/5/2015",
+    "what":[
+      {
+        "id":"B_exp6",
+        "lead":"Preparation of Frozen Stock",
+        "description":"Store Cells from yesterday",
+        "type":"P",
+        "steps":[
+          {"what":"-Cells were taken from picked colonies on June 4"},
+          {"what":"-We took 500 uL of that culture, added it to 500 uL of 30% glycerol solution, then place din -80k deg C conditions."},
+          {"what":"-We then prepared 30% glycerol solution for later use"},
+          {"what":"-Next, we prepared the CRIPSR/dCas9 plasmid for PCR"},
+          {"what":"-To do this, we separated the plasmid from its host bacterium"},
+          {"what":"-First, we took the bacterial culture and centrifuged it"},
+          {"what":"-Then, we discarded LB growing solution that was supernatant"},
+          {"what":"-Next, we resuspended bacterial cells in water"},
+          {"what":"-Buffer to lyze the cell was added"},
+          {"what":"-Immediately after, cold neutralization buffer was added to neutralize the process"},
+          {"what":"-Then, tubes were centrifuged at 16000 g for 43 minutes"},
+          {"what":"-Supernatant was transferred to a separation column"},
+          {"what":"-These columns were then centrifuged for 30 seconds"},
+          {"what":"-The flow through was discarded and the colonies were placed back into the collecting tubes"},
+          {"what":"-200 uL of Endo-Wash Buffer were added to each tubes"},
+          {"what":"-Each tubes was centrifuged under same conditions for 30 seconds"},
+          {"what":"-Upon centrifugation, 400 uL of Zappy’s buffer were added to each tube"},
+          {"what":"-Each tube was centrifuged for another 2 minutes"},
+          {"what":"-Upon centrifugation, high pure molecular water was added to each column and each column sat for two minutes"},
+          {"what":"-Each column was centrifuged, same condition, for another 2 minutes"},
+          {"what":"-After this step, dissolved plasmid DNA had collected on bottom of column"},
+          {"what":"-Each column was taken to spectrometer to determine concentration and purity"},
+          {"what":"-Concentrations and purities, in order", "result":"<table><tr><th>Tube</th><th>Conc (ng/uL)</th><th>Purity</th></tr><tr><td>Tube 1</th><td>113.9</td><td>1.87</td></tr><tr><td>Tube 2</th><td>127.1</td><td>1.86</td></tr><tr><td>Tube 3</th><td>95.6</td><td>1.79</td></tr><tr><td>Tube 4</th><td>82.7</td><td>1.86</td></tr></table>"},
+          {"what":"After that, each DNA sample was placed into freezer to be stored"}
+        ]
+      }
+    ]
+  },
+  {
+    "when":"6/8/2015",
+    "what":[
+      {
+        "id":"B_exp7",
+        "lead":"prep sgRNA",
+        "description":""
+      }
+    ]
+  }
+]
