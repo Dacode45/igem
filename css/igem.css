@@ -287,6 +287,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 header {
+  margin-top: -15px;
+  
     text-align: center;
     color: #fff;
     background-attachment: scroll;
