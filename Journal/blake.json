@@ -146,6 +146,49 @@
       {
         "id":"B_exp7",
         "lead":"prep sgRNA",
+        "description":"Today, we performed Inverse PCR reaction to prep sgRNA sequences",
+        "type":"P",
+        "steps":[
+          {"what":"-First, added recommended high-pure molecular water to suspend primers to 100 uM concentrations"},
+          {"what":"-Get out two 50 mL microcentrifuge tubes, one for the DMSO and for without DMSO"},
+          {"what":"-Add water first", "precaution":" (should be different from DMSO tube to non-DMSO tube)"},
+          {"what":"-Add 4 uL of DMSO per tube if needed"},
+          {"what":"-Add 10 uL of buffer per reaction"},
+          {"what":"-Add 1 uL of dNTPs per reaction"},
+          {"what":"-Add 2.5 uL of primer per reaction"},
+          {"what":"-Add 1 uL of template DNA per reaction"},
+          {"what":"Add 0.5 uL of phusion polymerase"},
+          {"what":"-Put into the thermocycler based on given temp","precaution":"DMSO should be used for large DNA strands and should be put at temperature 4 deg C lower than without it, but Ryan claims that you don’t have to worry about it"}
+        ]
+      },
+      {
+        "id":"B_exp8",
+        "lead":"transformed DH10B with pSL2397",
+        "from":"B_exp3"
+      },
+      {
+        "id":"B_exp9",
+        "lead":"Prepare Gel",
+        "description":"We prepared a gel for DNA purification",
+        "type":"P",
+        "steps":[
+          "-Mix 1g of Agarose with 100 mL of TAE buffer.",
+          {"what:":"Microwave for 1:30", "precaution":"Note that you can cool the mixture with cold, running water"},
+          "-Add 5 uL of cybersafe (5uL/100 mL of buffer) once mixture cools",
+          "-Put in combs",
+          "-Tape side of tray",
+          "-Pour agarose gel in tray",
+          "-Let gel cool for 1 hour"
+        ]
+      }
+    ]
+  },
+  {
+    "when":"6/8/2015",
+    "what":[
+      {
+        "id":"B_exp7",
+        "lead":"prep sgRNA",
         "description":""
       }
     ]
