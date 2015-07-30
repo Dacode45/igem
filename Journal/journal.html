@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="iGEM 2015 Wash U Penn State Team" name="description"/>
+  <meta content="Igem 2015 Wash U Penn State Team" name="description"/>
+  <meta content="David Ayeke" name="author"/>
+  <title>
+   Washington University - Penn State iGEM
+  </title>
+  <!-- Bootstrap Core CSS -->
+  <link href="http://2015.igem.org/Team:WashU_StLouis/css/bootstrap.min.css?action=raw&amp;ctype=text/css" rel="stylesheet"/>
+  <!-- Custom CSS -->
+  <link href="http://2015.igem.org/Team:WashU_StLouis/css/igem.css?action=raw&amp;ctype=text/css" rel="stylesheet"/>
+  <!-- Custom Fonts -->
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"/>
+  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css"/>
+  <link href="http://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet" type="text/css"/>
+  <link href="http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic" rel="stylesheet" type="text/css"/>
+  <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css"/>
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <!-- Background Req -->
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/underscore-min.js?action=raw&amp;ctype=text/javascript">
+  </script>
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/backbone-min.js?action=raw&amp;ctype=text/javascript">
+  </script>
+  <script charset="utf-8" src="http://2015.igem.org/Team:WashU_StLouis/js/d3.min.js?action=raw&amp;ctype=text/javascript">
+  </script>
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/module-manager.js?action=raw&amp;ctype=text/javascript">
+  </script>
+ </head>
+ <body class="index" id="page-top">
+  <!-- Background Canvas -->
+  <div id="background-canvas">
+  </div>
+  <!-- Header -->
+  <header class="row">
+   <div class="container">
+    <div class="intro-text">
+     <div class="intro-lead-in">
+      Welcome To Our Website!
+     </div>
+     <div class="intro-heading">
+      WashU and Penn State &nbsp; iGEM 2015
+     </div>
+     <a class="page-scroll btn btn-xl" href="http://2015.igem.org/Team:WashU_StLouis/description#description">
+      Project Description
+     </a>
+     <a class="page-scroll btn btn-xl" href="http://2015.igem.org/Team:WashU_StLouis#contact">
+      Let's Talk
+     </a>
+    </div>
+   </div>
+  </header>
+  <!-- Navigation -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+   <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header page-scroll">
+     <button class="navbar-toggle" data-target="#bs-example-navbar-collapse-1" data-toggle="collapse" type="button">
+      <span class="sr-only">
+       Toggle navigation
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+      <span class="icon-bar">
+      </span>
+     </button>
+     <a class="navbar-brand page-scroll" href="#page-top">
+      Nitrogen
+     </a>
+     <a class="navbar-brand" href="http://2015.igem.org">
+      <img alt="Igem Logo" class="img-responsive" id="igemLogo" src="http://2014.igem.org/wiki/images/0/09/Aalto_Helsinki_Logov_iGEM.png"/>
+     </a>
+    </div>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+     <ul class="nav navbar-nav navbar-right">
+      <li class="hidden">
+       <a href="#page-top">
+       </a>
+      </li>
+      <li>
+       <a class="page-scroll" href="#overview">
+        Overview
+       </a>
+      </li>
+      <li>
+       <a class="page-scroll" href="#team">
+        Team
+       </a>
+      </li>
+      <li>
+       <a class="page-scroll" href="#collaboration">
+        Collaboration
+       </a>
+      </li>
+      <li>
+       <a class="page-scroll" href="#sponsors">
+        Sponsors
+       </a>
+      </li>
+      <li>
+       <a class="page-scroll" href="#contact">
+        Contact
+       </a>
+      </li>
+      <li>
+       <a class="overview-link" data-toggle="modal" href="#reportBugsModal">
+        Report Bugs
+       </a>
+      </li>
+      <li>
+       <a class="page-scroll" href="#sitemap">
+        More
+       </a>
+      </li>
+     </ul>
+    </div>
+    <!-- iGEM Logo -->
+    <!-- /.navbar-collapse -->
+   </div>
+   <!-- /.container-fluid -->
+  </nav>
+  <div class="container" id="journal_container">
+   <div>
+    laura
+   </div>
+   <div>
+    charlotte
+   </div>
+   <div>
+    blake
+   </div>
+  </div>
+  <footer class="bg-white row">
+   <!-- overview Modal 6 -->
+   <div aria-hidden="true" class="overview-modal modal fade" id="reportBugsModal" role="dialog" tabindex="-1">
+    <div class="modal-content">
+     <div class="close-modal" data-dismiss="modal">
+      <div class="lr">
+       <div class="rl">
+       </div>
+      </div>
+     </div>
+     <div class="container">
+      <div class="row">
+       <div class="col-lg-8 col-lg-offset-2">
+        <div class="modal-body">
+         <!-- Report Bugs Section -->
+         <section class="bg-white row" id="report_bugs">
+          <div class="container">
+           <div class="row">
+            <div class="col-lg-12 text-center">
+             <h2 class="section-heading">
+              Report Bugs
+             </h2>
+             <h3 class="section-subheading text-muted">
+              Thanks for your help with out site!
+             </h3>
+             <div class="alert alert-danger">
+              <button aria-hidden="true" class="close" data-dismiss="alert" type="button">
+               &times;
+              </button>
+              <strong>
+               This form will open your default mail client (i.e Outlook). If you do not have one installed, email us at  WashU iGEM washu.igem@gmail.com
+              </strong>
+             </div>
+            </div>
+           </div>
+           <div class="row">
+            <div class="col-lg-12">
+             <form id="reportForm" name="sentMessage" novalidate="">
+              <div class="row">
+               <div class="col-md-6">
+                <div class="form-group">
+                 <input class="form-control" data-validation-required-message="Please enter your name." id="report_name" placeholder="Your Name *" required="" type="text"/>
+                 <p class="help-block text-danger">
+                 </p>
+                </div>
+                <div class="form-group">
+                 <input class="form-control" data-validation-required-message="Please enter your email address." id="report_email" placeholder="Your Email *" required="" type="email"/>
+                 <p class="help-block text-danger">
+                 </p>
+                </div>
+               </div>
+               <div class="col-md-6">
+                <div class="form-group">
+                 <textarea class="form-control" data-validation-required-message="Please enter a message." id="report_message" placeholder="Your Message *" required="">
+                 </textarea>
+                 <p class="help-block text-danger">
+                 </p>
+                </div>
+               </div>
+               <div class="clearfix">
+               </div>
+               <div class="col-lg-12 text-center">
+                <div id="success">
+                </div>
+                <button class="btn btn-xl" type="submit">
+                 Send Bug
+                </button>
+               </div>
+              </div>
+             </form>
+            </div>
+           </div>
+          </div>
+         </section>
+         <button class="btn btn-primary" data-dismiss="modal" type="button">
+          <i class="fa fa-times">
+          </i>
+          Close Modal
+         </button>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="container">
+    <!-- Site Map -->
+    <section class="row sectionNum5" id="sitemap">
+     <h2>
+      Discover
+     </h2>
+     <table class="table">
+      <tr>
+       <td>
+        Parts
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/basic_part">
+         Basic Parts
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/part_collection">
+         Parts Collection
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/parts">
+         Parts
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/composite_part">
+         Composite Part
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Team
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/team">
+         Members
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/notebook">
+         Journals
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/attributions">
+         Attributions
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Project
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/description">
+         Description
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/design">
+         Design
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/modeling">
+         Modeling
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/measurment">
+         Measurment
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/project">
+         Project
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Policies and Practices
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/human_practices">
+         Human Practices
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/practices">
+         Practices
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/safety">
+         Safety
+        </a>
+       </td>
+      </tr>
+      <tr>
+       <td>
+        Misc.
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/entrepreneurship">
+         Entrepreneurship
+        </a>
+       </td>
+       <td>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/software">
+         Software
+        </a>
+       </td>
+      </tr>
+     </table>
+    </section>
+    <!-- sponsors Aside -->
+    <section class="row sectionNum6" id="sponsors">
+     <div class="container">
+      <div class="row">
+       <h2>
+        Sponsors
+       </h2>
+      </div>
+      <div class="row">
+       <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="logo" id="WashULogo">
+        </div>
+       </div>
+       <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="logo" id="PennStateLogo">
+        </div>
+       </div>
+       <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="logo" id="ICaresLogo">
+        </div>
+       </div>
+       <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="logo" id="WashUArtLogo">
+        </div>
+       </div>
+       <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="logo" id="SnapGeneLogo">
+        </div>
+       </div>
+       <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="logo" id="Monsanto">
+        </div>
+       </div>
+       <div class="col-md-4 col-sm-6 col-xs-6">
+        <div class="logo" id="SigmaAldrichLogo">
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <div class="row">
+     <div class="col-md-4 col-md-offset-4">
+      <span class="copyright">
+       Washington University in St. Louis and Pennsylvania State University iGEM 2015
+      </span>
+     </div>
+    </div>
+    <div class="row">
+     <div class="col-md-4 col-md-offset-4">
+      <ul class="list-inline social-buttons">
+       <li>
+        <a href="http://twitter.com/WashUiGEM">
+         <i class="fa fa-twitter">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="http://www.facebook.com/WashuIgem">
+         <i class="fa fa-facebook">
+         </i>
+        </a>
+       </li>
+       <li>
+        <a href="http://www.youtube.com/channel/UCjO_tMiJdx6hCyCREsMBYUQ">
+         <i class="fa fa-youtube">
+         </i>
+        </a>
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </footer>
+  <!-- JQuery -->
+  <script src="js/jquery.js">
+  </script>
+  <!-- Bootstrap Core JavaScript -->
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/bootstrap.min.js?action=raw&amp;ctype=text/javascript">
+  </script>
+  <!-- Plugin JavaScript -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js">
+  </script>
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/classie.js?action=raw&amp;ctype=text/javascript">
+  </script>
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/cbpAnimatedHeader.js?action=raw&amp;ctype=text/javascript">
+  </script>
+  <!-- Contact Form JavaScript -->
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/jqBootstrapValidation.js?action=raw&amp;ctype=text/javascript">
+  </script>
+  <script src="js/contact_me.js">
+  </script>
+  <!-- Footnotes -->
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/bootstrap.footnotes.js?action=raw&amp;ctype=text/javascript">
+  </script>
+  <!-- Custom Theme JavaScript -->
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/agency.js?action=raw&amp;ctype=text/javascript">
+  </script>
+  <!-- Background Script -->
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/background.js?action=raw&amp;ctype=text/javascript">
+  </script>
+  <!-- Inline script -->
+  <script>
+   // Activate Footnotes
+                $.footnotes();
+  </script>
+  <script>
+   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-65150000-1', 'auto');
+                ga('send', 'pageview');
+  </script>
+ </body>
+</html>
