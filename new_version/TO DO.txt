@@ -12,3 +12,6 @@ Make pictures of advisors and mentors the same sizes. Say which school the advis
 
 Include all of our mentors on the front page. 
 
+Fix lines on the team page. 
+
+Put everyone (including Caroline) under advisors (rather than a separation from graduate student mentors)
