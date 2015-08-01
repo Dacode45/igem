@@ -132,23 +132,26 @@
    <!-- /.container-fluid -->
   </nav>
   <div class="container" id="journal_container">
-   <div id="journal_tabs">
-    <ul class="nav nav-tabs" role="tablist">
-     <li role="presentation">
-      <a aria-controls="laura_content" data-toggle="tab" href="laura_content" role="tab">
+   <section class="row bg-white sectionNum1 sectionNum2 sectionNum3 sectionNum4" id="journal_tabs">
+    <ul class="nav nav-tabs" id="journal-sidebar" role="tablist">
+     <li class="active" role="presentation">
+      <a aria-controls="laura_content" data-toggle="tab" href="#laura_content" role="tab">
+       laura
       </a>
      </li>
      <li role="presentation">
-      <a aria-controls="charlotte_content" data-toggle="tab" href="charlotte_content" role="tab">
+      <a aria-controls="charlotte_content" data-toggle="tab" href="#charlotte_content" role="tab">
+       charlotte
       </a>
      </li>
      <li role="presentation">
-      <a aria-controls="blake_content" data-toggle="tab" href="blake_content" role="tab">
+      <a aria-controls="blake_content" data-toggle="tab" href="#blake_content" role="tab">
+       blake
       </a>
      </li>
     </ul>
     <div class="tab-content">
-     <div class="tab-pane" id="laura_content" role="tabpanel">
+     <div class="tab-paneactive" id="laura_content" role="tabpanel">
       <div class="row" id="laura_content_header">
        <div class="col-md-3" id="laura_profile_pic_wrapper">
         <img class="img-responsive img-thumbnail" src="http://2015.igem.org/wiki/images/3/32/Laura.jpg"/>
@@ -1382,7 +1385,7 @@
       </div>
      </div>
     </div>
-   </div>
+   </section>
   </div>
   <footer class="bg-white row">
    <!-- overview Modal 6 -->
