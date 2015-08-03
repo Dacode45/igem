@@ -91,7 +91,7 @@
     "when":"6/12/2015",
     "what":[
       {
-        "lead":"Strange Results",
+        "lead":"Strange result",
         "id":"L_exp9",
         "description":"Observed CO2 and H2O export fixed for N2 fixing WM1788.  Started checking pathways (glycolysis, PPP, TCA cycle, pyruvate metabolism, reactions involving flavodoxin) to find out why."
 
@@ -105,7 +105,7 @@
         "lead":"Compared flux of N2 fixing of WM1788",
         "id":"L_exp10",
         "description":"Compared flux ranges of N2 fixing and wild type WM1788 within main metabolic pathways (glycolysis, PPP, TCA cycle, pyruvate metabolism) as well as within reactions that included oxidized or reduced flavodoxin. ",
-        "result":"Main results- pyruvate synthase (produces acetyl coA from pyruvate) in the N2 fixing strain has a higher flux than in wild type.  Additionally, many reactions within TCA cycle have a lower flux in the N2 fixing strain than in wild type (this is expected- N2 fixing WM1788 should have a depressed metabolism), except for malate dehydrogenase (produces oxaloacetate from malate). "
+        "result":"Main result- pyruvate synthase (produces acetyl coA from pyruvate) in the N2 fixing strain has a higher flux than in wild type.  Additionally, many reactions within TCA cycle have a lower flux in the N2 fixing strain than in wild type (this is expected- N2 fixing WM1788 should have a depressed metabolism), except for malate dehydrogenase (produces oxaloacetate from malate). "
       }
     ]
   },
@@ -127,7 +127,7 @@
         "lead":" Exploring relationship between pyruvate and acetyl coA in N2 fixing strain versus wild type",
         "id":"L_exp12",
         "description":" Continued analysis of differences between wild type and N2 fixing WM1788.",
-        "result":" Identified two other reactions containing both acetyl coA and pyruvate (besides pyruvate synthase), however both have the same flux in both N2 fixing and wild type.  The flux is 0-10,000, meaning they are cycling.  Jess explored deletion of these two reactions to see if removing them would help to push flux through pyruvate synthase and aid nitrogen fixation. Also looked at other ways to produce acetyl coA and other ways to spend pyruvate; however, no results yet for viable knockouts. "
+        "result":" Identified two other reactions containing both acetyl coA and pyruvate (besides pyruvate synthase), however both have the same flux in both N2 fixing and wild type.  The flux is 0-10,000, meaning they are cycling.  Jess explored deletion of these two reactions to see if removing them would help to push flux through pyruvate synthase and aid nitrogen fixation. Also looked at other ways to produce acetyl coA and other ways to spend pyruvate; however, no result yet for viable knockouts. "
       }
     ]
   },
@@ -137,7 +137,7 @@
       {
         "lead":" Exploring relationship between pyruvate and acetyl coA in N2 fixing strain versus wild type",
         "id":"L_exp13",
-        "description":"Continued identifying reactions that involve either the production of acetyl coA or the expenditure of pyruvate.  Looked for other ways to make products in reactions that spend pyruvate, indicating the potential for a knockout.  No conclusive results."
+        "description":"Continued identifying reactions that involve either the production of acetyl coA or the expenditure of pyruvate.  Looked for other ways to make products in reactions that spend pyruvate, indicating the potential for a knockout.  No conclusive result."
 
       }
     ]
@@ -214,7 +214,7 @@
         "lead":"Continuing flux range comparisons",
         "id":"L_exp20",
         "description":"Compared directionality of fluxes for N2 fixing and wild type WM1788 at maximum biomass.  This eliminates potentially large changes in reactions which are not a component of biomass.",
-        "result":"Major results<br>Comparison at fixed biomass<br>-1460 reactions changed flux ranges by more than .001<br>-The largest change was 137.262.  Reactions changing this much produce various components of biomass<br>-49 reactions changed directionality from wt.  Seems mostly to be due to fixed biomass (ie. this is not helpful/relevant). <br><br>Comparisons at max biomass<br>-428 reactions changed flux ranges by more than .001<br>-The largest change was 14.606: H2Otpp (h2o transport via diffusion- periplasm.   It changed from (7.289 - 7.384) in wt to (21.895 - 21.948) in N2 fixing<br>-POR5 (pyruvate synthase) had the 4th largest change, after H2Otpp, H2Otex, and EX_h2o(e).  It changed by 9.11<br>-4 reactions changed directionality from WT. 3 were related to NH4 (NH4 in N2 fixing is exported from the cell rather than taken in, as expected). The other was ATP synthase, which changed from running in the reverse in wild type to running in the forward direction for the N2 fixing strain.  We’re not entirely sure why this happened. "
+        "result":"Major result<br>Comparison at fixed biomass<br>-1460 reactions changed flux ranges by more than .001<br>-The largest change was 137.262.  Reactions changing this much produce various components of biomass<br>-49 reactions changed directionality from wt.  Seems mostly to be due to fixed biomass (ie. this is not helpful/relevant). <br><br>Comparisons at max biomass<br>-428 reactions changed flux ranges by more than .001<br>-The largest change was 14.606: H2Otpp (h2o transport via diffusion- periplasm.   It changed from (7.289 - 7.384) in wt to (21.895 - 21.948) in N2 fixing<br>-POR5 (pyruvate synthase) had the 4th largest change, after H2Otpp, H2Otex, and EX_h2o(e).  It changed by 9.11<br>-4 reactions changed directionality from WT. 3 were related to NH4 (NH4 in N2 fixing is exported from the cell rather than taken in, as expected). The other was ATP synthase, which changed from running in the reverse in wild type to running in the forward direction for the N2 fixing strain.  We’re not entirely sure why this happened. "
       }
     ]
   },
@@ -224,7 +224,7 @@
       {
         "lead":"Finish flux range comparisons",
         "id":"L_exp21",
-        "description":"Finished up comparisons.  Looked through fluxes of transporter reactions in search of an explanation for ATP synthase directionality change in N2 fixing WM1788 vs. wild type.  Did not find any conclusive results."
+        "description":"Finished up comparisons.  Looked through fluxes of transporter reactions in search of an explanation for ATP synthase directionality change in N2 fixing WM1788 vs. wild type.  Did not find any conclusive result."
       }
     ]
   },

@@ -1,0 +1,190 @@
+[
+  {
+    "when":"6/15/2015",
+    "what":[
+      {
+        "id":"J_exp1",
+        "lead":"Learn The Enviornment",
+        "description":"This was my first week with the iGem team, even though I got to work on some segments of the project from home. My first two days consisted of getting acclimated with the computer programming (Komodo and Cyberduck), and specifically running python and gams files from excel data on the E. coli model. I had the opportunity to work with Laura, who was very helpful in explaining the scripts we were running. Tom was also able to send me information on python and unix commands, so navigating through these programs was easier than expected. I’ve worked on and off with MATLAB, but I actually found python and gams to be a lot more user friendly."
+      }
+    ]
+  },
+  {
+    "when":"6/16/2015",
+    "what":[
+      {
+        "id":"J_exp2",
+        "lead":"Biomass and ATP calculations",
+        "description":"Once I generated my input files using a python code provided to me (I only had to personalize my directory information), I was able to run FBA scripts for both the WM1788 wild type and nitrogen fixation models. I was able to determine maximum biomass values for both, as well as maximum ATP values from these biomass outputs. For the WM1788 wild type model, I got a maximum biomass value of 2.97 and a maximum ATP production value of 547.03. For the WM1788 nitrogen fixation model I got a maximum biomass value of 2.52 and a maximum ATP production value of 391.274. These values checked with Laura’s. From there, I ran FVA on both  the wild type and nitrogen fixation models, and generated spreadsheets for flux data on each reaction in the model.",
+        "result":"model, I got a maximum biomass value of 2.97 and a maximum ATP production value of 547.03. For the WM1788 nitrogen fixation model I got a maximum biomass value of 2.52 and a maximum ATP production value of 391.274. These values checked with Laura’s."
+      }
+    ]
+  },
+  {
+    "when":"6/17/2015",
+    "what":[
+      {
+        "id":"J_exp3",
+        "lead":"The Galactose Pathway",
+        "description":"On Wednesday, I started to look at the pathway taken by galactose as it enters the cell, thereafter initiating glycolysis. Given our model predicted higher cell growth rates for galactose as a sole energy source than for glucose, which contradicts most available literature, we were trying to determine if there were any reactions that would help explain this phenomena (for example if there is a reaction supplying additional energy in the galactose model). However, even though I was able to identify the series of reactions the take place immediately following the uptake of galactose, which include converting alpha D­galactose to beta D­galactose, and elementary reactions depending on enzymes such as 4­epimerase and galactokinase, a greater amount of energy was required to initiate the conversion of galactose to glucose to G6P than was required to initiate the conversion of just glucose to G6P. We are still in the process of determining where these inconsistencies are coming from by looking into the first set of reactions that takes place when glucose is introduced to E. coli.",
+        "result":"I was able to identify the series of reactions the take place immediately following the uptake of galactose, which include converting alpha D­galactose to beta D­galactose, and elementary reactions depending on enzymes such as 4­epimerase and galactokinase, a greater amount of energy was required to initiate the conversion of galactose to glucose to G6P than was required to initiate the conversion of just glucose to G6P. We are still in the process of determining where these inconsistencies"
+      }
+    ]
+  },
+  {
+    "when":"6/18/2015",
+    "what":[
+      {
+        "id":"J_exp4",
+        "lead":"Knocking out PDH and PFL",
+        "description":"Lastly, Laura was working on finding an alternate path in the model that produced acetyl­coA. However, the only reactions listed involve the conversion of pyruvate to acetyl­coA. We are interested in determining which reactions can be potentially knocked out of the model to maximum the production of acetyl­coA. Tom wanted me to run gams files that removed the PDH (pyruvate dehydrogenase) and PFL (pyruvate formate lyase) reactions from the model, which are directly involved in the production of acetyl­coA, to determine if whether or not knocking one out will maximum flux through pyruvate synthase (POR5), which is the only other reaction involved in the production of acetyl­coA. However, our findings show that knocking either PDH or PFL from the model has no effect on the flux through this reaction, or on one another. Considering the flux ranges remained the same (0 ­ 10,000) for the PDH and PFL reactions, these reactions can potentially be removed from the model. When both PDH and PFL were both knocked from the model, the flux ranges varied slightly through the pyruvate synthase reaction­ from ­9,948.9478 ­ 444.251305 (for the lower and upper bounds respectively) to ­4068.693 ­ 444.251. Even though the lower bound was less negative, its magnitude was still significantly larger than the upper bound. You can refer to the PDH, PFL, and POR5 reactions below.<pre>PDH (pyruvate dehydrogenase): pyr_c + coa_c + nad_c → co2_c + nadh_c + accoa_c <br> PFL (pyruvate formate lyase): pyr_c + coa_c → accoa_c _ for_c <br> POR5 (pyruvate synthase): flxso_c +pyr_c + coa_c ↔ co2_c + flxr_c + h_c accoa_c</pre><br>Lastly, we identified that the main reaction converting glucose into G6P was glc_DASH_D_c + atp_c → g6p_c + h_c + adp_c (involves hexokinase) and not pep_c + glc_DASH_D_c → pyr_c + g6p_c ( 0 - 7155.54 to 0 - 20 respectfully)"
+
+      }
+    ]
+  },
+  {
+    "when":"6/19/2015",
+    "what":[
+      {
+        "id":"J_exp5",
+        "same_as":"J_exp4"
+      }
+    ]
+  },
+  {
+    "when":"6/22/2015",
+    "what":[
+      {
+        "id":"J_exp6",
+        "lead":"Adding Flavodoxin to the Equation",
+        "description":"At the end of last week, Laura added an additional reaction to the N2 WM1788 model that expends flavodoxin: <br><pre>flxr_c → flxso_c + h_c</pre>Not only were we interested in driving the pyruvate synthase reaction forward with the addition of this reaction, but we were also looking to optimize the production of flavodoxin as an available electron donor. We compared FVA outputs for maximizing biomass (exclusion of flavodoxin reaction) to maximizing flux through the flavodoxin reaction. We found that the flux ranges changed for over 1,300 reactions. And as for the pyruvate synthase reaction, there was hardly any variation in the flux ranges ( ­9948.95 to 443.698 and ­9948.904 to 443.703 for max biomass and max flavodoxin respectively). We started to look at reactions whose flux ranges varied by more than a factor of 1.0 × 10­1.",
+        "result":"We found that the flux ranges changed for over 1,300 reactions. And as for the pyruvate synthase reaction, there was hardly any variation in the flux ranges ( ­9948.95 to 443.698 and ­9948.904 to 443.703 for max biomass and max flavodoxin respectively). We started to look at reactions whose flux ranges varied by more than a factor of 1.0 × 10­1."
+      }
+    ]
+  },
+  {
+    "when":"6/23/2015",
+    "what":[
+      {
+        "id":"J_exp7",
+        "lead":"Knockout PDH and PFL",
+        "description":"<p>After the meeting with iGem, I started researching potential growth implications of knocking out the pyruvate dehydrogenase and pyruvate formate lyase reactions from the model. Our data supports that knocking out either of these reactions individually has little to no effect on the flux through the corresponding reaction, or on the flux through the pyruvate synthase reaction. Research shows that pyruvate dehydrogenase deficiency has been associated with a buildup of lactic acid in the cell. The enzyme has also been identified for its essential role in initiating the series of reactions that make up the TCA cycle. According to a study conducted by Anderson ME, Marshall of RT JFood Safety in 1990, increased concentrations of organic acids have been shown to reduce cellular activity in E. coli, leading to higher levels of population reduction. As for the pyruvate formate lyase reaction, one study examined the effects of knocking out it’s associated enzyme on the yield of butanediol in a strain of E. coli known as Klebsiella pneumoniae. Even though the yield was 92.2% of it’ theoretical value, mutant growth was slightly reduced to the parental strain. Similar studies on other mutants of E. coli suggest that this growth deficiency is due to a redox imbalance rather than a reduced level of acetyl­coA. These findings would eliminate the possibility of knocking out either of these reactions from the model.</p><p>Laura was in the process of researching the malate oxidase reaction, which had higher flux ranges for the N2 model over the WT model (contrary to depressed metabolism in the initial). Online databases revealed that this reaction was not included in several other E. coli models, which led us to the conclusion that it had to be removed.</p><p>After removing this reaction, we had to rerun all of our previous codes to update our figures.</p>"
+      }
+    ]
+  },
+  {
+    "when":"6/24/2015",
+    "what":[
+      {
+        "id":"J_exp8",
+        "lead":"Knockout Malate Oxidase",
+        "description":"After knocking out malate oxidase, Laura and I reran FBA codes for the WT and N2WM1788 models. Our updated max biomass and ATP values for the wild type model were 0.821233 and 3.155221, respectively. And for the nitrogen fixation model, 0.454531 and 3.155221, respectively. Our updated ATPmreq constraint was then set from 10.0 to 3.15. We also reran the flavodoxin scripts, and found that our max biomass value, which we derived from maximizing flux through the flavodoxin reaction (0.010442), was 0.4545. I continued rerunning the pyruvate codes with the malate oxidase knockout­ however, I was having some difficulty with running the codes to completion­ several errors kept popping up. I later found out that these issues were arising from available storage space in my terminal, which was later resolved after I consulted Tom.<table><tr><th>Original values (N2 outputs)</th><th>PDH</th><th>PFL</th><th>PDH and PFL</th></tr><tr><td>Max biomass: 0.454531</td><td>Flux range for PDH: 0 to 10,000</td><td>Flux range for PFL: 0 to 59.205</td><td>Flux range for POR5: ­9986.136 to 9.202</td></tr><tr><td>Max biomass: 0.454531</td><td>Flux range for PDH: 26.0981627712 to 10,000</td><td>Flux range for POR5: ­9964.701 to 9.202</td></tr><tr><td>Max biomass: 0.310129</td><td>Flux range for POR5: 24.575 to 24.588</td></tr></table>",
+        "result":"<table><tr><th>Original values (N2 outputs)</th><th>PDH</th><th>PFL</th><th>PDH and PFL</th></tr><tr><td>Max biomass: 0.454531</td><td>Flux range for PDH: 0 to 10,000</td><td>Flux range for PFL: 0 to 59.205</td><td>Flux range for POR5: ­9986.136 to 9.202</td></tr><tr><td>Max biomass: 0.454531</td><td>Flux range for PDH: 26.0981627712 to 10,000</td><td>Flux range for POR5: ­9964.701 to 9.202</td></tr><tr><td>Max biomass: 0.310129</td><td>Flux range for POR5: 24.575 to 24.588</td></tr></table><p>Knocking out the pyruvate formate lyase (PFL) reaction from the model had very little effect on the flux ranges for the pyruvate synthase reaction. Even though the lower bound became slightly less negative, the reverse reaction was still highly more favorable than the forward. On the other hand, knocking out the pyruvate dehydrogenase (PDH) reaction made the lower bound value significantly less negative, discouraging the conversion of acetyl­coA into pyruvate. For both the PDH and PFL individual knockouts, the biomass value did not change, which was expected given the corresponding reaction was producing like­products. Also, knocking out each of the individual reactions affected the directionality of the corresponding reaction­ now only in the forward direction (favored production of acetyl­coA). When knocking out both the PDH and PFL reactions, the max biomass value decreased by a factor of roughly 32%. So even though the flux ranges were only in the forward direction for the double knockout, cellular growth was compromised as a result.</p><p>Even though knocking out the PDH reaction seemed favorable when compared to the existing N2 WM1788 model, literature reveals that the removal of this reaction is associated with diminished cell growth, resulting from a buildup of organic acids. Therefore, we can not perform either of these knockouts.</p>"
+      }
+    ]
+  },
+  {
+    "when":"6/26/2015",
+    "what":[
+      {
+        "id":"J_exp9",
+        "lead":"Checking directionality",
+        "description":"I began comparing the FVA outputs for maximizing biomass and maximizing flux through the flavodoxin reaction. I was interested in identifying which reactions changed directionality with the addition of this reaction. Compared to our original FVA outputs (before knocking out malate oxidase), which detailed some reactions with variations of up to 1.0 × 101 in flux ranges, these updated figures only had variations of up to 1.0 × 10­2. So even though almost 1,000 reactions in the model did have different bound values, these differences were incredibly slight. I was also to identify 14 reaction whose directionality changed upon the addition of the flavodoxin reaction­ I included reactions that had an upper/lower bound of zero that then went in the positive/negative direction.",
+        "result":" These reactions include:<p>GLYCLTtex (glycolate transport via diffusion (extracellular to periplasm)):<br>1.0 glyclt_e <=> 1.0 glyclt_p<br>PG181abcpp (phosphatidylglycerol transport via ABC system (n­C18:1, periplasm)):<br>1.0 h2o_c + 1.0 pg181_c + 1.0 atp_c ­> 1.0 pi_c + 1.0 h_c + 1.0 adp_c + 1.0 pg181_p<br>PGPP181 (phosphatidylglycerol phosphate phosphatase (n­C18:1)): <br>1.0 h2o_c + 1.0 pgp181_c ­> 1.0 pi_c + 1.0 pg181_c <br>PG161abcpp (phosphatidylglycerol transport via ABC system (n­C16:1, periplasm)):<br>1.0 h2o_c + 1.0 pg161_c + 1.0 atp_c ­> 1.0 pg161_p + 1.0 pi_c + 1.0 h_c + 1.0 adp_c<br>FE2tex (iron (II) transport via diffusion (extracellular to periplasm)):<br>1.0 fe2_e <=> 1.0 fe2_p<br>PG160abcpp (phosphatidylglycerol transport via ABC system (n­C16:0, periplasm)):<br>1.0 h2o_c + 1.0 pg160_c + 1.0 atp_c ­> 1.0 pg160_p + 1.0 pi_c + 1.0 h_c + 1.0 adp_c<br>FACOAE140 (fatty­acid­CoA thioesterase (tetradecanoate)):<br>1.0 h2o_c + 1.0 tdcoa_c ­> 1.0 coa_c + 1.0 ttdca_c + 1.0 h_c<br>PPK2r (polyphosphate kinase):<br>1.0 ppi_c + 1.0 atp_c <=> 1.0 pppi_c + 1.0 adp_c<br>AACPS1 (acyl­[acyl­carrier­protein] synthetase (n­C14:0)):<br>1.0 ACP_c + 1.0 ttdca_c + 1.0 atp_c ­> 1.0 ppi_c + 1.0 amp_c + 1.0 myrsACP_c<br>MG2t3_2pp (magnesium (Mg+2) transport in/out via proton antiport (periplasm)):<br>2.0 h_c + 1.0 mg2_p <=> 1.0 mg2_c + 2.0 h_p<br>ZN2tpp (zinc transport in via permease (no H+)):<br>1.0 zn2_p ­> 1.0 zn2_c<br>MN2tpp (manganese transport in via permease (no H+)):<br>1.0 mn2_p ­> 1.0 mn2_c<br>FE2tpp (iron (+2) transport in via permease (no H+)):<br>1.0 fe2_p ­> 1.0 fe2_c<br>NI2tpp (nickel (+2) transport in via permease (no H+)):<br>1.0 ni2_p ­> 1.0 ni2_c</p>"
+      }
+    ]
+  },
+  {
+    "when":"6/29/2015",
+    "what":[
+      {
+        "id":"J_exp10",
+        "lead":"Continue flavadoxin comparision",
+        "description":"I continued with my comparisons of the FVA outputs for the max biomass vs. max flavodoxin codes.",
+        "result":"I was able to identify 3 reactions that changed directionality (***I clarified the difference in a reaction being essential to being both essential and changing directionality with Tom. I wanted to correct these errors from my earlier reports on 6/26) The 3 reactions that changed directionality were FE2tex (extracellular to periplasm), PPK2r (polyphosphate kinase), and MG2t3_2pp ((Mg2+) ABC transporter (uptake, periplasm). These reactions changed from carrying flux in the negative and positive direction at max biomass to only carrying flux in the positive direction at max flavodoxin, with the exception on MG2t3_2pp (went to only negative).For the remaining essential reactions, they all went from carrying no flux to carrying flux in the positive direction at max biomass, to only carrying flux in the positive direction at max flavodoxin. After consulting with Tom and Laura, we had no conclusive feedback from these comparisons, but planned on continuing to review them following our meeting with iGem."
+      },
+      {
+        "id":"J_exp11",
+        "lead":"Maximizing ATP",
+        "description":"Laura and I also began running FVA codes at max ATP, and then comparing those outputs to our existing max biomass outputs.",
+        "result":"Even though we identified 976 reactions that changed directionality, 220 of those being non­transporter reactions (independent of ATP cell transport), the slight changes in flux ranges led up to the conclusion that the model is already ATP­limited."
+      }
+    ]
+  },
+  {
+    "when":"6/30/2015",
+    "what":[
+      {
+        "id":"J_exp12",
+        "lead":"Reporting to Igem",
+        "description":"Overview­: Laura and I finished up comparing the FVA outputs for the N2 WM1788 model at max biomass vs. max flavodoxin, but we had no conclusive feedback to report to iGem. Following my updates on the pyruvate knockouts, we reported to Cheryl that there is a potential to remove pyruvate dehydrogenase from the model. But we would need to counterattack any additional buildup of pyruvate from this knockout. We surmised that pushing flux through the pyruvate synthase reaction, and thus maximizing the production of flavodoxin, could account for any compromised cell growth.",
+        "result":"The WashU branch was in the process of reworking the existing model to account for non recognition of certain promoters by E coli. These changes did not affect the WM1788 model that we are working with, given the nitrogen fixation reactions already account for any discrepancies. Laura and I completed all of our weekly tasks at the time, and were only responsible for summarizing our results and sending them to Cheryl. In addition to my reports, Tom, Laura, and I came to the conclusion that the pyruvate dehydrogenase reaction can potentially be removed from the model if we account for the build­up of pyruvate in the cell as a result. One way to counterattack this build­up of pyruvate, which will be converted into lactic acid and compromise cell growth/energy, is to push flux through the pyruvate synthase reaction and maximize the production of flavodoxin reductase. This will expend the excess pyruvate concentrations."
+      }
+    ]
+  },
+  {
+    "when":"7/2/2015",
+    "what":[
+      {
+        "id":"J_exp13",
+        "lead":"Try to maximize ATP",
+        "description":"7/2­ Laura and I began running FVA codes for maximizing ATP. We compared these outputs to the max biomass outputs, which we used from our previous flavodoxin trials.",
+        "result":"We noticed that most of the reactions whose flux ranges changed by more than 0.001 also changed directionality. We also noticed that many reactions at max ATP had lower bounds that were more positive than their upper bounds. We treated these reactions as if their reaction bounds were reversed. For example, instead of reading the reaction bounds at max ATP for XYLI2 as 1.44E­07 to ­5.893E­7, we read it as ­5.893E­7 to 1.44E­07. A majority of reactions that changed directionality were transporter reactions. Because ATP is indirectly involved with transporting proteins and sugars into the cell, it would make sense as to why maximizing its production would potentially alter the directionality of transporter reactions. This is why we only reported non­transporter reactions that changed directionality, which still consisted of roughly 220 reactions. Of the non­transporter reactions we identified, we only took those reactions whose flux ranges varied by more than 0.005 into account. Reactions that varied by less than 0.005 we regarded as essentially having no change in flux. Analyzing a list this complex is incredibly tedious and would not reveal anything about the effects of maximizing ATP on the model. There are too many factors to take into account. However, our greater difference in flux ranges was 0.02, so there was no need to do a thorough analysis of the data comparisons."
+      }
+    ]
+  },
+  {
+    "when":"7/6/2015",
+    "what":[
+      {
+        "id":"J_exp14",
+        "lead":"Analysis of high delta flux reactions",
+        "description":"Laura and I did a quick analysis of the 317 nonoverlapping reactions which change by more than 0.001 between the N2 fixing and WT WM1788 models. We each generated spreadsheets detailing the number of nonoverlapping reactions in each metabolic system/subsystem, what percentage of the total they make up, and what was the greatest change for each system. Overall, amino acid metabolism had the highest number of changing reactions (78), but the greatest change was only 0.637. Membrane transport, exchange, and inorganic ion transport only made up roughly 15% of changing reactions, but had the largest gap in flux ranges (14.6). We also started brainstorming about potential routes to go down, given we were wrapping up our flavodoxin and ATP analyses. Laura proposed looking more closely at dependence of the model on ATP, given flavodoxin, by contrast, is only involved in a handful of reactions. We started compiling a list of the top 10 reactions that produce/consume ATP. I personally was responsible for identifying consummation reactions. Initially I generated an excel file of reactions that only included ATP, and from there I identified which reactions had the most positive flux ranges, given ATP almost always appears as a reactant in the model."
+      }
+    ]
+  },
+  {
+    "when":"7/7/2015",
+    "what":[
+      {
+        "id":"J_exp15",
+        "lead":"Igem meeting consequences",
+        "description":"In our meeting with iGem, Laura and I reported that the model is ATP­limited, a conclusion that we drew from our max biomass vs. max ATP analyses. We also shared some of the main reactions that either produce or consume ATP, and identified that a majority of these reactionsare apart of the carbon metabolism system. After consulting with Tom, and as a step moving forward, we agreed upon knocking out each individual gene from the model to observe its effect on FBA. Him and Maggie also suggested adding additional metabolites in the model, potentially aiding cell growth. Laura and I decided to divvy up these tasks, with her taking the former and me the latter. My experience with python and gams coding is very limited, so I took it upon myself to begin with reviewing the existing templates that Maggie provided at the beginning ofWeek 1. With the help of a python syntax guide, I was able to get a feel for how to generateoutputs files that can then be used to run FBA and FVA."
+      }
+    ]
+  },
+  {
+    "when":"7/8/2015",
+    "what":[
+      {
+        "id":"J_exp16",
+        "lead":"Figuring out Overexpression",
+        "description":"I continued reviewing my existing python and gams to come up with a way to overexpress each of the metabolites in the model. Tom suggested created a “dummy” transporter reaction in my existing python code, which would carry each individual metabolite into the cytoplasm. I decided to take the list of metabolites already defined in the code and generate a new list which only included metabolites with cytoplasm compartments (Tom and I eventually realized that these metabolites are the only ones we are interested in given we are only concerned with “dummy” exchange reactions). With time and effort, I was finally able to generate a new list entitled metname. And from this list, after defining the new metabolite ids as exchange reactions, I was also to make new sij.txt, rxn.txt, and rxntype.txt output files."
+      }
+    ]
+  },
+  {
+    "when":"7/9/2015",
+    "what":[
+      {
+        "id":"J_exp17",
+        "lead":"Recalculating with new Metabolites",
+        "description":"After compiling my new metabolite input files, I started tweaking with the max biomass code that Laura and I have been using to run FBA. Other than including these additional files in the code, I also included a loop statement, which iteratively runs through each metabolite. The data generated from each loop was then placed in an output file, which included max biomass, max ATP, and max flavodoxin.",
+        "result":"Initially I set my max biomass constraint to the max biomass determined from running the code. However, setting it to this parameter overconstrained my output file. For example, only 9 of the metabolites had maximum ATP values other than the ATPmreq (3.15), and only 4 of them produced some amount of flavodoxin (all other metabolites produced none). Tom suggested setting the constraint to the original N2 WM1788 max biomass to see if I would get a wider range of figures. Sure enough, there was a much more diverse set of outputs, and almost all of the metabolites produced flavodoxin."
+      }
+    ]
+  },
+  {
+    "when":"7/10/2015",
+    "what":[
+      {
+        "id":"J_exp18",
+        "lead":"Carbon Constraints",
+        "description":"In order to standardize my outputs, and make any viable recommendations to the UWash team for improving the model, Tom recommended that I constrain the amount of substrate in each exchange reaction. And to do so by the number of carbon molecules in each metabolite. We used glucose as a template, and set the supply at 60 (half the amount supplied by the 6 carbon atoms in glucose (20 per molecule)). I also compressed the list of exchange reactions to only include those metabolite who have at least one carbon atom. We planned on dividing the supply by the number of carbon atoms in each metabolite, so dividing by zero carbon atoms would result in computational errors. It took some time reformatting my input files to only include these carbon­containing metabolites, and I encountered several programming issues along the way. For example, I originally only updated the input file that regulates my substrates, and this resulted in flux outputs that were significantly larger than expected. I’m still in the process of readjusting the parameters in the code to account for the addition of these exchange reactions."
+      }
+    ]
+  },
+  {
+
+  }
+]

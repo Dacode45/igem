@@ -1,0 +1,29 @@
+[
+  {
+    "when":"6/1/2015",
+    "what":[
+      {
+        "id":"M_exp1",
+        "same_as":"B_exp1"
+      }
+    ]
+  },
+  {
+    "when":"6/2/2015",
+    "what":[
+      {
+        "id":"M_exp2",
+        "same_as":"B_exp2"
+      }
+    ]
+  },
+  {
+    "when":"6/3/2015",
+    "what":[
+      {
+        "id":"M_exp3",
+        "same_as":"B_exp3"
+      }
+    ]
+  }
+]

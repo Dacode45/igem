@@ -11,7 +11,7 @@
         "steps":[
           {"what":"25 ml of each culture were transferred into 500 mL of LB"},
           {"what":"-These flasks were then grown at 37 deg C, 250 rpm for 1 hour, 30 min in incubator"},
-          {"what":"Measure absorbance", "results":"Cuv1-.1055, Cuv2-.1084"},
+          {"what":"Measure absorbance", "result":"Cuv1-.1055, Cuv2-.1084"},
           {"what":"After absorbances were measured, cultures were added to ice bucket and allowed to cool for 15 minutes."},
           {"what":"-Centrifuge bottles were centrifuged for 25 min. at 4 deg. "},
           {"what":"After centrifuge, bottles were taken to cold room",

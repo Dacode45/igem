@@ -10,7 +10,8 @@ File is structured like this
  "what":[//Array of stuff done that day
  {
  "lead"
-  "id"
+  "id",
+  "same_as":"id of journal entry it is the same as"
   "group":"same group as this experiment"
   "from" //if none is given assume previous experiment
   "goto"
