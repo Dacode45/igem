@@ -16,6 +16,7 @@
   background-color: rgba(255, 255, 255, 0);
 }
 
+
 #igemLogo{
   height: 25px;
   width: 25px;
@@ -355,6 +356,7 @@ section h2.section-heading {
     margin-top: 0;
     margin-bottom: 15px;
     font-size: 40px;
+    border-bottom: 0;
 }
 
 section h3.section-subheading {
