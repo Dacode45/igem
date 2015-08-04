@@ -988,3 +988,7 @@ background-image: url("http://2015.igem.org/wiki/images/8/8a/Sigma-Aldrich_Logo.
     min-width: 100%;
     min-height: 100%;
   }
+
+.tooltip{
+  z-index: : 50000;
+}
