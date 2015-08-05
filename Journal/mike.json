@@ -25,5 +25,73 @@
         "same_as":"B_exp3"
       }
     ]
+  },
+  {
+    "when":"6/4/2015",
+    "what":[
+      {
+        "id":"M_exp4",
+        "same_as":"B_exp4"
+      }
+    ]
+  },
+  {
+    "when":"6/5/2015",
+    "what":[
+      {
+        "id":"M_exp5",
+        "same_as":"B_exp6"
+      }
+    ]
+  },
+  {
+    "when":"6/8/2015",
+    "what":[
+      {
+        "id":"M_exp6",
+        "lead":"Prepare Primeres for PCR",
+        "type":"P",
+        "steps":[
+          "Add recommended high-pure molecular water to suspend primers to 100 micromolar",
+          "Vortex"
+        ]
+      },
+      {
+        "id":"M_exp7",
+        "lead":"Preparting solutions for PCR",
+        "type":"P",
+        "steps":[
+          "Buffer (red cap), DMSO, dNTP’s, polymerase, primers (F,R), high pure molecular water",
+          "Buffer needs to thaw, polymerase sits frozen",
+          {"what":"Calculate amount of each material needed, take into account number of PCR’s to be done (multiply)", "precaution":"Want each individual tube that goes in to have 50 microl"},
+          "Get two 50 ml microcentrifuge tubes (mcf tubes), one for DMSO rxn, one for rxn without DMSO",
+          "Add water first (should be different from DMSO tube to non-DMSO tube)",
+          "Add 4 microl of DMSO per rxn if needed",
+          "Add 10 microl of buffer per rxn",
+          "Add 1 microl of dNTP’s per rxn",
+          "Add 2.5 microl of forward primer per rxn",
+          "Add 2.5 microl of reverse primer per rxn",
+          "Add 1 microl of template DNA per rxn",
+          {"what":"Add 2.5 microl of phusion polymerase", "precaution":"-Do not keep out of freezer more than 15 min. -Do not put tip of micropipetter down into fluid, slide along side"},
+          {"what":"Put into thermocycler on given temp.", "precaution":"DMSO should be used for larger constructs and should be put at temp. of 4 degrees C lower than rxn without DMSO, but Ryan says don’t worry about it"}
+
+        ]
+      },
+      {
+        "id":"M_exp8",
+        "lead":"Cell Transformation",
+        "from":"M_exp3",
+        "description":"Refer to 6/3/2015 for full procedure",
+        "steps":[
+          "Time constant of 5.1 ms",
+          "Put in at 4:32 to be taken out at 5:32"
+        ]
+      },
+      {
+        "id":"M_exp9",
+        "same_as":"B_exp9"
+      }
+    ]
   }
+
 ]

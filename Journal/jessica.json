@@ -185,6 +185,160 @@
     ]
   },
   {
-
+    "when":"7/13/2015",
+    "what":[
+      {
+        "id":"J_exp19",
+        "lead":"Carbon Overview",
+        "description":"Last week, I started looking at the effects of adding supplemental metabolites to the WM1788 N2 fixing model. After creating a set of exchange reactions, and regulating the amount of substrate being imported by each reaction, I was able to generate max biomass, max ATP, and max flavodoxin outputs. We normalized our data by the number of carbons in each supplemented metabolite. This allowed the code to constrain our substrate by the number of additional carbon atoms supplied to the model. In my 7/10 journal, I mentioned that we used glucose as a template for regulating our substrate. I failed to mention why we used only 50%. I want to point out that we felt it was a good level to supplement growth. I was having some coding errors last Friday, and I realized that it was a formatting issue in one of my input files. I was still working through some technical issues by the end of the day. I also started working with Laura on our slides for the Monsanto powerpoint. Her and I wrote up a brief overview of FBA and FVA (refer to term sheet if unfamiliar with abbreviations), our general findings thus far, and current projects we are working on."
+      }
+    ]
+  },
+  {
+    "when":"7/14/2015",
+    "what":[
+      {
+        "id":"J_exp20",
+        "lead":"iGEM meeting and Monsanto Slides",
+        "description":"In our meeting with iGem, Laura and I gave a brief summary on each of our projects, specifically what we’re doing and what our objectives are. After the meeting, we updated our Monsanto slides from Tom’s recommendations (mostly visual layout edits). I continued editing my GAMS code from the updates I made in my input files (only include carbon-containing metabolites). "
+      }
+    ]
+  },
+  {
+    "when":"7/15/2015",
+    "what":[
+      {
+        "id":"J_exp21",
+        "lead":"Compile and Run?",
+        "description":"After double checking my GAMS parameters, variables, and input files, I was finally able to run my code and generate flux outputs. ",
+        "result":"While I was reading through them, I realized that some of my carbon-number figures were off. I originally generated a carbon number input file from the iAF model. Specifically, I ran a python code that identifies the number of carbon atoms in each metabolites chemical formula. However, I realized that some of the metabolites were defined differently in the iAF model than in the WM1788 model. I had to manually go through the model and update any figures that were not matching up. "
+      }
+    ]
+  },
+  {
+    "when":"7/16/2015",
+    "what":[
+      {
+        "id":"J_exp22",
+        "lead":"Finding Metabolites",
+        "description":"After tediously updating my carbon number input file, I reran my GAMS code and collected my updated outputs in an excel file. Tom recommended I generate a scatter plot of max biomass vs. max ATP to see if I could identify any observable trends. Him and I noticed a portion of the plot that followed a rigid linear trend. Of the metabolites that were along this trend line, one was glucose, our models primary source of energy. Because our objective was to look into supplemental metabolites/energy sources, specifically those with higher flux values than glucose, we were only interested in those metabolite above glucose on the trend line. This consisted of 73 metabolites.",
+        "result":"Given several metabolites in the model are either intermediates or impractical to isolate and provide the cell, I started doing a literature check on each one to determine its candidacy. Even though I only ruled out a handful of metabolites that are intermediates, all of the remaining metabolites were either phosphorylated or sugars, specifically glucose derivatives. We were only interested in these six sugars, which include maltotriose, maltotetraoise, maltose, maltopentaose, maltohexaose, and maltoheptaose. "
+      }
+    ]
+  },
+  {
+    "when":"7/17/2015",
+    "what":[
+      {
+        "id":"J_exp23",
+        "lead":"Writing a summary",
+        "description":"I completed my summary of metabolite additives for Cheryl, including a project overview, the general procedure I followed, constraints and reasons for such, and findings. We believe that the addition of these sugars, providing additional sources of energy, can promote cell growth and activity. I also added mine and Laura’s slides to the Monsanto powerpoint. "
+      }
+    ]
+  },
+  {
+    "when":"7/21/2015",
+    "what":[
+      {
+      "id":"J_exp24",
+      "lead":"Meeting with iGEM and Succinate miracle?",
+      "description":"Laura and I summarized the results of individual trials in our meeting with iGem. After mentioning the 6 sugars I identified from the addition of our metabolite exchange reactions, one member of the WashU team mentioned hearing of an outside branch having success with replacing glucose as a sole energy source with succinate. From this, I started transitioning on to a new topic, specifically other carbon-containing substrates that can replace glucose in our model. Tom also sat down with Dr. Maranas, who would orchestrate funding for our trip to the Jamboree. Even though Dr. Maranas oversees student research in our branch of the department, he does not play a direct role in the work Laura and I do. To verify that her and I are making productive use of our time here, he requested that each of us write a report detailing our project with iGem, along with our findings and future objectives. "
+      }
+    ]
+  },
+  {
+    "when":"7/22/2015",
+    "what":[
+      {
+        "id":"J_exp25",
+        "lead":"Reporting Results",
+        "description":" I began writing my report for Dr. Maranas, detailing the motive behind our work here and our ultimate goal of giving plants the ability to produce their own nitrogen. I also mentioned that our branch specifically oversees genome-scale modeling to help guide potential genetic interventions and facilitate nitrogen fixation in E. coli. From our model, we can use FBA to determine the flow of metabolites, or flux, through the network. And from gene knockouts/overexpressions, we can identify available pathways for producing/consuming a metabolite of interest, such as ATP.. As for our results, I focused primarily on how ATP and reduced flavodoxin are the limiting factors in our nitrogenase reactions. Specifically, I mentioned how we attempted to maximize reduced flavodoxin by manipulating pyruvate metabolism. I also focused heavily on my recent work with the metabolite exchange reactions, and how we are looking for ways to help aid cell growth/activity. From this, I have begun looking into other carbon-containing substrates that can replace glucose as the model’s source carbon source. "
+      }
+    ]
+  },
+  {
+    "when":"7/23/2015",
+    "what":[
+      {
+        "id":"J_exp26",
+        "lead":"Writing Report",
+        "description":" I spent some time reviewing my report for Dr. Maranas- Tom is not allowed to edit any of the work Laura and I submit to him, so I wanted to make sure that all of the information I was relaying was accurate."
+      },
+      {
+        "id":"J_exp27",
+        "lead":"Checking out Succinate",
+        "description":"I started editing my codes to begin running an FBA analysis on replacing glucose with succinate as our model’s sole carbon source. However, after normalizing our substrate to the number of carbon atoms in succinate, 30 mmol/g DW hr succinate vs. 20 mmol/g DW hr glucose, the model proved infeasible. After consulting with Tom, he suggested looking into studies on E. coli growth on succinate to determine if any there are any additional parameters we need to account for, like the presence of another carbon source. "
+      }
+    ]
+  },
+  {
+    "when":"7/24/2015",
+    "what":[
+      {
+        "id":"J_exp28",
+        "lead":"Succinate + Fumarate < Glucose?",
+        "description":" I stumbled upon a few online studies that detailed pairing succinate and fumarate as  carbon sources for E. coli. Growth deficiency on succinate in our model, from my interpretation, has to do with the essentiality of two enzymes: succinate dehydrogenase and fumarate reductase. Fumarate is derived from the breakdown of glucose in the glycolysis pathway, so replacing glucose with succinate results in a deficiency of fumarate in the cell. I assumed that these two enzymes, which are responsible for promoting microbial metabolism and play an essential role in the citric acid cycle, can not catalyze cell activity if both succinate and fumarate are not at sufficient levels. When I added fumarate as an additional energy source, the model did experience some level of growth, but the max biomass value was only 0.269648 in comparison to 0.454531 for glucose. Tom recommended that I look into the pathway taken by succinate in E. coli determine if any transport reactions have been overlooked in our model. On a side note, I found one study that redirected the metabolism of glucose to succinate, and detailed increased succinate yields from increasing the expression of phosphoenolpyruvate carboxykinase and inactivating the glucose phosphoenolpyruvate- dependent phosphotransferase system. This resulted in increased ATP production and increased concentrations of phosphoenolpyruvate for carboxylation. Inactivating the pflB gene, which encodes pyruvate formate lyase, was also associated with increased succinate yields. However, the primary goal of this particular study was to increase the production of succinate, so I’m not yet sure if these same steps can be taken to maximize growth in our model. "
+      }
+    ]
+  },
+  {
+    "when":"7/27/2015",
+    "what":[
+      {
+        "id":"J_exp29",
+        "lead":"Reporting Succinate",
+        "description":"After relaying the information I found on succinate on Friday to Tom, him and I came to the conclusion that the lag in growth in E. coli on succinate makes having it as a sole carbon source disadvantageous."
+      },
+      {
+        "id":"J_exp30",
+        "lead":"OptKnock comes knocking",
+        "description":"While Laura continued running her double gene knockout code, Tom and Maggie mentioned a code called OptKnock. Optknock suggests a list of potential reaction knockouts to couple growth production with the production of a desired product, in our case max biomass and reduced flavodoxin, respectively. Biomass values will vary depending on the percent biolevel we set in our code (refer to 7/29 for more details). Laura and I spent some time reviewing a chapter on OptKnock to become more familiar with it’s structure and objectives. The goal of running this code is to provide another route for identifying potential knockouts in our model. "
+      }
+    ]
+  },
+  {
+    "when":"7/28/2015",
+    "what":[
+      {
+        "id":"J_exp31",
+        "lead":"Succinate could help Respiration",
+        "description":"During our meeting with iGem, Charlotte clarified that using succinate as a carbon source is meant to promote respiration in the cell. I want to note that prior to the meeting, I also ran FBA on our N2 model with both glucose and succinate as carbon sources. I found that my max biomass and max ATP figures were identical to my original nitrogen fixing figures (with glucose as the sole carbon source). However, increased respiration would not appear in FBA, so Maggie suggested running FVA and comparing flux ranges for reactions in the citric acid cycle. The citric acid cycle provides a pool of chemical energy from the oxidation of pyruvate, so changes in flux ranges for reactions associated with this subsystem would imply changes in cellular respiration. After running FVA with the addition of succinate, I found that a majority of reactions in this subsystem had altered flux ranges in comparison to their original flux values. However, these changes were incredibly slight- i.e. less than a factor of 1*10^-2."
+      }
+    ]
+  },
+  {
+    "when":"7/29/2015",
+    "what":[
+      {
+        "id":"J_exp32",
+        "lead":"Start working with OptKnock",
+        "description":" Laura and I began editing a OptKnock template that Maggie provided us. Some of these edits included our reaction input files and our ATP and percent biolevel constraints. We initially encountered some issues with getting our code to run, but we quickly identified them and were able to generate a list of potential double knockouts, which consisted of roughly 400 couples. At first glance, all of the double knockouts had the same max biomass and reduced flavodoxin levels. We set our percent biolevel to .9, so each double knockout had a max biomass value of 0.409 (.9 of 0.4545- i.e. our original max biomass value). We wanted to double check and see what effect these knockouts would have on max biomass and ATP levels in our model by running them through an iteration. Laura wrote a python code that splits a reaction input file into a series of coupled-knockouts, given our previous OptKnock output file only lists the couples without pairing them. She originally had to generate this code to run her gene knockouts, so all we really had to do was substitute in our new input file. While Laura edited her python code, I went ahead and ran OptKnock for triple reaction knockouts. "
+      }
+    ]
+  },
+  {
+    "when":"7/30/2015",
+    "what":[
+      {
+        "id":"J_exp33",
+        "lead":"Knockouts did not have expected Results",
+        "description":"After running our python code for both double and triple reaction knockouts, we found that none of the proposed knockouts from our OptKnock code were coupled with reduced flavodoxin. In other words, every knockout had the same max biomass and ATP level as our original nitrogen fixation model- i.e. without any knockouts. The only useful piece of information we drew from our outputs was that several reactions involved in pyruvate metabolism were included in the suggested knockouts. This would confirm some of our previous suggestions on increasing reduced flavodoxin production by manipulating pyruvate metabolism in the cell. "
+      }
+    ]
+  },
+  {
+    "when":"7/31/2015",
+    "what":[
+      {
+        "id":"J_exp34",
+        "lead":"Bug in Code, Rechecking Knockouts",
+        "description":"Laura and I sat down together to review her existing outputs from her double gene knockouts. We were finding that several of the gene couples were not matching up with their maximum biomass, ATP, and reduced flavodoxin figures. We did this by manually knocking out an example pair in the code she used to run her knockout iteration. After consulting with Maggie, we suspected that this was a result of the code not pausing after each loop in the iteration. This was causing some of the pairs to have mismatched data in the output file."
+      },
+      {
+        "id":"J_exp35",
+        "lead":"Summary for Website",
+        "description":" While Laura resolved these issues in her code, I began our modeling summary for the website. Laura and I felt that an introduction, associated methods, formulation, and results section were appropriate. Because Laura is still working on her python code, I decided to cover the first two sections and my results from the metabolite exchange reactions. "
+      }
+    ]
   }
 ]

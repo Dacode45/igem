@@ -178,7 +178,8 @@
           "-Put in combs",
           "-Tape side of tray",
           "-Pour agarose gel in tray",
-          "-Let gel cool for 1 hour"
+          "-Let gel cool for 1 hour",
+          "Run gels for 1 hour"
         ]
       }
     ]
@@ -190,6 +191,14 @@
         "id":"B_exp7",
         "lead":"prep sgRNA",
         "description":""
+      }
+    ]
+  },
+  {
+    "when":"6/9/2015",
+    "what":[
+      {
+
       }
     ]
   }

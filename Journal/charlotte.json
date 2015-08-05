@@ -454,5 +454,15 @@
                       }
 
                     ]
+                  },
+                  {
+                    "when":"6/17/2015",
+                    "what":[
+                      {
+                        "id":"C_exp26",
+                        "lead":"Confirm Inserts",
+                        "description":"Make 20 μL PCR reactions for plasmids purified yesterday (to attempt to confirm correct inserts)"
+                      }
+                    ]
                   }
                 ]
