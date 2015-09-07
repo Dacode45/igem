@@ -15,6 +15,7 @@
           {"what":"After absorbances were measured, cultures were added to ice bucket and allowed to cool for 15 minutes."},
           {"what":"-Centrifuge bottles were centrifuged for 25 min. at 4 deg. "},
           {"what":"After centrifuge, bottles were taken to cold room",
+
             "steps":[
               {"what":"Chilled 10% glycerol was added, 55 ml each, into each bottle","precaution":"It’s worth noting that % glycerol in each bottle is roughly 4.4%"},
               {"what":"70 Ml of water were added to each bottle"}

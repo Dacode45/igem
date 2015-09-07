@@ -994,3 +994,27 @@ background-image: url("http://2015.igem.org/wiki/images/8/8a/Sigma-Aldrich_Logo.
 .tooltip{
   z-index: : 50000;
 }
+
+.journal_nav{
+  max-height: 400px;
+  overflow: scroll;
+}
+
+@media (min-width: 979px) {
+  .journal_nav.affix-top {
+    position: relative;
+    top: 100px;
+  	margin-top:50px;
+
+  }
+
+  .journal_nav.affix {
+    position: fixed;
+    top:150px;
+    width:228px;
+  }
+}
+
+.affix,.affix-top {
+   position:static;
+}
