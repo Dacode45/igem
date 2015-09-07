@@ -340,5 +340,52 @@
         "description":" While Laura resolved these issues in her code, I began our modeling summary for the website. Laura and I felt that an introduction, associated methods, formulation, and results section were appropriate. Because Laura is still working on her python code, I decided to cover the first two sections and my results from the metabolite exchange reactions. "
       }
     ]
+  },{
+    "when":"8/3/15",
+    "what":[
+      {
+        "id":"J_exp36",
+        "lead":"Fixed another Bug",
+        "description":"8/3­ Laura regenerated outputs for her double­gene knockout code, but inconsistencies were still popping up in our data when we manually tested knockouts coupled with flavodoxin. We were finding that for non­infeasible knockouts, the maximum biomass, ATP, and reduced flavodoxin values were completely off from those in the iteration outputs. We finally were able to figure out that the code was coupling each gene with itself, resulting in several infeasible outputs. However, instead of skipping over these knockouts, the code outputted the previous set of output values, resulting in mismatched data. We resolved this issue but removing duplicate genes in our code."
+      }
+    ]
+  },
+  {
+    "when":"8/4/15",
+    "what":[
+      {
+        "id":"J_exp37",
+        "lead":"Work on Website Summary",
+        "description":"Following our meeting with iGem, Laura and I finalized our travels grants and began working on the modeling summary for our wiki page. We wanted to draw attention specifically to what genome­scale modeling is and what we’re hoping to accomplish using methods such as FBA (navigating potential genetic interventions to optimize cofactors of nitrogen­fixing in E. coli). Because most of our results were inconclusive, we wanted to focus on our discoveries with pyruvate metabolism, and how we can promote the production of reduced flavodoxin by redistributing flux through reactions involving pyruvate. We also included brief summaries of our recent work on metabolite exchange reactions and gene/reaction knockouts."
+      }
+    ]
+  },{
+    "when":"8/5/15",
+    "what":[
+      {
+        "id":"J_exp38",
+        "lead":"Work on Website summary",
+        "description":"Laura and I finalized the first draft of our wiki page, after reworking it to include more visuals and minimal text. Even though computational modeling is extensive, we tried to summarize key points in flow charts and supplement them with brief descriptions. Laura also collected all of the outputs for the double gene knockout code. Even though our outputs were finally starting to match up, we found, unfortunately, that any knockout coupled with flavodoxin outputted an infeasible model."
+      }
+    ]
+  },{
+    "when":"8/6/15",
+    "what":[
+      {
+        "id":"J_exp39",
+        "lead":"Review First Draft",
+        "description":"Laura and I sat down together and reviewed the completed first draft of our modeling summary. Considering Laura had to leave early, I finalized any remaining edits, such as redesigning our section on genome­scale modeling. We wanted to break up any big chunks of texts. Before Laura left, her and I also wrote up our section on computational modeling for the abstract. Given the length constraint, we focused primarily on what our goal was in using computational modeling to promote nitrogenase activity."
+      }
+    ]
+  },
+  {
+    "when":"8/7/15",
+    "what":[
+      {
+        "id":"J_exp40",
+        "lead":"Finished First draft",
+        "description":"I reviewed the final first draft of our wiki modeling page, and any edits that the WashU team made to our abstract."
+      }
+    ]
   }
 ]

@@ -15,191 +15,778 @@
           {"what":"After absorbances were measured, cultures were added to ice bucket and allowed to cool for 15 minutes."},
           {"what":"-Centrifuge bottles were centrifuged for 25 min. at 4 deg. "},
           {"what":"After centrifuge, bottles were taken to cold room",
-          "steps":[
-            {"what":"Chilled 10% glycerol was added, 55 ml each, into each bottle","precaution":"It’s worth noting that % glycerol in each bottle is roughly 4.4%"},
-            {"what":"70 Ml of water were added to each bottle"}
-            ]},
-          {"what":"-Bottles were placed back into centrifuge for another 256 minutes at 4 deg C-After centrifuge, bottles were taken to cold room once more"},
-          {"what":"Supernatant was drained", "steps":[
-            {"what":"10% glycerol was added to 4 tubes"},
-            {"what":"Roughly 15 mL were allotted to each tube"},
-            {"what":" Tubes were taken and centrifuged"}
-            ]},
-          {"what":"After centrifuge, conical tubes were taken to cold room", "steps":[
-            {"what":"Supernatant was drained"},
-            {"what":"1 mL of 10% glycerol was added to each tube, pellet allowed to resuspend"},
-            {"what":"Tubes were taken to centrifuge again, 3000 RPM @ 4deg C"}
-            ]}
-        ]
+            "steps":[
+              {"what":"Chilled 10% glycerol was added, 55 ml each, into each bottle","precaution":"It’s worth noting that % glycerol in each bottle is roughly 4.4%"},
+              {"what":"70 Ml of water were added to each bottle"}
+              ]},
+              {"what":"-Bottles were placed back into centrifuge for another 256 minutes at 4 deg C-After centrifuge, bottles were taken to cold room once more"},
+              {"what":"Supernatant was drained", "steps":[
+                {"what":"10% glycerol was added to 4 tubes"},
+                {"what":"Roughly 15 mL were allotted to each tube"},
+                {"what":" Tubes were taken and centrifuged"}
+                ]},
+                {"what":"After centrifuge, conical tubes were taken to cold room", "steps":[
+                  {"what":"Supernatant was drained"},
+                  {"what":"1 mL of 10% glycerol was added to each tube, pellet allowed to resuspend"},
+                  {"what":"Tubes were taken to centrifuge again, 3000 RPM @ 4deg C"}
+                  ]}
+                ]
 
-      }
-    ]
-  },
-  {
-    "when":"6/2/2015",
-    "what":[
-      {
-        "lead":"Designed program to find sgRNAs in Java,",
-        "id":"B_exp2",
-        "description":"Designed program to find sgRNAs in Java, key feature is finding the PAM sequence",
-        "why":"Need to find a place for dCAS9 to bind"
-      }
-    ]
-  },
-  {
-    "when":"6/3/2015",
-    "what":[
-      {
-        "lead":"More electrocompetent cell prep",
-        "description":"EC cell prep for Strains: MG1655 and JM109",
-        "type":"P",
-        "id":"B_exp3",
-        "steps":[
-          {"what":"Two culture were incubated overnight"},
-          {"what":"-In the morning, 26 mL of culture were placed into 500 mL of LB"},
-          {"what":"-These flasks were incubated for an hour beginning at 10:34"},
-          {"what":"-Both flasks were taken out around 11:35 P.M."},
-          {"what":"-Optical measurements were performed on both colonies using a 10x dilution factor", "result":"i. The optical density of JM109 was 0.287 ii. The optical density of MG1655 was 0.39"},
-          {"what":"-JM109 went back to be incubated at 11:56 A.M."},
-          {"what":"-Optical measurement performed on JM109 once again", "result":"Optical density was 0.38"},
-          {"what":"    -Optical density for both strains was determined to be satisfactory -Thus, each flask was equally partitioned into two centrifuge bottles"},
-          {"what":"-Centrifuge bottles were left to sit for 20 minutes"},
-          {"what":"-After sitting for 30 minutes, bottles were centrifuged at 3000 RPM for 25 minutes"},
-          {"what":"-Upon centrifugation, supernatant was drained, pellet was resuspended in 125 mL of water"},
-          {"what":"    -Bottles were centrifuged again for another 25 minutes"},
-          {"what":"-Upon centrifugation, supernatant was drained and 55 mL of 10% glycerol were added to each bottles"},
-          {"what":"    -Pellet was resuspended in each bottles"},
-          {"what":"    -After resuspension, each bottles was partitioned into 4 15 mL conical tubes"},
-          {"what":"    -Conical tubes were centrifuged under same conditions"},
-          {"what":"    -From a combined conical tube, 40uL aliquots were created for JM109 and MG1655"},
-          {"what":"    -These aliquots were stored in -80 deg C conditions Electroporation"},
-          {"what":"    -We transformed MG1655 and WM1788"},
-          {"what":"-To do this, we obtained copies of pSL2397 plasmids"},
-          {"what":"    -2.5 uL of this plamsmid DNA was collected and mixed with pipettor"},
-          {"what":"-After this, the plasmid DNA was inserted into a cuvette"},
-          {"what":"    -The entirety of the aliquot containing the E.Coli strains was dumped into the cuvette"},
-          {"what":"    -The plasmid was shocked into the strain for 5.5s"},
-          {"what":"    -Strain was taken out and put into conical tube for an hour"},
-          {"what":"    -The same process was repeated with MG1655 strain"}
-        ]
-      }
-    ]
-  },
-  {
-    "when":"6/4/2015",
-    "what":[
-      {
-        "lead":"-We finalized sgRNA sequences ",
-        "from":"B_exp2",
-        "description":"-In picking sgRNA sequences, we determined that sequences close to the beginning of the strand would be the most effective -Using a computer program, we ran gene sequences through and found the most effective sgRNA sequences i. Java program that predicates itself on finding the PAM sequence",
-        "type":"D",
-        "id":"B_exp4"
-      },
-      {
-        "lead":"Picked Colonies",
-        "from":"B_exp3",
-        "id":"B_exp5",
-        "description":"Picked colonies from yesterday's prep"
-      }
-    ]
-  },
-  {
-    "when":"6/5/2015",
-    "what":[
-      {
-        "id":"B_exp6",
-        "lead":"Preparation of Frozen Stock",
-        "description":"Store Cells from yesterday",
-        "type":"P",
-        "steps":[
-          {"what":"-Cells were taken from picked colonies on June 4"},
-          {"what":"-We took 500 uL of that culture, added it to 500 uL of 30% glycerol solution, then place din -80k deg C conditions."},
-          {"what":"-We then prepared 30% glycerol solution for later use"},
-          {"what":"-Next, we prepared the CRIPSR/dCas9 plasmid for PCR"},
-          {"what":"-To do this, we separated the plasmid from its host bacterium"},
-          {"what":"-First, we took the bacterial culture and centrifuged it"},
-          {"what":"-Then, we discarded LB growing solution that was supernatant"},
-          {"what":"-Next, we resuspended bacterial cells in water"},
-          {"what":"-Buffer to lyze the cell was added"},
-          {"what":"-Immediately after, cold neutralization buffer was added to neutralize the process"},
-          {"what":"-Then, tubes were centrifuged at 16000 g for 43 minutes"},
-          {"what":"-Supernatant was transferred to a separation column"},
-          {"what":"-These columns were then centrifuged for 30 seconds"},
-          {"what":"-The flow through was discarded and the colonies were placed back into the collecting tubes"},
-          {"what":"-200 uL of Endo-Wash Buffer were added to each tubes"},
-          {"what":"-Each tubes was centrifuged under same conditions for 30 seconds"},
-          {"what":"-Upon centrifugation, 400 uL of Zappy’s buffer were added to each tube"},
-          {"what":"-Each tube was centrifuged for another 2 minutes"},
-          {"what":"-Upon centrifugation, high pure molecular water was added to each column and each column sat for two minutes"},
-          {"what":"-Each column was centrifuged, same condition, for another 2 minutes"},
-          {"what":"-After this step, dissolved plasmid DNA had collected on bottom of column"},
-          {"what":"-Each column was taken to spectrometer to determine concentration and purity"},
-          {"what":"-Concentrations and purities, in order", "result":"<table><tr><th>Tube</th><th>Conc (ng/uL)</th><th>Purity</th></tr><tr><td>Tube 1</th><td>113.9</td><td>1.87</td></tr><tr><td>Tube 2</th><td>127.1</td><td>1.86</td></tr><tr><td>Tube 3</th><td>95.6</td><td>1.79</td></tr><tr><td>Tube 4</th><td>82.7</td><td>1.86</td></tr></table>"},
-          {"what":"After that, each DNA sample was placed into freezer to be stored"}
-        ]
-      }
-    ]
-  },
-  {
-    "when":"6/8/2015",
-    "what":[
-      {
-        "id":"B_exp7",
-        "lead":"prep sgRNA",
-        "description":"Today, we performed Inverse PCR reaction to prep sgRNA sequences",
-        "type":"P",
-        "steps":[
-          {"what":"-First, added recommended high-pure molecular water to suspend primers to 100 uM concentrations"},
-          {"what":"-Get out two 50 mL microcentrifuge tubes, one for the DMSO and for without DMSO"},
-          {"what":"-Add water first", "precaution":" (should be different from DMSO tube to non-DMSO tube)"},
-          {"what":"-Add 4 uL of DMSO per tube if needed"},
-          {"what":"-Add 10 uL of buffer per reaction"},
-          {"what":"-Add 1 uL of dNTPs per reaction"},
-          {"what":"-Add 2.5 uL of primer per reaction"},
-          {"what":"-Add 1 uL of template DNA per reaction"},
-          {"what":"Add 0.5 uL of phusion polymerase"},
-          {"what":"-Put into the thermocycler based on given temp","precaution":"DMSO should be used for large DNA strands and should be put at temperature 4 deg C lower than without it, but Ryan claims that you don’t have to worry about it"}
-        ]
-      },
-      {
-        "id":"B_exp8",
-        "lead":"transformed DH10B with pSL2397",
-        "from":"B_exp3"
-      },
-      {
-        "id":"B_exp9",
-        "lead":"Prepare Gel",
-        "description":"We prepared a gel for DNA purification",
-        "type":"P",
-        "steps":[
-          "-Mix 1g of Agarose with 100 mL of TAE buffer.",
-          {"what:":"Microwave for 1:30", "precaution":"Note that you can cool the mixture with cold, running water"},
-          "-Add 5 uL of cybersafe (5uL/100 mL of buffer) once mixture cools",
-          "-Put in combs",
-          "-Tape side of tray",
-          "-Pour agarose gel in tray",
-          "-Let gel cool for 1 hour",
-          "Run gels for 1 hour"
-        ]
-      }
-    ]
-  },
-  {
-    "when":"6/8/2015",
-    "what":[
-      {
-        "id":"B_exp7",
-        "lead":"prep sgRNA",
-        "description":""
-      }
-    ]
-  },
-  {
-    "when":"6/9/2015",
-    "what":[
-      {
+              }
+            ]
+          },
+          {
+            "when":"6/2/2015",
+            "what":[
+              {
+                "lead":"Designed program to find sgRNAs in Java,",
+                "id":"B_exp2",
+                "description":"Designed program to find sgRNAs in Java, key feature is finding the PAM sequence",
+                "why":"Need to find a place for dCAS9 to bind"
+              }
+            ]
+          },
+          {
+            "when":"6/3/2015",
+            "what":[
+              {
+                "lead":"More electrocompetent cell prep",
+                "description":"EC cell prep for Strains: MG1655 and JM109",
+                "type":"P",
+                "id":"B_exp3",
+                "steps":[
+                  {"what":"Two culture were incubated overnight"},
+                  {"what":"-In the morning, 26 mL of culture were placed into 500 mL of LB"},
+                  {"what":"-These flasks were incubated for an hour beginning at 10:34"},
+                  {"what":"-Both flasks were taken out around 11:35 P.M."},
+                  {"what":"-Optical measurements were performed on both colonies using a 10x dilution factor", "result":"i. The optical density of JM109 was 0.287 ii. The optical density of MG1655 was 0.39"},
+                  {"what":"-JM109 went back to be incubated at 11:56 A.M."},
+                  {"what":"-Optical measurement performed on JM109 once again", "result":"Optical density was 0.38"},
+                  {"what":"    -Optical density for both strains was determined to be satisfactory -Thus, each flask was equally partitioned into two centrifuge bottles"},
+                  {"what":"-Centrifuge bottles were left to sit for 20 minutes"},
+                  {"what":"-After sitting for 30 minutes, bottles were centrifuged at 3000 RPM for 25 minutes"},
+                  {"what":"-Upon centrifugation, supernatant was drained, pellet was resuspended in 125 mL of water"},
+                  {"what":"    -Bottles were centrifuged again for another 25 minutes"},
+                  {"what":"-Upon centrifugation, supernatant was drained and 55 mL of 10% glycerol were added to each bottles"},
+                  {"what":"    -Pellet was resuspended in each bottles"},
+                  {"what":"    -After resuspension, each bottles was partitioned into 4 15 mL conical tubes"},
+                  {"what":"    -Conical tubes were centrifuged under same conditions"},
+                  {"what":"    -From a combined conical tube, 40uL aliquots were created for JM109 and MG1655"},
+                  {"what":"    -These aliquots were stored in -80 deg C conditions Electroporation"},
+                  {"what":"    -We transformed MG1655 and WM1788"},
+                  {"what":"-To do this, we obtained copies of pSL2397 plasmids"},
+                  {"what":"    -2.5 uL of this plamsmid DNA was collected and mixed with pipettor"},
+                  {"what":"-After this, the plasmid DNA was inserted into a cuvette"},
+                  {"what":"    -The entirety of the aliquot containing the E.Coli strains was dumped into the cuvette"},
+                  {"what":"    -The plasmid was shocked into the strain for 5.5s"},
+                  {"what":"    -Strain was taken out and put into conical tube for an hour"},
+                  {"what":"    -The same process was repeated with MG1655 strain"}
+                ]
+              }
+            ]
+          },
+          {
+            "when":"6/4/2015",
+            "what":[
+              {
+                "lead":"-We finalized sgRNA sequences ",
+                "from":"B_exp2",
+                "description":"-In picking sgRNA sequences, we determined that sequences close to the beginning of the strand would be the most effective -Using a computer program, we ran gene sequences through and found the most effective sgRNA sequences i. Java program that predicates itself on finding the PAM sequence",
+                "type":"D",
+                "id":"B_exp4"
+              },
+              {
+                "lead":"Picked Colonies",
+                "from":"B_exp3",
+                "id":"B_exp5",
+                "description":"Picked colonies from yesterday's prep"
+              }
+            ]
+          },
+          {
+            "when":"6/5/2015",
+            "what":[
+              {
+                "id":"B_exp6",
+                "lead":"Preparation of Frozen Stock",
+                "description":"Store Cells from yesterday",
+                "type":"P",
+                "steps":[
+                  {"what":"-Cells were taken from picked colonies on June 4"},
+                  {"what":"-We took 500 uL of that culture, added it to 500 uL of 30% glycerol solution, then place din -80k deg C conditions."},
+                  {"what":"-We then prepared 30% glycerol solution for later use"},
+                  {"what":"-Next, we prepared the CRIPSR/dCas9 plasmid for PCR"},
+                  {"what":"-To do this, we separated the plasmid from its host bacterium"},
+                  {"what":"-First, we took the bacterial culture and centrifuged it"},
+                  {"what":"-Then, we discarded LB growing solution that was supernatant"},
+                  {"what":"-Next, we resuspended bacterial cells in water"},
+                  {"what":"-Buffer to lyze the cell was added"},
+                  {"what":"-Immediately after, cold neutralization buffer was added to neutralize the process"},
+                  {"what":"-Then, tubes were centrifuged at 16000 g for 43 minutes"},
+                  {"what":"-Supernatant was transferred to a separation column"},
+                  {"what":"-These columns were then centrifuged for 30 seconds"},
+                  {"what":"-The flow through was discarded and the colonies were placed back into the collecting tubes"},
+                  {"what":"-200 uL of Endo-Wash Buffer were added to each tubes"},
+                  {"what":"-Each tubes was centrifuged under same conditions for 30 seconds"},
+                  {"what":"-Upon centrifugation, 400 uL of Zappy’s buffer were added to each tube"},
+                  {"what":"-Each tube was centrifuged for another 2 minutes"},
+                  {"what":"-Upon centrifugation, high pure molecular water was added to each column and each column sat for two minutes"},
+                  {"what":"-Each column was centrifuged, same condition, for another 2 minutes"},
+                  {"what":"-After this step, dissolved plasmid DNA had collected on bottom of column"},
+                  {"what":"-Each column was taken to spectrometer to determine concentration and purity"},
+                  {"what":"-Concentrations and purities, in order", "result":"<table><tr><th>Tube</th><th>Conc (ng/uL)</th><th>Purity</th></tr><tr><td>Tube 1</th><td>113.9</td><td>1.87</td></tr><tr><td>Tube 2</th><td>127.1</td><td>1.86</td></tr><tr><td>Tube 3</th><td>95.6</td><td>1.79</td></tr><tr><td>Tube 4</th><td>82.7</td><td>1.86</td></tr></table>"},
+                  {"what":"After that, each DNA sample was placed into freezer to be stored"}
+                ]
+              }
+            ]
+          },
+          {
+            "when":"6/8/2015",
+            "what":[
+              {
+                "id":"B_exp7",
+                "lead":"prep sgRNA",
+                "description":"Today, we performed Inverse PCR reaction to prep sgRNA sequences",
+                "type":"P",
+                "steps":[
+                  {"what":"-First, added recommended high-pure molecular water to suspend primers to 100 uM concentrations"},
+                  {"what":"-Get out two 50 mL microcentrifuge tubes, one for the DMSO and for without DMSO"},
+                  {"what":"-Add water first", "precaution":" (should be different from DMSO tube to non-DMSO tube)"},
+                  {"what":"-Add 4 uL of DMSO per tube if needed"},
+                  {"what":"-Add 10 uL of buffer per reaction"},
+                  {"what":"-Add 1 uL of dNTPs per reaction"},
+                  {"what":"-Add 2.5 uL of primer per reaction"},
+                  {"what":"-Add 1 uL of template DNA per reaction"},
+                  {"what":"Add 0.5 uL of phusion polymerase"},
+                  {"what":"-Put into the thermocycler based on given temp","precaution":"DMSO should be used for large DNA strands and should be put at temperature 4 deg C lower than without it, but Ryan claims that you don’t have to worry about it"}
+                ]
+              },
+              {
+                "id":"B_exp8",
+                "lead":"transformed DH10B with pSL2397",
+                "from":"B_exp3"
+              },
+              {
+                "id":"B_exp9",
+                "lead":"Prepare Gel",
+                "description":"We prepared a gel for DNA purification",
+                "type":"P",
+                "steps":[
+                  "-Mix 1g of Agarose with 100 mL of TAE buffer.",
+                  {"what:":"Microwave for 1:30", "precaution":"Note that you can cool the mixture with cold, running water"},
+                  "-Add 5 uL of cybersafe (5uL/100 mL of buffer) once mixture cools",
+                  "-Put in combs",
+                  "-Tape side of tray",
+                  "-Pour agarose gel in tray",
+                  "-Let gel cool for 1 hour",
+                  "Run gels for 1 hour"
+                ]
+              }
+            ]
+          },
+          {
+            "when":"6/8/2015",
+            "what":[
+              {
+                "id":"B_exp10",
+                "lead":"prep sgRNA",
+                "description":"Today, we performed Inverse PCR reaction to prep sgRNA sequences",
+                "type":"R",
+                "steps":[
+                  "­First, added recommended high­pure molecular water to suspend primers to 100 uM concentrations",
+                  "Vortex",
+                  "­Buffer, DMSO, dNTPs, polymerase, primers, (forward and reverse), high pure molecular water",
+                  "­Buffer needs to thaw, polymerase stays in ice tray",
+                  "­Calculate amount of each material you need to take into account the number of PCRs  you will be cloning. Ensure that each tube going in has 50 uL",
+                  "­Get out two 50 mL microcentrifuge tubes, one for the DMSO and for without DMSO",
+                  "­Add water first (should be different from DMSO tube to non­DMSO tube)",
+                  "­Add 4 uL of DMSO per tube if needed",
+                  "­Add 10 uL of buffer per reaction",
+                  "­Add 1 uL of dNTPs per reaction",
+                  "­Add 2.5 uL of primer per reaction",
+                  "­Add 1 uL of template DNA per reaction",
+                  {"what":"­Add 0.5 uL of phusion polymerase", "precaution":"Do not put tip of micropipettor into fluid"},
+                  {"what":"­Put into the thermocycler based on given temp", "precaution":"DMSO should be used for large DNA strands and should be put at temperature 4 deg C lower than without it, but Ryan claims that you don’t have to worry about it"},
+                  "Primers"
+                ]
+              },
+              {
+                "id":"B_exp11",
+                "lead":"Transform nif cluster",
+                "description":"Transform nif cluster into DH10B, See June 3 for transformation procedure"
+              },
+              {
+                "id":"B_exp12",
+                "lead":"Prepare gel for DNA purification",
+                "steps":[
+                  "Obtained 1g of Agarose",
+                  "Mixed agarose with 100 mL of buffer",
+                  "This is main gel component",
+                  {"what":"Afterwards, gel with agarose was microwaved for 1:30", "precaution":"Note that you can cool mixture with cold, running water"},
+                  "­Add 5 uL of cybersafe (5uL/100 mL of buffer) once the mixture cools",
+                  "­Put in combs, dependent on how many lanes you want to construct",
+                  "­Tape sides of tray",
+                  "­Pour agarose gel in tray",
+                  "­Let gel cool for 1 hour"
+                ]
+                },{
+                  "id":"B_exp13",
+                  "lead":"Ran gels",
+                  "steps":[
+                    "­6x loading dye, 10 uL, was added to each sample",
+                    "­Take yellow tape off of sides",
+                    "­Buffer was added until the top of the hardened gel plate was covered",
+                    {"what":"­Ladder was inserted", "precaution":"i. Make sure you have ladder for each row of running lanes"},
+                    {"what":"­Then,inset DNA into each well", "precaution":"Make sure not to creat bubbles. Do not tap plate"},
+                    {"what":"­125V, 30 min", "precaution":"i. Make sure there are bubbles forming on the negatively charged end"}
+                  ]
+                }
+              ]
+            },
+            {
+              "when":"6/16/2015",
+              "what":[
+                {
+                  "id":"B_exp14",
+                  "lead":"Another miniprep of plasmid",
+                  "steps":[
+                    "­Grow stock overnight",
+                    "­Add 600 uL of culture to 1.5 mL mc tube",
+                    {"what":"­Centrifuge for 30 seconds to pellet cells", "precaution":"Do at max speed"},
+                    "­Discard supernatant",
+                    "­Add 600 uL of deionized water to cell pellet and resuspend by vortexing the tubes",
+                    "­Add 100 uL of 7x lysis buffer and mix by inverting 4­6 times proceed to next step within 2 minutes",
+                    "­Solution should change from opaque to clear blue",
+                    "­Add 350 uL of cold neutralization buffer and shake hard to mix",
+                    "­Sample will turn yellow when neutralization is complete and a yellowish precipitate will form",
+                    "­Invert the sample an additional 2­3 times to ensure complete neutralization",
+                    "­Centrifuge at 16,000 rpm for 2 min 30 seconds",
+                    "­Transfer the supernatant into Zymo Spin column (small, without cups) by simply dumping it from microcentrifuge tube into column and avoiding the pellet",
+                    "­Place into a collection tube and centrifuge for 30 seconds",
+                    "­Discard the liquid, protect the filter and place the column back into the same collection tube",
+                    "­Add 20 uL of endo­wash buffer to the column and centrifuge for 30 seconds",
+                    "­Add 400 uL of Zyppy wash Buffer to the column and centrifuge for 30 seconds",
+                    "­Discard liquid and centrifuge for 2 minutes",
+                    "­Transfer column into clean 1.5 mL microcentrifuge tube and add 30 uL of high­pure molecular  water directly to column and let stand at room temp. for 2 min",
+                    "­Centrifuge for 30 seconds to elute plasmid",
+                    "­Boot up Nano2000 program and prepare a blank by place 1 uL of high pure molecule water on stand",
+                    "­Test each sample"
+                  ]
+                }
+              ]
+              },{
+                "when":"6/17/15",
+                "what":[
+                  {
+                    "id":"B_exp15",
+                    "lead":"Meaure concentrations of dna on nanodrop",
+                    "result":[
+                      {"what":"1F and 2F were strange had to repeat PCR", "so":"B_exp16"},
+                      {"what":"3F and 45 fine. Treat with Dpn1", "so":"B_exp17"}
+                    ]
+                  },
+                  {
+                    "id":"B_exp16",
+                    "lead":"PCR of 1F and 2F",
+                    "steps":
+                    ["199.5 uL of water",
+                      " 28uL of DMSO",
+                      "70 uL of buffer",
+                      "7 uL of dNTPs",
+                      "­2.5 uL of forward primer in each PCR tube",
+                      "17.5 uL of reverse primer",
+                      "­7 uL of template",
+                      "­3.5 uL of Phusion polymerase"
+                    ]
+                  },
+                  {
+                    "id":"B_exp17",
+                    "lead":"DPN1 treated 3F and 4F",
+                    "steps":[
+                      "­40 uL of sample 3, 40 uL of sample 4 in 2 separate mcf tubes",
+                      "­Added 5 uL of 10x CutSmart buffer to each",
+                      "­Added 5 uL of Dpn1 enzyme to each",
+                      "­Let set in 37 deg C for 2 hours straight starting at 10:45 A.M."
+                    ]
+                  },
+                  {
+                    "id":"B_exp18",
+                    "lead":"DNA cleanup 3 and 4",
+                    "steps":[
+                      "­Each sample loaded with 250 uL of DNA binding buffer ­Vortex",
+                      "­Tube contents poured into spin columns",
+                      "­Centrifuged for 30 seconds @ 16000 RPM Centrifuge 5424",
+                      "­Tubes taken out, flow through discarded in beaker",
+                      "­200 uL washing buffer added to each collection tube",
+                      "­Tubes spun for 30s @ 16000 RPM",
+                      "­Tubes taken out, 200 uL more of DNA washing buffer added after flow through ",
+                      "discarded i beaker",
+                      "­Tubes centrifuged 2:30 @ 16000 RPM",
+                      "­Tubes taken out, flow through discarded in beaker",
+                      "­30 uL of HP water added to each tube",
+                      "­Tubes sit on counter 2 mins.",
+                      "­After 2 mins. tubes CFd 2 mins @ 16000 RPM",
+                      "­Post centrifugation, DNA concentrations measured"
+                    ]
+                  },
+                  {
+                    "id":"B_exp19",
+                    "lead":"Ligation Reaction of 3 and 4",
+                    "steps":[
+                      "­Obtained 2 PCR tubes",
+                      "Put 1 uL of T4 Ligase buffer",
+                      "­Put 8 uL of 3F into 3F tube, 4F into 4F tube",
+                      "Put 0.2 uL of P4 Kinase into each tube",
+                      "Put 1.0 uL of T4 Ligase into each tube",
+                      "­Let tubes sit out for 1 hour"
+                    ]
+                  },
+                  {
+                    "id":"B_exp20",
+                    "lead":"Post ligation, transformation",
+                    "steps":[
+                      "­Need: 500 uL of LB",
+                      "­NO MORE THAN 2 uL OF LIGATION PRODUCT (had to start over on 4)",
+                      "­DH10B competent cells, 2 aliquots",
+                      "­Sanity A flame",
+                      "Obtain <2 uL of ligation product",
+                      "Insert ligation product into DH10B cell tube",
+                      "Put mixture into chilled cuvette",
+                      "­Ensure mixture @ bottom and no air bubbles",
+                      "WIPE OFF CUVETTE WITH KIMWIPE",
+                      "Insert into Eporator set @ 2500",
+                      "While cuvette is being transformed, hover 400 uL pipette tip over flame then proceed to fill 500 ",
+                      "Once transformation is complete immediately insert LB into cuvette",
+                      "Dump contents of cuvette into falcon tube and let incubate for 1 hour"
+                    ],
+                    "result":"4 was a failute because too much buffer was present. Salts caused archs"
+                  }
+                ]
+              },
+              {
+                "when":"6/18/15",
+                "what":[
+                  {
+                    "id":"B_exp21",
+                    "lead":"Transformed sgRNA seq 2 into DH10B",
+                    "steps":[
+                      "­Did this by first injecting 1 uL of ligated 2F product into aliquot containing DH10B",
+                      "­Then, injected resulting mixture into Eporation cuvette",
+                      "­Tapped cuvette to ensure mixture was at bottom",
+                      "­Ran cuvette through Eporator",
+                      "­Immediately after transformation, injected 500 uL of LB into cuvette",
+                      "­Transferred mixture to falcon tube and let incubate for 1 hour",
+                      {"when":"­After 1 hour, cultures were plated", "steps":["100 uL of culture pipetted onto plate","Pipet onto one corner, spread, turn plate 90 degrees, spread, repeat  until entire plate is spread"]}
+                    ]
+                  },
+                  {
+                    "id":"B_exp22",
+                    "lead":"Colony PCR",
+                    "steps":[
+                      "­First, 12 PCR tubes obtained",
+                      "­Added 50 uL of HP water to each",
+                      "­Prepared a 1ml/uL LB:AMP mixture and used 60 mL of mixture total",
+                      "­Obtained 1F, 2F, 3F, 4F plates",
+                      "­Picked 3 colonies from each plate and put 1 into each PCR tube",
+                      "­Then, I pipetted 5 mL of LB/AMP mixture into a culture tube",
+                      "­After this was complete, dropped pipet tip corresponding to each culture tube and set  them aside",
+                      "­Next, PCR reaction was prepped",
+                      "­Reaction was done with 7 uL of template (not entirely DNA)",
+                      "­292.5 uL of water",
+                      "­52 uL of DMSO",
+                      "­130 uL of Buffer",
+                      "­13 uL of dNTPs",
+                      "­42.5 uL of forward primer",
+                      "­42.5 uL of reverse primer",
+                      "­6.5 uL of Phusion polymerase",
+                      "­These were components of master mix",
+                      "­Each added to 7 uL of template DNA strand",
+                      "­Annealing temperature of PCR:60 degrees"
+                    ]
+                  }
+                ]
+              },
+              {
+                "when":"6/24/15",
+                "what":[
+                  {
+                    "id":"B_exp23",
+                    "lead":"Make Amp/Kan plates",
+                    "steps":[
+                      "­Made Amp/KAN plates:",
+                      "i. Protocol on pg. 7",
+                      "ii. 12.5 g Miller LB",
+                      "iii. 7.5 g Agar",
+                      "iv. put magnetic stir bar into bottle",
+                      "v. Pour UV deionized water, 500 mL, into bottle (25g/L miller LB, 15 g/L Agar)",
+                      "vi. Took bottle to be autoclaved",
+                      "vii. Bottle autoclaved on agar cycle, loose cap, for two hours",
+                      "­Grew culture of sgRNA plasmids for miniprep the following day"
+                    ]
+                  }
+                ]
+              },
+              {
+                "when":"6/25/15",
+                "what":[
+                  {
+                    "id":"B_exp24",
+                    "lead":"­Mini prepped sgRNA plasmids for transformation into MG1655, JM109"
+                  },
+                  {
+                    "id":"B_exp25",
+                    "lead":"­­Went to Pakrasi lab to observe acetylene injection"
+                  }
+                ]
+              },
+              {
+                "when":"6/26/15",
+                "what":[
+                  {
+                    "id":"B_exp26",
+                    "lead":"­Prepped M9 media"
+                  }
+                ]
+              },
+              {
+                "when":"6/28/15",
+                "what":[
+                  {
+                    "id":"B_exp27",
+                    "lead":"­Prepped culture with aTc"
+                  }
+                ]
+              },
+              {
+                "when":"6/29/15",
+                "what":[
+                  {
+                    "id":"B_exp28",
+                    "lead":"­Prepared for assay",
+                    "steps":[
+                      "­Prepped for assay ",
+                      "­Spun down cells @ 3200g @ 4 deg C for 15 minutes",
+                      "­Took out culture tubes, discarded supernatant ",
+                      "­Added 4mL of M9 media to each tube and resuspended",
+                      "­Centrifuged cells 3200g @ 4 deg C for 20 minutes",
+                      "­Took out culture tubes, discarded supernatant",
+                      "­Added 4 mL of M9 media to each tube and resuspended",
+                      "­Centrigued cells 3200 g @ 4 deg C for 25 minutes",
+                      "­Toook out culture tubes, discarded superantant",
+                      "­Added 4 mL of M9 media to each tube and resuspend",
+                      "Centrifuge cells 3200g @ 4 deg C for 30 min.",
+                      "­Took out culture tubes, discard supernatant"
+                    ]
+                  }
+                ]
+              },
+              {
+                "when":"7/6/15",
+                "what":[
+                  {
+                    "id":"B_exp29",
+                    "lead":"­Prepped cultures of JM109 with pSL2397 for a miniprep"
+                  }
+                ]
+              },
+              {
+                "when":"7/7/15",
+                "what":[
+                  {
+                    "id":"B_exp30",
+                    "lead":"­­Miniprepped pSL2397"
+                  }
+                ]
+              },
+              {
+                "when":"7/8/15",
+                "what":[
+                  {
+                    "id":"B_exp31",
+                    "lead":"iGEM characterization of BBa_K577895",
+                    "steps":[
+                      "­Transformed colonies of DH10B containing pSB1C3 with 577895, pAH34, and pAH35 ",
+                      "­Prepared cultures of these colonies"
+                    ]
+                  }
+                ]
+              },
+              {
+                "when":"7/9/15",
+                "what":[
+                  {
+                    "id":"B_exp32",
+                    "lead":"Started induction experiment",
+                    "description":"­Started with induction experiment, but halfway through realized I forgot to make frozen stock, so the experiment was nixed and restarted for the following day"
+                  }
+                ]
+              },
+              {
+                "when":"7/10/15",
+                "what":[
+                  {
+                    "id":"B_exp33",
+                    "lead":"Started induction experiment",
+                    "steps":[
+                      "­ODs of overnight cultures were measured in the TECAN",
+                      "­More culture tubes were made containing each overnight culture diluted to an OD of 0.2",
+                      "­Put these new, diluted culture tubes into incubator for two hours",
+                      "­While this was happening, prepared well plates for induction",
+                      "­Calculations were made such that I serially diluted aTc stock concentration 5x across each well ",
+                      "­0.1 mL of each cell culture was added to its respective well",
+                      "­Well plates were taken and incubated for 6 hours",
+                      "­At the end of the 6 hours, fluorescence was measured using"
 
-      }
-    ]
-  }
-]
+                    ],
+                    "result":"­Results showed that part expressed RFP constitutively"
+                  }
+                ]
+              },
+              {
+                "when":"7/12/15",
+                "what":[
+                  {
+                    "id":"B_ex34",
+                    "lead":"Another induction",
+                    "description":"Transformed iGEM part into another strain of DH10B"
+                  }
+                ]
+              },
+              {
+                "when":"7/13/15",
+                "what":[
+                  {
+                    "id":"B_exp35",
+                    "lead":"Another induction",
+                    "description":" repeated same protocol from July 11",
+                    "result":"Checked overnight cultures, cells did not grow at all. Nixed experiment"
+                  },
+                  {
+                    "id":"B_exp36",
+                    "lead":"Prepped sgRNA cultures",
+                    "description":"­Prepped cultures of sgRNA plasmid (pTet­pCon­sgRNAT1­p15a­dCas9­I4), DH10B, pAH34, pAH35, 2 cultures of pSB1C3 (one was the first transformation, the other the second)"
+                  }
+                ]
+              },
+              {
+                "when":"7/14/15",
+                "what":[
+                  {
+                    "id":"B_exp37",
+                    "lead":"Induction Experiment",
+                    "description":"July 14 ­Cultures pAH34, pAH35, and pSB1C3 did not grow again last night, ­Ran an induction experiment with just the retransformed DH10B with pSB1C3(refer to pSB1C3 dd)",
+                    "result":"­Results showed that iGEM part did not express RFP at all across any inducer concentrations"
+                  }
+                ]
+              },
+              {
+                "when":"7/17/15",
+                "what":[
+                  {
+
+                    "id":"B_exp38",
+                    "lead":"Induction experiment",
+                    "description":"­Prepared new stocks of pAH34, pAH35, and pSB1C3. ­Did another induction experiment involving two colonies of pSB1C3 dd, pSB1C3, pAH34, pAH35, and DH10B",
+                    "result":"­Results were consistent with earlier findings; pSB1C3 dd is colorless, pSB1C3 is red"
+                  }
+                ]
+              },
+              {
+                "when":"7/18/15",
+                "what":[
+                  {
+                    "id":"B_exp39",
+                    "lead":"Prepare more sgRNA"
+                  }
+                ]
+              },
+              {
+                "when":"7/19/15",
+                "what":[
+                  {
+                    "id":"B_exp40",
+                    "lead":"Checked samples",
+                    "description":"Did Dpn1 of 23 samples. Did chemical transformation for 33 samples. Did Eporation of 8 samples",
+                    "result":"All Failed"
+                  }
+                ]
+              },
+
+              {
+                "when":"7/20/15",
+                "what":[
+                  {
+                    "id":"B_exp41",
+                    "lead":"Ran PCR",
+                    "description":"Ran a PCR for 9 samples, Did gel recovery."
+                  }
+                ]
+              },
+
+              {
+                "when":"7/22/15",
+                "what":[
+                  {
+                    "id":"B_exp42",
+                    "lead":"Ran PCR",
+                    "description":"Did DNA cleanup of 9 samples. Loaded 26 samples for colony PCR. Ran a PCR for 9 samples"
+                  }
+                ]
+              },
+
+              {
+                "when":"7/23/15",
+                "what":[
+                  {
+                    "id":"B_exp42",
+                    "lead":"Prepped gel for samples",
+                    "description":"Prepped gel for 9 samples. Prepped forzen stock from colony PCR for 17 samples"
+                  }
+                ]
+              },
+              {
+                "when":"7/27/15",
+                "what":[
+                  {
+                    "id":"B_exp43",
+                    "lead":"Prepped frozen stock of 7 samples",
+                    "description":"Dpn1 digested two samples, Prepped frozen stock of 7 samples"
+                  }
+                ]
+              },
+              {
+                "when":"7/29/15",
+                "what":[
+                  {
+                    "id":"B_exp45",
+                    "lead":"Dpn1/Gel recovered 8 samples",
+                    "description":"Dpn1/Gel recovered 8 samples. Retransformed 13 other samples"
+                  }
+                ]
+              },
+              {
+                "when":"7/31/15",
+                "what":[
+                  {
+                    "id":"B_exp46",
+                    "lead":"Did another colony PCR",
+                    "description":"Did another colony PCR for troublesome samples. Did another PCR for 15 other samples; concentrations were too low post clean-up"
+                  }
+                ]
+              },
+              {
+                "when":"8/4/15",
+                "what":[
+                  {
+                    "id":"B_exp47",
+                    "lead":"Vanderbilt Induction Exp",
+                    "description":"­Want to run an induction experiment with troublesome Vanderbilt promoters transformed into two separate strains:BL21 and MG1655 ­Grew cultures of these two parts transformed into these two strains as well as wild type strains of MG1655 and BL21",
+                    "result":"­Results obtained from Vanderbilt induction were nebulous at best"
+                  }
+                ]
+              },
+              {
+                "when":"8/6/15",
+                "what":[
+                  {
+                    "id":"B_exp48",
+                    "lead":"Grew more cultures for Vanderbilt induction experiment",
+                    "result":"Negative control didn't grow; experiment nixed"
+                  }
+                ]
+              },
+              {
+                "when":"8/20/15",
+                "what":[
+                  {
+                    "id":"B_exp49",
+                    "lead":"Grew more cultures for Vanderbilt induction experiment",
+                    "result":"­Grew cultures for another round of induction experiments on the Vanderbilt part using OUR protocol."
+                  }
+                ]
+              },
+              {
+                "when":"8/23/15",
+                "what":[
+                  {
+                    "id":"B_exp50",
+                    "lead":"Grew more cultures for Vanderbilt induction experiment"
+                  }
+                ]
+              },
+              {
+                "when":"8/24/15",
+                "what":[
+                  {
+                    "id":"B_exp51",
+                    "lead":"­Induced with IPTG and put each plate into the incubator to grow for 24 hours, roughly"
+                  }
+                ]
+              },
+
+              {
+                "when":"8/25/15",
+                "what":[
+                  {
+                    "id":"B_exp52",
+                    "lead":"­Prepared media",
+                    "steps":[
+
+
+                      "­Obtain frozen stock",
+
+                      "­Grow overnight in LB and selected antibiotic",
+
+                      "­Spin down at 3000 RPM for 15 minutes",
+
+                      "­Discard supernatant",
+
+                      "­Resuspend in M9 media, 4 mL",
+
+                      "­Spin down at 3000 RPM for 20 minutes",
+
+                      "­Discard supernatant again",
+
+                      "­Resuspend in M9 media",
+
+                      "­Spin down at 3000g for 25 minutes",
+
+                      "­Discard supernatant",
+
+                      "­Resuspend in M9",
+
+                      "­Spin down at 3000g for 30 minutes",
+
+                      "­Discard supernatant",
+
+                      "­Take OD",
+
+                      "­Calculate how much you’ll need to have 0.1 OD in 5mL",
+
+                      "­Prepare all bottles by adding 10 uL of antibiotic",
+
+                      "­Place stopper in bottle",
+
+                      "­Place in 30 degree shaker",
+
+                      "­Grow overnight",
+
+                      "­Next morning, take OD again",
+
+                      "­Goal is to have it at 0.2",
+
+                      "­React away oxygen in anaerobic chamber",
+
+                      "­Put them back in 30 degree shaker",
+
+                      "­Next day, inject acetylene",
+
+                      "­Take zero point",
+
+                      "­Put back in shaker",
+                      "­Take 24 hour point"
+                    ]
+                  }
+                ]
+              }
+            ]

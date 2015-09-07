@@ -6,9 +6,9 @@
       {
         "why":"We needed LB to grow this summer's cells",
         "lead":"Make Lb",
-        "id":"C_exp1",
+        "id":"D_exp1",
         "goto":[
-          "C_exp2"
+          "D_exp2"
         ],
         "description":"We made LB Stock",
         "type":"R",
@@ -34,9 +34,9 @@
 
       {
         "lead":"Make CμLtures",
-        "id":"C_exp2",
+        "id":"D_exp2",
         "goto":[
-          "C_exp3"
+          "D_exp3"
         ],
         "description":"Make overnight cμLtures from frozen stock to make electrocompetent cells the next day (in Moon lab):",
         "why":"The Moon Lab needed, strains JM109 and MG1655 for their experiments",
@@ -53,9 +53,9 @@
     "what":[
       {
         "lead":"Competant Cell Prep",
-        "id":"C_exp3",
+        "id":"D_exp3",
         "goto":[
-          "C_exp4"
+          "D_exp4"
         ],
         "description":"Electrocompetent prep of JM109 and MG1655 (in Moon lab):",
         "why":"The Moon Lab needed, strains JM109 and MG1655 for their experiments",
@@ -101,9 +101,9 @@
           ]
         },
         {"lead":"Make Lb",
-          "id":"C_exp4",
+          "id":"D_exp4",
           "goto":[
-            "C_exp5"
+            "D_exp5"
           ],
           "description":"Transformation (in Moon lab):",
           "why":"The Moon Lab needed, strains JM109 and MG1655 for their experiments",
@@ -125,9 +125,9 @@
       "what":[
         {
           "lead":"Competant Cell Prep",
-          "id":"C_exp5",
+          "id":"D_exp5",
           "goto":[
-            "C_exp6"
+            "D_exp6"
           ],
           "description":"Isolate plasmid (Zhang lab):",
           "type":"P",
@@ -174,7 +174,7 @@
           },
           {
             "lead":"Make Lb",
-            "id":"C_exp6",
+            "id":"D_exp6",
 
             "description":"Use SnapGene to design primers for the 14 sequences to be overexpressed",
             "type":"D",
@@ -197,14 +197,14 @@
         "what":[
           {
             "lead":"Resuspend Primers",
-            "id":"C_exp7",
+            "id":"D_exp7",
 
             "description":"Resuspend the dry primers in Tris-EDTA (TE) solution",
             "type":"P"},
             {"lead":"Run PCR",
-              "id":"C_exp8",
+              "id":"D_exp8",
               "from":[
-                "C_exp7"
+                "D_exp7"
               ],
               "description":"Run PCR on 3 of the 14 amplicons",
               "extra":"Amplify hesA, nifB, and nifV",
@@ -223,11 +223,11 @@
           "what":[
             {
               "lead":"Run PCR",
-              "id":"C_exp9",
+              "id":"D_exp9",
               "from":[
-                "C_exp7"
+                "D_exp7"
               ],
-              "group":"C_exp8",
+              "group":"D_exp8",
 
               "description":"Run PCR on remaining amplicons", "type":"P",
               "pics":[
@@ -245,9 +245,9 @@
             {
               "lead":"Restriction Digest",
               "description":"Perform a restriction enzyme digest of PCR products and of plasmid backbone using 20 μL.",
-              "id":"C_exp10",
+              "id":"D_exp10",
               "from":[
-                "C_exp9"
+                "D_exp9"
               ],
               "steps":[
                 {"what":"Use 2 μL 10x buffer with green dye"},
@@ -266,9 +266,9 @@
             },
             {
               "lead":"Run PCR",
-              "id":"C_exp11",
+              "id":"D_exp11",
               "from":[
-                "C_exp10"
+                "D_exp10"
               ],
 
               "description":"Run PCR on restriction digest products", "type":"P",
@@ -287,17 +287,17 @@
             },
             {
               "lead":"Gel Purification",
-              "id":"C_exp12",
+              "id":"D_exp12",
               "from":[
-                "C_exp11"
+                "D_exp11"
               ],
               "description":"Gel purify the backbone with fragment cut out from plasmid as well as the PCR product"
             },
             {
               "lead":"Ligate products",
-              "id":"C_exp13",
+              "id":"D_exp13",
               "from":[
-                "C_exp12"
+                "D_exp12"
               ],
               "description":"Set up 7 μL ligation reactions for the digestion products that were digested by both enzymes: (EcoR1 and Xho1)"
               ,"extra":"Set up an addition ligation reaction for negative control",
@@ -309,9 +309,9 @@
             },
             {
               "lead":"Overnight cμLtures",
-              "id":"C_exp14",
+              "id":"D_exp14",
               "from":[
-                "C_exp13"
+                "D_exp13"
               ],
               "description":"Start an overnight cμLture in 5 mL of LB at 37°C for transformation of ligated plasmids"
             }
@@ -322,10 +322,10 @@
           "what":[
             {
               "lead":"Competent cell prep",
-              "id":"C_exp15",
+              "id":"D_exp15",
               "description":"Prepare competent cellls using the RbCl method",
               "from":[
-                "C_exp14"
+                "D_exp14"
               ],
               "steps":[
                 {"what":"- Dilute 1 mL of cμLture into 50 mL of LBMg medium pre-warmed to 37°C"},
@@ -343,11 +343,11 @@
             },
             {
               "lead":"Transform",
-              "id":"C_exp16",
+              "id":"D_exp16",
               "description":"Transform products from yesterday's ligation reaction into the cells",
               "from":[
-                "C_exp15",
-                "C_exp13"
+                "D_exp15",
+                "D_exp13"
               ],
               "steps":[
                 {"what":"Use PE5A plasmid ( with amplicilin resistance) as an additional control",
@@ -360,8 +360,8 @@
               },
               {
                 "lead":"Make Plates",
-                "id":"C_exp17",
-                "group":"C_exp16",
+                "id":"D_exp17",
+                "group":"D_exp16",
                 "steps":[
                   "- Melt LB agar in the microwave; incubate on ice for 25 minutes",
                   {"what": "Add appropriate antibiotic to LB agar",
@@ -379,8 +379,8 @@
               },
               {
                 "lead":"Plate Cells",
-                "id":"C_exp18",
-                "group":"C_exp17",
+                "id":"D_exp18",
+                "group":"D_exp17",
                 "steps":[
                   "- Take cells out of 37°C room and spin down all but the control for efficiency of transformation (PE5A) for 4 minutes",
                   {"what":"- Take 100 μL from PE5A control and add to 900 μL of LB",
@@ -400,9 +400,9 @@
                   "what":[
                     {
                       "lead":"Store plates",
-                      "id":"C_exp19",
+                      "id":"D_exp19",
                       "description":"Take plates out of 37°C room, check for colonies, and place those that grew into the 4°C room for the remainder of the weekend",
-                      "from":"C_exp18"
+                      "from":"D_exp18"
                     }
                   ]
                 },
@@ -411,35 +411,35 @@
                   "what":[
                     {
                       "lead":"Start a CμLture",
-                      "id":"C_exp20",
+                      "id":"D_exp20",
                       "description":"Start a cμLture of PA2C-TesA in LB for ~4 hours"
                     },
                     {
                       "lead":"Redo PCR",
-                      "id":"C_exp21",
+                      "id":"D_exp21",
                       "description":"Redo PCR using same conditions as previously for the genes that were not successfμLly transformed",
-                      "from":"C_exp9"
+                      "from":"D_exp9"
                       },{
                         "lead":"Redo Purification",
-                        "id":"C_exp22",
+                        "id":"D_exp22",
                         "description":"Purify the PCR product with a kit, as previously and take concentrations on nanodrop",
-                        "group":"C_exp21"
+                        "group":"D_exp21"
                       },
                       {
                         "lead":"Redo Purification",
-                        "id":"C_exp23",
+                        "id":"D_exp23",
                         "description":"Purify the PA2C-TesA plasmid as previously and take concentration on nanodrop",
-                        "group":"C_exp21"
+                        "group":"D_exp21"
                       },
                       {
                         "lead":"Redo Digest",
-                        "id":"C_exp24",
+                        "id":"D_exp24",
                         "description":"Set up 20 μL digest reactions for the newly purified genes using the same specifications as previously ",
                         "precaution":"Place at 37 degrees for ~ 2 hours"
                       },
                       {
                         "lead":"Run Gel",
-                        "id":"C_exp25",
+                        "id":"D_exp25",
                         "description":"- Run digested plasmid through the gel ",
                         "pics":[
                           {
@@ -459,7 +459,7 @@
                     "when":"6/17/2015",
                     "what":[
                       {
-                        "id":"C_exp26",
+                        "id":"D_exp26",
                         "lead":"Confirm Inserts",
                         "description":"Make 20 μL PCR reactions for plasmids purified yesterday (to attempt to confirm correct inserts)"
                       }
@@ -468,13 +468,13 @@
                     "when":"6/18/2015",
                     "what":[
                       {
-                        "id":"C_exp27",
+                        "id":"D_exp27",
                         "lead":"Purify plasmid cut by EcoRI only again",
                         "description":"Use DNA clean & concentrator kit again, as previously",
                         "result":"Better looking peak than last time"
                       },
                       {
-                        "id":"C_exp28",
+                        "id":"D_exp28",
                         "lead":"Set up 10 uL ligation reactions:",
                         "description":"Set up ligation reactions with plasmid and genes",
                         "type":"R",
@@ -490,7 +490,7 @@
 
                       },
                       {
-                        "id":"C_exp29",
+                        "id":"D_exp29",
                         "lead":"Digest plasmid",
                         "description":"Diges more plasmid with EcorR1 only in a 50 uL digestion reaction:",
                         "type":"R",
@@ -503,7 +503,7 @@
                         ]
                       },
                       {
-                        "id":"C_exp30",
+                        "id":"D_exp30",
                         "lead":"Transform",
                         "description":"Transform plasmid that has been ligating",
                         "type":"R",
@@ -515,13 +515,13 @@
                         ]
                       },
                       {
-                        "id":"C_exp31",
+                        "id":"D_exp31",
                         "lead":"Run gel",
                         "description":"Run a gel of a small amount of the newly digested plasmid cut with EcoR1, along with ladder and undigested plasmid",
                         "result":"Saw bands as expected -- should all be digested--purify with DNA clean & concentrator kit from digest(not from gel)"
                       },
                       {
-                        "id":"C_exp32",
+                        "id":"D_exp32",
                         "lead":"Klenow",
                         "description":"Run a 20 uL Klenow reaction to blunt the ends of EcoR1-digested plasmid",
                         "type":"P",
@@ -534,7 +534,7 @@
                           "stop reaction by placing at 75C on thermocycler for 20 minutes"
                         ]
                       },{
-                        "id":"C_exp33",
+                        "id":"D_exp33",
                         "lead":"Digest",
                         "description":"Digest the blunted cut plasmid with Xho1 in a 25 uL reaction",
                         "type":"P",
@@ -553,7 +553,7 @@
                     "when":"6/19/2015",
                     "what":[
                       {
-                        "id":"C_exp34",
+                        "id":"D_exp34",
                         "lead":"Check plates",
                         "description":"Carlos checked plated cells for growth",
                         "result":[
@@ -567,7 +567,7 @@
                     "when":"6/20/15",
                     "what":[
                       {
-                        "id":"C_exp35",
+                        "id":"D_exp35",
                         "lead":"Pick colonies",
                         "description":"Carlos picked 2 colonies per plate and started overnight cultures in LB"
                       }
@@ -576,7 +576,7 @@
                     "when":"6/22/15",
                     "what":[
                       {
-                        "id":"C_exp36",
+                        "id":"D_exp36",
                         "lead":"Digest plasmid & clean up",
                         "description":"Carlos ran plasmid cut with EcoR1, then blunted with Klenow, then cut with Xho1 on a gel",
                         "type":"P",
@@ -594,7 +594,7 @@
                         ]
                       },
                       {
-                        "id":"C_exp37",
+                        "id":"D_exp37",
                         "lead":"Set up ligations",
                         "description":"Set up 10 uL ligation reactions for the fragment digested by Xho1 only and the purified plasmids and control with no insert",
                         "type":"R",
@@ -608,7 +608,7 @@
                         ]
                       },
                       {
-                        "id":"C_exp38",
+                        "id":"D_exp38",
                         "lead":"Transform",
                         "description":"Transform plasmids from overnight",
                         "type":"P",
@@ -644,7 +644,7 @@
                     "when":"6/23/2015",
                     "what":[
                       {
-                        "id":"C_exp39",
+                        "id":"D_exp39",
                         "lead":"Check colonies",
                         "description":"Check for colonies from plated cells",
                         "result":[
@@ -662,11 +662,11 @@
                     "when":"6/24/15",
                     "what":[
                       {
-                        "id":"C_exp40",
+                        "id":"D_exp40",
                         "lead":"Purify plasid from overnight culturres, quantify concentrations"
                       },
                       {
-                        "id":"C_exp41",
+                        "id":"D_exp41",
                         "lead":"Overnight culture",
                         "description":"Start a 50 mL culture of PA2C-TesA from the overnight 5 mL culture",
                         "type":"p",
@@ -677,12 +677,12 @@
                         ]
                       },
                       {
-                        "id":"C_exp42",
+                        "id":"D_exp42",
                         "lead":"Set up pCR",
                         "description":"Set up PCR reaction to confirm, inserts, as previously; use same PCR conditions"
                       },
                       {
-                        "id":"C_exp43",
+                        "id":"D_exp43",
                         "lead":"Prepare gel",
                         "description":"Prepare a gel for plasmids isolated from transformed cell - make a thin gel with ~35mL 1% agarose and 2 uL EtBr",
                         "steps":[
@@ -694,7 +694,7 @@
                         "result":"Plasmid bands look good; bands from PCR seem okay but hard to tell which ladder being diffuse for small fragments -> make a 2% agarose gel to see clearer bands and use 2.5 uL of ladder"
                       },
                       {
-                        "id":"C_exp44",
+                        "id":"D_exp44",
                         "lead":"Miniprep PA2C-TesA",
                         "description":"Miniprep PA2C-TesA (using 10X the amount of buffers as suggested by the kit)",
                         "steps":[
@@ -722,7 +722,7 @@
                     "when":"6/25/15",
                     "what":[
                       {
-                        "id":"C_exp44",
+                        "id":"D_exp44",
                         "lead":"Run gel",
                         "description":"Run a gel to see if PA2C-TesA purified yesterday is okay",
                         "steps":[
@@ -737,7 +737,7 @@
                     "when":"6/26/15",
                     "what":[
                       {
-                        "id":"C_exp45",
+                        "id":"D_exp45",
                         "lead":"Repeat transformation",
                         "steps":[
                           "Purify digested PA2C-TesA with DNA clean & concentrator kit",
@@ -753,7 +753,7 @@
                     "when":"6/30/15",
                     "what":[
                       {
-                        "id":"C_exp46",
+                        "id":"D_exp46",
                         "lead":"Start overnight of more PA2C-TesA"
                       }
                     ]
@@ -762,11 +762,11 @@
                     "when":"7/1/15",
                     "what":[
                       {
-                        "id":"C_exp47",
+                        "id":"D_exp47",
                         "lead":"Miniprep the HDK overexpression plasmid and PA2C-TesA overnight"
                       },
                       {
-                        "id":"C_exp48",
+                        "id":"D_exp48",
                         "lead":"Attempt to PCR the inserts from the HDK overexpression plasmid using the nifHDK F and R primers"
                       }
                     ]
@@ -775,13 +775,13 @@
                     "when":"7/2/15",
                     "what":[
                       {
-                        "id":"C_exp49",
+                        "id":"D_exp49",
                         "lead":"purify HDK overexpression plasmid",
                         "description":"Run the PCR product, purified HDK overexpression plasmid, and purified PA2C-TesA on a gel",
                         "result":"PA2C-TesA band looks good, HDK overexpression plasmid is smaller than PA2C-TesA, and there is no band in the PCR product lane-insert not present, and the miniprepped HDK overexpresion plasmid is not correct"
                       },
                       {
-                        "id":"C_exp50",
+                        "id":"D_exp50",
                         "lead":"Redo HDK PCR",
                         "description":"Redo HDK PCR from nif cluster plasmid to attempt construction of the HDK overexpression plasmid again"
                       }
@@ -791,7 +791,7 @@
                     "when":"7/3/15",
                     "what":[
                       {
-                        "id":"C_exp51",
+                        "id":"D_exp51",
                         "lead":"Primer design for minimal nif plasmid",
                         "type":"D"
                       }
@@ -801,11 +801,11 @@
                     "when":"7/6/15",
                     "what":[
                       {
-                        "id":"C_exp52",
+                        "id":"D_exp52",
                         "lead":"Digest PA2C-TesA with EcoRI"
                       },
                       {
-                        "id":"C_exp53",
+                        "id":"D_exp53",
                         "lead":"Redo PCR of HDK and cce_0550",
                         "result":"Cut and purified band for 0550, but HDK band was incorrect"
                       }
@@ -815,7 +815,7 @@
                     "when":"7/7/15",
                     "what":[
                       {
-                        "id":"C_exp54",
+                        "id":"D_exp54",
                         "lead":"Ligate 0550 and HDK",
                         "description":"Ligate genes into plasmid",
                         "steps":[
@@ -831,7 +831,7 @@
                     "when":"7/8/15",
                     "what":[
                       {
-                        "id":"C_exp55",
+                        "id":"D_exp55",
                         "lead":"PCR genes for minimal nif plasmid-grouped by size into 3 sets",
                         "steps":[
                           "PCR for small and large size groups",
@@ -846,7 +846,7 @@
                     "when":"7/9/15",
                     "what":[
                       {
-                        "id":"C_exp56",
+                        "id":"D_exp56",
                         "lead":"PCr medium size group"
                       }
 
@@ -855,7 +855,7 @@
                     "when":"7/10/15",
                     "what":[
                       {
-                        "id":"C_exp57",
+                        "id":"D_exp57",
                         "lead":"PCR for minimal nif plasmids continued"
                       }
                     ]
@@ -864,7 +864,7 @@
                     "when":"7/13/15",
                     "what":[
                       {
-                        "id":"C_exp58",
+                        "id":"D_exp58",
                         "lead":"PCR more 0550 and HDK for overexpression plasmids",
                         "steps":[
                           "EcoR1 digest of PA2C-TesA",
@@ -879,7 +879,7 @@
                     "when":"7/14/15",
                     "what":[
                       {
-                        "id":"C_exp59",
+                        "id":"D_exp59",
                         "lead":"Prepare 1 plasmid of nif cluster",
                         "steps":[
                           "PCR amplify tetracyclin resistance gene off of one plasmid and pB1a except for the amplicilin resistance gene, using primers designed for Gibson ligation",
@@ -911,10 +911,10 @@
                     "when":"7/16/15",
                     "what":[
                       {
-                        "id":"C_exp60",
+                        "id":"D_exp60",
                         "lead":"Retry Gibson"
                       },{
-                        "id":"C_exp61",
+                        "id":"D_exp61",
                         "lead":"Transform ps8k plasmid into DH10B to make more"
                       }
                     ]
@@ -922,12 +922,12 @@
                     "when":"7/17/15",
                     "What":[
                       {
-                        "id":"C_exp62",
+                        "id":"D_exp62",
                         "lead":"Check  colonies",
                         "result":"Only pS8K had colonies. other plates (gibson) did not"
                       },
                       {
-                        "id":"C_exp63",
+                        "id":"D_exp63",
                         "lead":"Golden Gate reactions",
                         "description":"Set up a 10 uL Golden Gate reaction of all 8 pieces for the pS8K cysE2-hesB minimal plasmid, using a molar ratio that compares concentration/size(bp) of each piece. Inserts should all be in a 3 to 1 ratio to the backbone",
                         "steps":[
@@ -951,7 +951,7 @@
                     "when":"7/20/15",
                     "what":[
                       {
-                        "id":"C_exp64",
+                        "id":"D_exp64",
                         "lead":"Pick colonies",
                         "description":"Pick 5 colonies from DH10B plate of golden gate reaction mixture transformation. Pick 1 colony of ps8k"
                       }
@@ -961,7 +961,7 @@
                     "when":"7/21/15",
                     "what":[
                       {
-                        "id":"C_exp65",
+                        "id":"D_exp65",
                         "lead":"Work on HDK & 0550",
                         "description":"Digest PA2C-TesA with EcoR1, PCR more 0550 and HDK"
                       }
@@ -971,7 +971,7 @@
                     "when":"7/22/15",
                     "what":[
                       {
-                        "id":"C_exp66",
+                        "id":"D_exp66",
                         "lead":"Work on HDK & 0550",
                         "description":"New method of ligation",
                         "steps":[
@@ -984,7 +984,7 @@
                           ]
                       },
                       {
-                        "id":"C_exp67",
+                        "id":"D_exp67",
                         "lead":"Golden gate cysE2-hesB",
                         "steps":[
                           "Run a gel to check for cysE2-hesB PCR product",
@@ -999,7 +999,7 @@
                     "when":"7/23/15",
                     "what":[
                       {
-                        "id":"C_exp68",
+                        "id":"D_exp68",
                         "lead":"Repeat Golden Gate",
                         "steps":[
                           "Set up a PCR using the 7 insert Golden Gate reaction as template: make 2 15 microliter reactions, one using 1 microliter of the golden gate as template and the other using 1 microliter of a 10x dilution of the template",
@@ -1017,11 +1017,11 @@
                     "when":"7/24/15",
                     "what":[
                       {
-                        "id":"C_exp69",
+                        "id":"D_exp69",
                         "lead":"Miniprep PA2C-TesA"
                       },
                       {
-                        "id":"C_exp70",
+                        "id":"D_exp70",
                         "lead":"More Golden Gate",
                         "steps":[
                           "Re PCR the ps8k backbone to ligate cysE2-hesB into",
@@ -1034,14 +1034,14 @@
                   },{
                     "when":"7/25/15",
                     "what":{
-                      "id":"C_exp71",
+                      "id":"D_exp71",
                       "lead":"Transform the Golden Gate product into chemically competent DH10B"
                     }
                   },
                   {
                     "when":"7/27/15",
                     "what":{
-                      "id":"C_exp72",
+                      "id":"D_exp72",
                       "lead":"Check for inserts",
                       "steps":[
                         "Miniprep the overnight of ps8k, ps8k cysE2-hesB 1 through 5 ( 5 colonies picked from the plate), and pB1a-tet",
@@ -1055,7 +1055,7 @@
                     "when":"7/28/15",
                     "what":[
                       {
-                        "id":"C_exp73",
+                        "id":"D_exp73",
                         "lead":"Prepare Second plasmid",
                         "description":"Prepare second plasmid of minimal nif cluster",
                         "steps":[
@@ -1072,7 +1072,7 @@
                         ]
                       },
                       {
-                        "id":"C_exp74",
+                        "id":"D_exp74",
                         "lead":"Send in sequencing primers",
                         "steps":[
                           "Dilute sequencing primers for ps8k cysE2-hesB",
@@ -1090,7 +1090,7 @@
                     "when":"7/29/2015",
                     "what":[
                       {
-                        "id":"C_exp75",
+                        "id":"D_exp75",
                         "lead":"Check Plasmid",
                         "steps":[
                           "Run a gel of a small amount of nifh to nifn golden gate mixture and all of the pB1t PCR",
@@ -1107,7 +1107,7 @@
                     "when":"7/30/15",
                     "what":[
                       {
-                        "id":"C_exp76",
+                        "id":"D_exp76",
                         "lead":"Send in sequencing primers",
                         "description":"Received sequencing results for the first ~1000 bp read of the cysE2-hesB minimal nif plasmid and they look good—send in the remainder of the reads for sequencing",
                         "steps":[
@@ -1116,7 +1116,7 @@
                           "Water to 12 uL total"
                         ]
                       },{
-                        "id":"C_exp77",
+                        "id":"D_exp77",
                         "lead":"Repeat Golden Gate",
                         "steps":[
                           "Try inserts in groups of 3 and 4 rather than all 7",
@@ -1129,7 +1129,7 @@
                     "when":"7/31/15",
                     "what":[
                       {
-                        "id":"C_exp78",
+                        "id":"D_exp78",
                         "lead":"Do Goldan Gate 2 at a time",
                         "description":"Do Golden gate 2 inserts at a time, in pairs as follows (leaving out nifK from the groupings for now): nifH & nifK, nifB & hesA, nifE & nifN"
 
@@ -1140,7 +1140,7 @@
                     "when":"8/1/15",
                     "what":[
                       {
-                        "id":"C_exp79",
+                        "id":"D_exp79",
                         "lead":"Run PCRs to confirm",
                         "result":[
                           "EN did not work. Try PCR with varied MgCl concentration and annealing temperatures. ",
@@ -1154,7 +1154,7 @@
                     "when":"8/4/15",
                     "what":[
                       {
-                        "id":"C_exp80",
+                        "id":"D_exp80",
                         "lead":"Try new golden gate conditions",
                         "steps":[
                           "37C for 3 minutes",
@@ -1170,7 +1170,7 @@
                         ]
                       },
                       {
-                        "id":"C_exp81",
+                        "id":"D_exp81",
                         "lead":"Attempt to digest then ligate separately",
                         "steps":[
                           {"what":"Digest", "steps":[
@@ -1192,7 +1192,7 @@
                     "when":"8/5/15",
                     "what":[
                       {
-                        "id":"C_exp82",
+                        "id":"D_exp82",
                         "lead":"More ligations",
                         "steps":[
                           "Ligate HDK with BA under cyclic conditions",
@@ -1201,7 +1201,7 @@
                         ]
                     },
                     {
-                      "id":"C_exp83",
+                      "id":"D_exp83",
                       "lead":"More EN",
                       "description":"Run PCRs of nifE and nifN ligation from separate digestion and ligation",
                       "steps":[
@@ -1216,7 +1216,7 @@
                     "when":"8/6/15",
                     "what":[
                       {
-                        "id":"C_exp84",
+                        "id":"D_exp84",
                         "lead":"Check on ligation reactions",
                         "steps":[
                           "Ran gel of HDK BA, HDK BA E N, and overnight 4C E N ligations",

@@ -92,6 +92,182 @@
         "same_as":"B_exp9"
       }
     ]
+  },{
+    "when":"6/9/15",
+    "what":[
+      {
+        "id":"M_exp10",
+        "lead":"Made culture",
+        "description":"Made culture for the transformed DH10B so that we could create frozen stock"
+      }
+    ]
+  },{
+    "when":"6/10/15",
+    "what":[
+      {
+        "id":"M_exp11",
+        "lead":"Helped out in Zhangs lab",
+        "description":"Helped Charlotte and Carlos in the Zhang lab as they ran PCR's, gels, DNA purification"
+      }
+    ]
+  },
+  {
+    "when":"6/11/15",
+    "what":[
+      {
+        "id":"M_exp12",
+        "lead":"Zhang RE Digest (30 microl)"
+      }
+    ]
+  },{
+    "when":"6/12/15",
+    "what":[
+      {
+        "id":"M_exp13",
+        "lead":"PCR",
+        "steps":[
+          {"what":"Preparing samples", "steps":[
+            "Add HP molecular water 10x the amount of DNA in primer tube to get a 100 uM concentration after centrifuging",
+            "Vortex each tube"
+            ]},
+          {"what":"Preparing solutions", "steps":[
+            "Create 10 uM solutions of DNA by transferring primer DNA from 100 uM solution to a microcentrifuge (10 microl) and add 90 microl water",
+            "Make a mastermix for the PCR, which should have an amount of liquid n+ 1 times the number of rexn you have",
+            {"what":"Per rxn", "type":"R", "steps":[
+              "1 microl template",
+              ".5 microl phusion polymerase (mastermix)",
+              "2.5 microl forward primer",
+              "2.5 microl reverse primer",
+              "1 microl dNTP's (mastermix)",
+              "4 microl DMSO (mastermix)",
+              "Fill rest of 50 microl with water (micromix)"
+              ]},
+              "Get out 150 ml mcf tube per reaction and add mastermix plus DNA"
+            ]},
+            {"what":"Thermocycler", "steps":[
+              "Put tubes in top tray and close lid",
+              "Tighten the dial on lid so that it's tight, but doesn't break off",
+              "Choose the new protocol button",
+              "Make sure to change the vol",
+              {"what":"Make sure to change the polymerization time (72 C) to make sure phusion can extend whole DNA strand", "precaution":"Phusion's rate is 1000 bp/15 sec"},
+              {"what":"Change primer annealing temp. to what you want", "precaution":"Should be 4 degrees C less for DMSO solutions"}
+
+              ]},
+            {"what":"Making an agarose gel", "steps":[
+              "Measure out 1 g of agarose and add to 100 ml of TAE in a 250 ml flask",
+              "2. Put in microwave for 1.5 min.",
+              "3. Let cool after microwaving and then add 7 microl Sybersafe",
+              "4. Make a gel plate by drying sides off and taping twice",
+              "5. Pour gel into plate until it reaches comb inserts level",
+              "6. Make sure no air bubbles are in gel by combing the gel with comb",
+              "7. Place comb into gel and let sit for 1.5 hrs.",
+              "8. Throw out all trash into gel bin"
+              ]},
+            {"what":"Loading a gel", "steps":[
+              "1. Take comb out perpendicularly and place plate in clean buffer",
+              "2. Grab samples from Thermocycler on 50 microl tray",
+              "3. Dilute samples with loading dye from fridge to 1x to 6x",
+              "a. If PCR products are 50 microl, this means adding 10 microl dye",
+              "4. Mix by drawing up ~60 microl from the bottom of tube, not middle",
+              "5. Put in well, approaching perpendicularly",
+              "a. Do not go in so far as to poke gel!",
+              "6. Continuously push the product into the well and pull the pipetter out as ",
+              "soon as the first stop is hit",
+              "7. Load DNA ladder (5 microl) (1 kb)",
+              "8. Place black end of electrode onto side with DNA",
+              "9. Press mode on machine 3 times to find time, set to 30 min., let sit"
+              ]},
+              {
+                "what":"PCR", "type":"P", "steps":[
+                  "<table><th><td></td><td>1X</td><td>9x</td></th><tr><td>Template</td><td>1 microl</td><td>-</td></tr><tr><td>Pusion</td><td>.5 microl</td><td>4.5 microl</td></tr><tr><td>F Primer</td><td>2.5 microl</td><td>-</td></tr><tr><td>R Primer</td><td>2.5 microl</td><td>-</td></tr><tr><td>dNTP's</td><td>1 microl</td><td>9 microl</td></tr><tr><td>HF Buffer</td><td>10 microl</td><td>90 microl</td></tr><tr><td>DMSO</td><td>4 microl</td><td>36 microl</td></tr><tr><td>Water</td><td>28.5 microl</td><td>256.5 microl</td></tr></table>"
+                ]}
+
+        ]
+      }
+    ]
+  },{
+    "when":"6/13/15",
+    "what":[
+      {
+        "id":"M_exp14",
+        "lead":"Gel DNA recovery",
+        "steps":[
+          "Put DNA cut from gel into 1.7 mcf tube",
+          "Add 600 microl ADB to each mcf tube",
+          {"what":"Incubate at 55 degrees C for 20-30 min", "precaution":"Check on gel throughout incubation and vortex every so often"},
+          {"what":"Pipette melted agarose solution into zymo-spin column in a collection tube 900 microl at a time", "precaution":"Spin-column with cap is used for gels, those without used for mini-prep"},
+          "Centrifuge for 30 sec. on 16000 rpm",
+          "Discard flow-through into beaker",
+          "Pipette rest of liquid into spin column until no more liquid left in mcf tubes",
+          "Add 200 microl wash buffer twice, discarding flow-through each time, and centrifuging 30 sec. ",
+          "ix. Spin for 2 min. without anything",
+          "x. Discard flow-through",
+          "xi. Move spin column to 1.7 microl tube",
+          "xii. Add 40 microl HP molec. water to column matrix and let sit for 2 min.",
+          "1. 30 microl unless doing an RE digest",
+          "xiii. Spin at 16000 rpm for 30 sec.",
+          "xiv. Take a DNA concentration",
+          "1. 1: 90.1 ng/microl",
+          "2.04 for 260/280",
+          "2. 2: 85.0 ng/microl",
+          "1.85 ng/microl"
+        ]
+      },
+      {
+        "id":"M_exp15",
+        "lead":"Dpn1 and clean-up",
+        "steps":[
+          "i. Add 5 microl buffer to mcf tube",
+          "ii. Add 5 microl enzyme to mcf tube",
+          "iii. Put in 37 degrees C for 1 hr.",
+          "1. 11:30 to be taken out at 12:30",
+          "iv. Get DNA Clean and Concentrator Kit",
+          "v. Add 5 volumes DNA Binding Buffer to each tube",
+          "vi. Vortex",
+          "vii. Transfer liquid into capless spin columns in collection tubes",
+          "viii. Spin for 30 sec. at 16000 rpm",
+          "ix. Add 200 microl Wash Buffer",
+          "x. Spin for 30 sec. at 16000 rpm",
+          "xi. Add 200 microl Wash Buffer",
+          "xii. Spin for 2.5 min. at 16000 rpm",
+          "xiii. Transfer spin columns to 1.7 mcf tubes",
+          "xiv. Add 40 microl water to DNA and let sit for 2 min.",
+          "1. 30 microl unless doing an RE digest",
+          "xv. Spin for 2 min. at 16000 rpm"
+        ]
+      },{
+        "id":"M_exp16",
+        "lead":"RE Digest",
+        "steps":[
+          "i. Add 5 microl buffer",
+          "ii. Add 5 microl enzyme",
+          "iii. Total vol. should be 50 microl",
+          "iv. Incubate for 3 hrs. at 37 degrees C",
+          "1. Started at 12:40 to be taken out at 3:40"
+        ]
+      },
+      {
+        "id":"M_exp17",
+        "lead":"Density Measurment"
+      },
+      {
+        "id":"M_exp18",
+        "lead":"DNA ligation",
+        "steps":[
+          "i. Want 100 ng backbone (bb) with 5x insert (in)",
+          "ii. (5)x(100 ng bb/(6819bp/bb))x((820 bp/in)/(46.7ng/microl)) = 1.28 microl of insert",
+          "iii. 100 ng bb/45.1 ng/microl = 2.22 microl bb",
+          {"what":"iv. Totals", "type":"R", "steps":[
+            "8 microl",
+            "1 microl T4 ligase",
+            "1 microl buffer",
+            ".2 microl PNK"
+            ]},
+            "let ligation reaction sit for 1-1.5 hrs.",
+            "transform cells with plasmid"
+        ]
+      }
+    ]
   }
 
 ]

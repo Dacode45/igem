@@ -387,5 +387,66 @@
         "lead":"Finished both the report and code."
       }
     ]
+  },
+  {
+    "when":"7/27/2015",
+    "what":[
+      {
+        "id":"L_exp38",
+        "lead":"Worked on code",
+        "description":"Tried running my gene double knockouts code but it timed out.Broke up the code into smaller pieces that will be run simultaneously.  Also started reading about OptKnock."
+      }
+    ]
+  },
+  {
+    "when":"7/28/2015",
+    "what":[
+      {
+        "id":"L_exp39",
+        "lead":"Worked on code",
+        "description":"Started setting up and debugging the OptKnock code with Jess.  We want to try to couple flavodoxin production with biomass."
+      }
+    ]
+  },
+  {
+    "when":"7/29/2015",
+    "what":[
+      {
+        "id":"L_exp40",
+        "lead":"Worked on code",
+        "description":"Ran OptKnock for double reaction knockouts and continued to debug.  Wrote a Python code that will determine if the OptKnock suggested knockouts couple flavodoxin with biomass or not. Jess ran an OptKnock code for triple reaction knockouts."
+      }
+    ]
+  },
+  {
+    "when":"7/30/2015",
+    "what":[
+      {
+        "id":"L_exp41",
+        "lead":"Worked on code",
+        "description":"Wrote a new Python code to determine of the OptKnock suggested triple reaction knockouts couple flavodoxin production to biomass."
+      }
+    ]
+  },
+  {
+    "when":"7/31/2015",
+    "what":[
+      {
+        "id":"L_exp42",
+        "lead":"First OptKnock results",
+        "description":"Analyzed OptKnock results; however, none couple flavodoxin to biomass.  Note that OptKnock suggests reaction, not gene knockouts."
+      }
+    ]
+  },
+  {
+    "when":"8/3/2015",
+    "what":[
+      {
+        "id":"L_exp43",
+        "lead":"Second OptKnock results",
+        "description":"In my final week, I fixed the issues with my double gene knockout codes (so there are no longer discrepancies and the outputs are correct).  Unfortunately, we did not find any double knockouts that coupled flavodoxin production to biomass. Future research could look into why this is the case.  Additionally, Jess and I worked on getting travel grants and funding in order for our trip to the iGEM Giant Jamboree in September. compiled our wiki modeling summary and worked on making edits for it."
+      }
+    ]
   }
+
 ]
