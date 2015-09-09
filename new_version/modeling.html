@@ -6,19 +6,21 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
-  <title>Washington University - Penn State IGEM</title>
+  <meta name="description" content="iGEM 2015 Wash U Penn State Team">
+  <meta name="description" content="Igem 2015 Wash U Penn State Team">
+  <meta name="author" content="David Ayeke">
+
+  <title>Washington University - Penn State iGEM</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="http://2015.igem.org/Team:WashU_StLouis/css/bootstrap.min.css?action=raw&ctype=text/css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="css/igem.css" rel="stylesheet">
+  <link href="http://2015.igem.org/Team:WashU_StLouis/css/igem.css?action=raw&ctype=text/css" rel="stylesheet">
 
   <!-- Custom Fonts -->
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -32,16 +34,28 @@
   <![endif]-->
 
   <!-- Background Req -->
-  <script src="js/underscore-min.js"></script>
-  <script src="js/backbone-min.js"></script>
-  <script src="js/d3.min.js" charset="utf-8"></script>
-  <script src="js/module-manager.js"></script>
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/underscore-min.js?action=raw&ctype=text/javascript"></script>
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/backbone-min.js?action=raw&ctype=text/javascript"></script>
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/d3.min.js?action=raw&ctype=text/javascript" charset="utf-8"></script>
+  <script src="http://2015.igem.org/Team:WashU_StLouis/js/module-manager.js?action=raw&ctype=text/javascript"></script>
 
 
 </head>
 
-<body id="page-top" class="index">
-
+<body  id="page-top" class="index" data-spy="scroll" data-target="IgemScrollSpy" data-offset="15">
+  <!-- Background Canvas -->
+  <div id = "background-canvas"></div>
+  <!-- Header -->
+  <header class="row">
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Welcome To Our Website!</div>
+        <div class="intro-heading"> WashU and Penn State &nbsp; iGEM 2015</div>
+        <a href="http://2015.igem.org/Team:WashU_StLouis/description#description" class="page-scroll btn btn-xl">Project Description</a>
+        <a href="http://2015.igem.org/Team:WashU_StLouis#contact" class="page-scroll btn btn-xl">Let's Talk</a>
+      </div>
+    </div>
+  </header>
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -53,7 +67,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand page-scroll" href="#page-top">Nitrogenius</a>
+        <a class="navbar-brand page-scroll" href="#page-top">Nitrogen</a>
+        <a class="navbar-brand" href="http://2015.igem.org">
+          <img id="igemLogo" class="img-responsive" src="http://2014.igem.org/wiki/images/0/09/Aalto_Helsinki_Logov_iGEM.png" alt="Igem Logo">
+        </a>
+
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->
@@ -63,93 +81,229 @@
             <a href="#page-top"></a>
           </li>
           <li>
-            <a class="page-scroll" href="#Team">Team</a>
+            <a class="page-scroll" href="#modeling_intro">Genome-Scale Modeling</a>
           </li>
           <li>
-            <a href="mailto:ayekedavidr@wustl.edu?subject=Bug">Report Bugs</a>
+            <a class="page-scroll" href="#flux_analysis">What is Flux Balance Analysis</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#modeling_hypothesis">Our Modeling Hypothesis</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#problem_formulations">Problem Formulation</a>
+          </li>
+
+          <li class="dropdown">
+            <a href="#results" class="dropdown-toggle" data-toggle="dropdown">Results <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#pyruvate">Pyruvate metabolism</a></li>
+                <li><a href="#metabolite">Metabolite Exchange</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#additional_work" class="dropdown-toggle" data-toggle="dropdown">Additional Work<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#knockouts">Single and Double Gene Knockouts</a></li>
+                <li><a href="#optknock">Optknock</a></li>
+            </ul>
+          </li>
+          <li>
+            <a class="page-scroll" href="#future">Future Work</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#references">References</a>
+          </li>
+          <li>
+            <a href="#reportBugsModal" class="overview-link" data-toggle="modal">Report Bugs</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#sitemap">More</a>
           </li>
         </ul>
       </div>
+      <!-- iGEM Logo -->
       <!-- /.navbar-collapse -->
     </div>
     <!-- /.container-fluid -->
   </nav>
+  <div class="container bg-white">
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">Check out our Team!</div>
-        <div class="intro-heading"></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Background Canvas -->
-  <div id = "background-canvas"></div>
-
-
-
-  <!-- Project Overview -->
-  <!-- Main container -->
-  <div class="container">
     <div class="row">
-      <div class="md-col-9">
-        <section class="row sectionNum1 bg-light-gray">
-          <a href="#modeling_intro" class="anchorjs-link" data-anchorjs-icon="[]" aria-label="Anchor-link" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;">
-            Anchor
-          </a>
-          <h2>here</h2>
+      <div class="col-md-12" role="main">
+         <section id="modeling_intro" class="sectionNum1 bg-light-gray">
+          <a aria-label="Anchor link" class="anchorjs-link" data-anchorjs-icon="[]" href="#modeling_intro" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+           </a>
+          <h2>What is a genome-scale metabolic model?</h2>
+          <p>
+            A genome-scale metabolic model (<strong>GSM</strong>)  is a network reconstruction of all known metabolic reactions in an organism and the genes that encode each associated enzyme.1 Through the construction of these networks, we can assess the metabolic capabilities of an organism as well as its potential to produce biologically useful metabolites.
+          </p>
+          <h3>What are the components of a genome-scale model</h3>
+          <ul>
+            <li><strong>Gene-Protein-Reaction (GPR)</strong> relationships</li>
+            <li>Set of known metabolic reactions represented in a <strong>stoichiometric matrix</strong>. Identifies stoichiometric coefficients and directionality associated with each reaction. </li>
+            <li>Scaled <strong>biomass equation</strong>. Assumes flux through the biomass equation is equal to the exponential growth rate of the organism. This is made from experimental measurements of biomass components.
+            </li>
+          </ul>
+          <img class="img-responsive" src="http://placehold.it/400x400"/>
+          <p>You can download our GSM, adapted from a published model of <em>E. coli</em> strain DH10B (Monk et al)<a data-container="body" data-toggle="popover" data-placement="top" data-content="TODO add actual reference" ><sup>[2]</sup></a>, of nitrogen-fixing <em>E. coli</em> (strain WM1788) <a href="">here</a>. <p>
+
         </section>
+        <section id="flux_analysis" class="sectionNum2 bg-white">
+          <a aria-label="Anchor link" class="anchorjs-link" data-anchorjs-icon="[]" href="#modeling_intro" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+           </a>
+           <h2>What is flux balance analysis?</h2>
+           <p>Flux balance analysis, or <strong>FBA</strong>, is the method by which we determine the flow of metabolites, or flux, through the constructed metabolic network of a GSM1. FBA allows us to predict growth rates of an organism under certain media conditions, along with the production levels of targeted metabolites, such as ATP. </p>
+           <table class=".table-striped ">
+             <th><td><em>E. Coli Strain</em></td><td>Maximum Biomass</td><td>Maximum ATP</td></th>
+             <tr><td>DH10B</td><td>.821451</td><td>3.154784</td></tr>
+             <tr><td>K-12 MG1655</td><td>.821233</td><td>3.153125</td></tr>
+             <tr><td>JM109</td><td>.821233</td><td>3.153125</td></tr>
+             <tr><td>WM1788 (Wild Type) </td><td>.821233</td><td>3.153125</td></tr>
+             <tr><td>WM1788 (Nitrogen-fixing)</td><td>.454531</td><td>3.155221*</td></tr>
+           </table>
+           <br>
+           <span><em>Sample FBA outputs for several E.coli strain models. Values are in mmol/(gram cell dry weight * hour)</em></span>
+           <p class="text-muted">*Note that the units for maximum ATP are tied to biomass; therefore the maximum ATP value for nitrogen fixing E. coli is  actually much lower, not higher, than the wild type values.</p>
 
-      </div>
-      <aside class="md-col-3 visible-xs-block hidden-xs">
-        <ol class="nav modeling-sidenav">
-          <li>
-            <a href="#modeling_intro">What is Genome-Scale Modeling?</a>
-          </li>
-          <li>
-            <a href="#flux_analysis">What is Flux Balance Analysis</a>
-          </li>
-          <li>
-            <a href="#modeling_hypothesis">Our Modeling Hypothesis</a>
-          </li>
-          <li>
-            <a href="#problem_formulations">Problem Formulations</a>
-          </li>
-          <li>
-            <a href="#results">Results</a>
+           <p><strong>Mass balance constraints</strong> are imposed on each metabolite using the stoichiometric coefficients of each metabolic reaction and the assumption that the organism is in the logarithmic growth phase (i.e. its metabolic fluxes are at steady state). This assumes that the total amount of any compound being produced is equal to the total amount being consumed. <strong>Upper and lower bounds</strong> are also applied to constrain the maximum fluxes based on the directionality of the reactions.</p>
+           <img class="img-responsive" src="http://placehold.it/400x400"/>
+           <span>(from Orth <em>et al</em>)<a data-container="body" data-toggle="popover" data-placement="top" data-content="TODO add actual reference" ><sup>[1]</sup></a></span>
+           <br>
+           <p>Linear programming is then used to identify the flux distribution throughout the model in order to maximize the flux through the biomass equation, subject to the previously defined constraints.</p>
+        </section>
+         <section id="modeling_hypothesis" class="sectionNum3 bg-light-gray">
+          <a aria-label="Anchor link" class="anchorjs-link" data-anchorjs-icon="[]" href="#modeling_intro" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;">
+           </a>
+           <h2>Our modeling hypothesis:</h2>
+           <p class="text-muted">How can we use genome scale modeling and flux balance analysis to optimize nitrogenase activity in vivo?</p>
+           <img class="img-responsive" src="http://placehold.it/400x400"/>
+           <p>The key limiting factors of the nitrogenase reaction are <span class="text-danger">ATP</span> and <span class="text-danger">reduced flavodoxin</span>. Therefore, our analyses focused on ways to either <strong>produce</strong> or <strong>provide</strong> more of these essential metabolites to the nitrogen fixing cell.</p>
+           <strong>How?</strong>
             <ul>
-              <li>
-                <a href="#pyruvate">Pyruvate metabolism</a>
-              </li>
-              <li>
-                <a href="#metabolite">Metobolite Exchange</a>
-              </li>
+              <li>Looking for potential gene <strong>overexpressions</strong> which lead to increased production of intracellular reduced flavodoxin and ATP </li>
+              <li>Looking for potential gene <strong>knockouts</strong> which redistribute flux, decreasing ATP consumption or leading to increased production of reduced flavodoxin</li>
+              <li>Determining which supplemental <strong>metabolites</strong> lead to the largest increases in reduced flavodoxin and ATP production </li>
             </ul>
-          </li>
-          <li>
-            <a href="#additional_work">Additional Work</a>
-            <ul>
-              <li>
-                <a href="#knockouts">Single and Double Gene Knockouts</a>
-              </li>
-              <li>
-                <a href="#metabolite">OptKnock</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="#future">Future Work</a>
-          </li>
-          <li>
-            <a href="#references">References</a>
-          </li>
+         </section>
 
-        </ol>
-      </aside>
+         <section id="problem_formulations" class="sectionNum4 bg-white">
+           <a aria-label="Anchor link" class="anchorjs-link" data-anchorjs-icon="[]" href="#modeling_intro" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+          <h2>Problem Formulations:</h2>
+          <p>Where S<sub>ij</sub> is the stoichiometric coefficient for metabolite i in reaction j, v<sub>j,min</sub> and v<sub>j,max</sub> are the minimum and maximum flux values for reaction j, v<sub>j</sub> is the flux value of reaction j, N is the number of metabolites, and M is the number of reactions.</p>
+          <table class=".table-striped ">
+            <tr>
+              <th class="col-md-6">What we did</td>
+              <th class="col-md-6">The math behind it</td>
+            </tr>
+            <tr>
+              <td class="col-md-6"><strong>Maximizing Biomass</strong><p>In general, FBA can be formulated to <strong>maximize the biomass</strong> (growth) of an organism. </p></td>
+              <td class="col-md-6"><p> Maximize v<sub>biomass</sub></p><span>Subject to:</span>
+                <img class="img-responsive" src="http://placehold.it/400x400"/>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="col-md-6">
+                <strong>Coupling flavodoxin production to biomass production</strong>
+                <p>With the goal of supplying the maximum amount of ATP and reduced flavodoxin to the nitrogenase reaction, a major part of our analysis involved performing all single and double gene knockouts in the model and iteratively retrieving FBA results for each.  We aimed to find instances in which <strong>flavodoxin production was coupled to biomass</strong>. </p>
+              </td>
+              <td class="col-md-6"><p> Maximize v<sub>flavodoxin</sub></p><span>Subject to:</span>
+                <img class="img-responsive" src="http://placehold.it/400x400"/>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="col-md-6">
+                <strong>Performing flux range analysis</strong>
+                <p>While FBA only produces one optimal solution when multiple valid optima may exist, FVA (flux variability analysis) reveals the entire optimal solution space and provides flux ranges for each reaction in the model.3,4  Therefore, analyzing FVA results gives us insight into <strong>which metabolic pathways an organism is using</strong>, given constraints that we set.</p>
+              </td>
+              <td class="col-md-6"><p></p>
+                <img class="img-responsive" src="http://placehold.it/400x400"/>
+              </td>
+            </tr>
+          </table>
+         </section>
+
+         <section id="results" class="sectionNum5 bg-light-gray">
+           <a aria-label="Anchor link" class="anchorjs-link" data-anchorjs-icon="[]" href="#modeling_intro" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+          <h2 id="pyruvate">Result: Pyruvate Metabolism</h2>
+          <p>When we compared flux data for our wild type and nitrogen fixing WM1788 models, we found that <span class="text-danger">pyruvate synthase</span> had higher (more positive) flux ranges for the nitrogen fixing strain than for the wild type. </p>
+          <img class="img-responsive" src="http://placehold.it/400x400"/>
+          <p class="text-danger text-center">2 flavodoxin (semi-oxidized) + 1 pyruvate +1 coenzyme A ↔ 1 CO2 + 2 reduced flavodoxin + 1 H+ + 1 acetyl-coA</p>
+          <p class="text-primary text-center">1 pyruvate + 1 coenzyme A + 1 NAD → 1 CO2 + 1 NADH + 1 acetyl-coA</p>
+          <p class="text-info text-center">1 pyruvate  + 1 coenzyme A → 1 acetyl-co-A + 1 formate</p>
+          <p>Therefore, we determined that knocking out <span class="text-primary">pyruvate dehydrogenase</span> (see figure above) redistributed more flux through <span class="text-danger">pyruvate synthase</span>, increasing the positive effect and producing more reduced flavodoxin.  </p>
+          <p>However, experimentally, <span class="text-danger">pyruvate dehydrogenase</span> deficiency in <em>E. coli</em> is associated with a buildup of pyruvate<a data-container="body" data-toggle="popover" data-placement="top" data-content="TODO add actual reference" ><sup>[5]</sup></a>, which is then converted into lactic acid, and results in compromised cell activity. To bypass this effect, we proposed simultaneous overexpression of <span class="text-danger">pyruvate synthase</span>, which will favorably produce more reduced flavodoxin from excess pyruvate. </p>
+         </section>
+         <section id="metabolite" class="sectionNum6 bg-white">
+           <a aria-label="Anchor link" class="anchorjs-link" data-anchorjs-icon="[]" href="#modeling_intro" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+            <h2>Metabolite Exchange Reactions</h2>
+            <p>We wanted to determine if the addition of any one metabolite to cell media could help promote model growth or activity. We specifically looked into the effects on maximum biomass, ATP, and reduced flavodoxin. From a Max Biomass vs. Max ATP scatter plot we generated with our data, we were able to narrow our set of metabolites to 6 sugars, including <strong>maltotriose, maltotetraose, maltose, maltopentaose, maltohexaose, and maltoheptaose</strong>.
+            </p>
+            <img class="img-responsive" src="http://placehold.it/400x400"/>
+            <p>Based on our results, we believe that the addition of any one of these metabolites to lab media can aid cell activity by providing an additional source of energy. </p>
+        </section>
+        <section id="additional_work" class="sectionNum7 bg-light-gray">
+          <a aria-label="Anchor link" class="anchorjs-link" data-anchorjs-icon="[]" href="#modeling_intro" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+            <h2 id="knockouts">Additional Work: Single and Double Gene Knockouts</h2>
+            <p>When a gene is knocked out in a cell, a metabolic <strong>flux redistribution</strong> can result. </p>
+            <img class="img-responsive" src="http://placehold.it/400x400"/>
+            <p>Thus, our goal in performing knockouts is to <strong>take advantage of flux redistributions</strong>, directing metabolic flux through pathways which produce more of the metabolites we desire.  Optimally, we aim to <strong>couple metabolite production with biomass</strong> -- that is, in order to grow at all, the cell will need to produce more of the specified metabolite.</p>
+            <p>Nitrogen fixing E. coli is already ATP-limited (the cell has already redistributed flux as much as it can to produce the most ATP).  Therefore, we focused most on looking for knockouts that <strong>couple reduced flavodoxin production to biomass</strong>. </p>
+            <img class="img-responsive" src="http://placehold.it/400x400"/>
+            <p class="text-center">The <em>E. coli</em> genome.<a data-container="body" data-toggle="popover" data-placement="top" data-content="TODO add actual reference" ><sup>[6]</sup></a></p>
+            <p>By knocking out every gene in our model (there are 1367), as well as performing all non-essential double gene knockouts (a total of 1,236,544 possible combinations), we can comprehensively assess the effect any single or double gene knockout has on intracellular biomass, ATP, and flavodoxin production. Unfortunately, while we did discover knockouts where maximum flavodoxin increased due to compromised biomass, we did not find any instances of coupling between flavodoxin and biomass. </p>
+
+            <h4>Our Python workflow for assessing single gene knockouts can be found below</h4>
+            TODO Implement
+       </section>
+       <section id="optknock" class="sectionNum4 bg-white">
+         <a aria-label="Anchor link" class="anchorjs-link" data-anchorjs-icon="[]" href="#modeling_intro" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+           <h2>OptKnock</h2>
+           <p>     OptKnock outputs a list of potential reaction knockouts to couple a growth function with the production of a specified compound. We were specifically looking at knockouts that couple maximum biomass with reduced flavodoxin. After running potential double and triple reaction knockouts, however, we found that none of the proposed knockouts were coupled with reduced flavodoxin- i.e. the maximum biomass, ATP, and reduced flavodoxin levels were identical to our original nitrogen-fixing figures. </p>
+           <img class="img-responsive" src="http://placehold.it/400x400"/>
+           <p class="text-muted">An example wild-type trade-off plot, using acetate production vs. biomass, with a point indicating the OptKnock suggested mutation.<a data-container="body" data-toggle="popover" data-placement="top" data-content="TODO add actual reference" ><sup>[7]</sup></a></p>
+       </section>
+       <section id ="future" class="sectionNum5 bg-light-gray">
+         <a aria-label="Anchor link" class="anchorjs-link" data-anchorjs-icon="[]" href="#modeling_intro" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+           <h2>What can we learn in the future?</h2>
+           <h4><em>The remaining questions:</em></h4>
+           <ul>
+             <li>
+               How can we search for new ways to couple reduced flavodoxin production to growth? Is it possible to do this?
+               <ul>
+                 <li>Will require a reexamination of the reactions flavodoxin is involved in, their roles in metabolism, and the essentiality of parallel pathways.  </li>
+               </ul>
+             </li>
+             <li>
+               How can we extend our analyses of supplemental metabolites, in order to optimize cell energy and growth?
+               <ul>
+                 <li>
+                   A possible approach to this problem involves extending our analysis from simple metabolites to more complex cell media.  Given a database of available media, or a way to create our own media, we could provide a comprehensive formula for lab use that is optimized to provide the most energy to the cell.
+                 </li>
+               </ul>
+             </li>
+           </ul>
+      </section>
+      <section id="references" class="sectionNum6 bg-white">
+        <a aria-label="Anchor link" class="anchorjs-link" data-anchorjs-icon="[]" href="#modeling_intro" style="font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"></a>
+          <h2>References</h2>
+          <ol>
+            <li>Orth J.D., Thiele I., and Palsson, B.O. 2010.  What is flux balance analysis? Nat. Biotechnol 28: 245-248. </li>
+            <li>Monk, J. M., P. Charusanti, R. K. Aziz, J. A. Lerman, N. Premyodhin, J. D. Orth, A. M. Feist, and Palsson, B.O. 2013. Genome-scale metabolic reconstructions of multiple Escherichia coli strains highlight strain-specific adaptations to nutritional environments. Proc. Natl. Acad. Sci. USA 110: 20338–20343.</li>
+            <li> Oberhardt, M.A., Palsson, B.O. and Papin, J.A. 2009. Applications of genome-scale metabolic reconstructions. Mol. Syst. Biol. 5: 320.</li>
+            <li>Mahadevan, R., Schilling CH. 2003. The effects of alternate optimal solutions in constraint-based genome-scale metabolic models. Metabolic Engineering 5: 264-276.</li>
+            <li>U.S. National Library of Medicine. Result Filters. National Center for Biotechnology Information. <a href="http://ghr.nlm.nih.gov/condition/pyruvate-dehydrogenase-deficiency">here</a></li>
+            <li><a href="http://biologos.org/uploads/static-content/figure_2_ussery_4.jpg">E. Coli genomre</a></li>
+            <li>Burgard, A.P., Pharkya, P., and Maranas, C.D. 2003. OptoKnock: A Bilevel Programming Framework for Identifying Single Gene Knockout Strategies for Microbial Strain Optimization. Biotechnol. Bioeng 84: 647-657.</li>
+          </ol>
+     </section>
+   </div>
+
+
+
     </div>
-    
+
   </div>
 
   <footer  class="bg-white row">
@@ -200,40 +354,211 @@
         </div>
 
       </div>
+    </section>
     </div>
-  </footer>
 
-  <!-- jQuery -->
-  <script src="js/jquery.js"></script>
+                      <footer  class="bg-white row">
+                        <!-- overview Modal 6 -->
+                        <div class="overview-modal modal fade" id="reportBugsModal" tabindex="-1" role="dialog" aria-hidden="true">
+                          <div class="modal-content">
+                            <div class="close-modal" data-dismiss="modal">
+                              <div class="lr">
+                                <div class="rl">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="container">
+                              <div class="row">
+                                <div class="col-lg-8 col-lg-offset-2">
+                                  <div class="modal-body">
+                                    <!-- Report Bugs Section -->
+                                    <section id="report_bugs"  class="bg-white row">
+                                      <div class="container">
+                                        <div class="row">
+                                          <div class="col-lg-12 text-center">
+                                            <h2 class="section-heading">Report Bugs</h2>
+                                            <h3 class="section-subheading text-muted">Thanks for your help with out site!</h3>
+                                            <div class="alert alert-danger">
+                                              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                                              <strong>This form will open your default mail client (i.e Outlook). If you do not have one installed, email us at  WashU iGEM washu.igem@gmail.com</strong>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <div class="row">
+                                          <div class="col-lg-12">
+                                            <form  name="sentMessage" id="reportForm" novalidate>
+                                              <div class="row">
+                                                <div class="col-md-6">
+                                                  <div class="form-group">
+                                                    <input type="text" class="form-control" placeholder="Your Name *" id="report_name" required data-validation-required-message="Please enter your name.">
+                                                    <p class="help-block text-danger"></p>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <input type="email" class="form-control" placeholder="Your Email *" id="report_email" required data-validation-required-message="Please enter your email address.">
+                                                    <p class="help-block text-danger"></p>
+                                                  </div>
+                                                </div>
+                                                <div class="col-md-6">
+                                                  <div class="form-group">
+                                                    <textarea class="form-control" placeholder="Your Message *" id="report_message" required data-validation-required-message="Please enter a message."></textarea>
+                                                    <p class="help-block text-danger"></p>
+                                                  </div>
+                                                </div>
+                                                <div class="clearfix"></div>
+                                                <div class="col-lg-12 text-center">
+                                                  <div id="success"></div>
+                                                  <button type="submit" class="btn btn-xl">Send Bug</button>
+                                                </div>
+                                              </div>
+                                            </form>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </section>
 
-  <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="js/classie.js"></script>
-  <script src="js/cbpAnimatedHeader.js"></script>
-
-  <!-- Contact Form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
-
-  <!-- Footnotes -->
-  <script src="js/bootstrap.footnotes.css"></script>
-
-  <!-- Custom Theme JavaScript -->
-  <script src="js/agency.js"></script>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close Modal</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 
 
+                        <div class="container">
+                          <!-- Site Map -->
+                          <section class="row sectionNum5" id="sitemap">
+                            <h2>Discover</h2>
+                            <table class="table">
+                              <tr>
+                                <td>Parts</td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/basic_part">Basic Parts</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/part_collection">Parts Collection</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/parts">Parts</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/composite_part">Composite Part</a></td>
+                              </tr>
+                              <tr>
+                                <td>Team</td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/team">Members</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/notebook">Journals</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/attributions">Attributions</a></td>
+                              </tr>
+                              <tr>
+                                <td>Project</td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/description">Description</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/design">Design</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/modeling">Modeling</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/measurment">Measurment</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/project">Project</a></td>
+                              </tr>
+                              <tr>
+                                <td>Policies and Practices</td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/human_practices">Human Practices</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/practices">Practices</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/safety">Safety</a></td>
+                              </tr>
+                              <tr>
+                                <td>Misc.</td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/entrepreneurship">Entrepreneurship</a></td>
+                                <td><a href="http://2015.igem.org/Team:WashU_StLouis/software">Software</a></td>
+                              </tr>
+                            </table>
 
-  <!-- Background Script -->
-  <script src="js/background.js"></script>
+                          </section>
+                          <!-- sponsors Aside -->
+                          <section id="sponsors" class="row  sectionNum6">
+                            <div class="container">
+                              <div class="row">
+                                <h2>Sponsors</h2>
+                              </div>
 
-  <!-- Inline script -->
-  <script>
-  // Activate Footnotes
-  $.footnotes();
-  </script>
-</body>
+                              <div class="row">
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                  <div id="WashULogo" class="logo"></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                  <div id="PennStateLogo" class="logo"></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                  <div id="ICaresLogo" class="logo"></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                  <div id="WashUArtLogo" class="logo"></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                  <div id="SnapGeneLogo" class="logo"></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                  <div id="Monsanto" class="logo"></div>
+                                </div>
+                                <div class="col-md-4 col-sm-6 col-xs-6">
+                                  <div id="SigmaAldrichLogo" class="logo"></div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                          <div class="row" >
+                            <div class="col-md-4 col-md-offset-4">
+                              <span class="copyright"> Washington University in St. Louis and Pennsylvania State University iGEM 2015</span>
+                            </div>
+                          </div>
+                          <div class ="row">
+                            <div class="col-md-4 col-md-offset-4">
+                              <ul class="list-inline social-buttons">
+                                <li><a href="http://twitter.com/WashUiGEM"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li><a href="http://www.facebook.com/WashuIgem"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a href="http://www.youtube.com/channel/UCjO_tMiJdx6hCyCREsMBYUQ"><i class="fa fa-youtube"></i></a>
+                                </li>
+                              </ul>
+                            </div>
 
-</html>
+                          </div>
+                        </div>
+                      </footer>
+
+                    </div>
+                    <!-- JQuery -->
+                    <script src="js/jquery.js"></script>
+                    <!-- Bootstrap Core JavaScript -->
+                    <script src="http://2015.igem.org/Team:WashU_StLouis/js/bootstrap.min.js?action=raw&ctype=text/javascript"></script>
+
+                    <!-- Plugin JavaScript -->
+                    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+                    <script src="http://2015.igem.org/Team:WashU_StLouis/js/classie.js?action=raw&ctype=text/javascript"></script>
+                    <script src="http://2015.igem.org/Team:WashU_StLouis/js/cbpAnimatedHeader.js?action=raw&ctype=text/javascript"></script>
+
+                    <!-- Contact Form JavaScript -->
+                    <script src="http://2015.igem.org/Team:WashU_StLouis/js/jqBootstrapValidation.js?action=raw&ctype=text/javascript"></script>
+                    <script src="js/contact_me.js"></script>
+
+                    <!-- Footnotes -->
+                    <script src="http://2015.igem.org/Team:WashU_StLouis/js/bootstrap.footnotes.js?action=raw&ctype=text/javascript"></script>
+
+                    <!-- Custom Theme JavaScript -->
+                    <script src="http://2015.igem.org/Team:WashU_StLouis/js/agency.js?action=raw&ctype=text/javascript"></script>
+
+
+
+                    <!-- Background Script -->
+                    <script src="http://2015.igem.org/Team:WashU_StLouis/js/background.js?action=raw&ctype=text/javascript"></script>
+                    <!-- Inline script -->
+                    <script>
+                    // Activate Footnotes
+                    $.footnotes();
+                    </script>
+
+                    <script>
+                    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                    ga('create', 'UA-65150000-1', 'auto');
+                    ga('send', 'pageview');
+
+                    </script>
+                  </body>
+
+                  </html>

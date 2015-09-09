@@ -1015,6 +1015,22 @@ background-image: url("http://2015.igem.org/wiki/images/8/8a/Sigma-Aldrich_Logo.
   }
 }
 
+
+@media (min-width: 979px) {
+  .modeling_nav.affix-top {
+    position: relative;
+    top: 100px;
+  	margin-top:50px;
+
+  }
+
+  .modeling_nav.affix {
+    position: fixed;
+    top:150px;
+    width:228px;
+  }
+}
+
 .affix,.affix-top {
    position:static;
 }

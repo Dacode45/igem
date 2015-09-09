@@ -980,20 +980,20 @@ background-image: url("http://2015.igem.org/wiki/images/8/8a/Sigma-Aldrich_Logo.
   }
 
   @media (min-width: 979px) {
-    #journal-sidebar.affix-top {
+    #journal-sidebar, #journal-modeling .affix-top {
       position: static;
     	margin-top:30px;
     	width:228px;
     }
 
-    #journal-sidebar.affix {
+    #journal-sidebar, #journal-modeling .affix {
       position: fixed;
       top:70px;
       width:228px;
     }
   }
 
-  #journal-sidebar li.active {
+  #journal-sidebar, #journal-modeling li.active {
     	border:0 #eee solid;
     	border-right-width:4px;
   }

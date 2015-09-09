@@ -92,7 +92,8 @@ def addTabularScaffold(data, html):
     html.append(tabDiv)
     return tabContent
 
-def addJournalContent(person, journal, contentDiv):
+def addJournalContent(person_var, journal, contentDiv):
+    person = str(person_var)
     header, main, aside = addJournalScaffold(person, contentDiv)
 
     #add picture and description to header
@@ -123,9 +124,9 @@ def addJournalContent(person, journal, contentDiv):
         journalSection['class'] = "journal-section list-group"
         date = dateutil.parser.parse(day['when'])
         dateID = date.strftime('%b_%d')
-        h1 = soup.new_tag('h1', id="person_"+dateID)
+        h1 = soup.new_tag('h1', id=person+"_"+dateID)
         anchorStyle = "font-family: anchorjs-icons; font-style: normal; font-variant: normal; font-weight: normal; position: absolute; margin-left: -1em; padding-right: 0.5em;"
-        anchor = soup.new_tag('a', href="#person_"+dateID,  style=anchorStyle)
+        anchor = soup.new_tag('a', href="#"+person+"_"+dateID,  style=anchorStyle)
         anchor['aria-label'] = "Anchor link for: "+dateID
         anchor['data-anchorjs-icon'] = "[]"
         anchor['class'] = "anchorjs-link"
@@ -137,7 +138,7 @@ def addJournalContent(person, journal, contentDiv):
         #Add this Day to the sidebar.
         dayList = soup.new_tag('div')
         dayList['class'] = "list-group-item"
-        anchor = soup.new_tag('a', href="#person_"+dateID)
+        anchor = soup.new_tag('a', href="#"+person+"_"+dateID)
         anchor.append(dateID)
         dayList.append(anchor)
         dayList.append(soup.new_tag('hr'))
@@ -203,7 +204,7 @@ def addJournalScaffold(person, contentDiv):
     main['class'] = "col-md-9"
 
     aside = soup.new_tag("aside", id=person+"_journal_aside", role="complementary")
-    aside['class'] = "col-md-3 scrollspy journal_asside"
+    aside['class'] = "col-md-3 scrollspy journal_aside"
 
     mainRow.append(main)
     mainRow.append(aside)

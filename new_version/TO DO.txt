@@ -17,3 +17,7 @@ Fix lines on the team page.
 Put everyone (including Caroline) under advisors (rather than a separation from graduate student mentors).
 
 Add citations to the "Why are we doing this project?" page where necessary.
+
+Replace all instances of uM with the right symbol.
+
+Remove font awesome and replace with images. 
