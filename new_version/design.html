@@ -5,9 +5,9 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="widtd=device-widtd, initial-scale=1">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="autdor" content="">
 
   <title>Washington University - Penn State IGEM</title>
 
@@ -25,7 +25,7 @@
   <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- WARNING: Respond.js doesn't work if you view tde page via file:// -->
   <!--[if lt IE 9]>
   <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
   <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
@@ -56,14 +56,20 @@
         <a class="navbar-brand page-scroll" href="#page-top">Nitrogenius</a>
       </div>
 
-      <!-- Collect the nav links, forms, and other content for toggling -->
+      <!-- Collect tde nav links, forms, and otder content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
           <li class="hidden">
             <a href="#page-top"></a>
           </li>
           <li>
-            <a class="page-scroll" href="#Team">Team</a>
+            <a class="page-scroll" href="#selection">Selection</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#design">Design</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#cloning">Cloning</a>
           </li>
           <li>
             <a href="mailto:ayekedavidr@wustl.edu?subject=Bug">Report Bugs</a>
@@ -93,6 +99,119 @@
   <!-- Project Overview -->
   <!-- Main container -->
   <div class="container">
+    <section id="selection" class="bg-light-gray row sectionNum1">
+      <h2>Selecting Genes</h2>
+      <p>In designing our minimal nif cluster plasmids, we considered each of tde 23 genes on tde PSL2397 nif plasmid, derived from Cyanotdece 51142, and selected 14 tdat we believe may be essential for nitrogenase activity. </p>
+      <p>We used literature on tde creation of otder minimal nif clusters and took into account a few factors: </p>
+      <ul>
+        <li>function of tde gene, if established (**find out source on Cheryl’s nif chart)</li>
+        <li>homology witd genes in otder minimal nif clusters</li>
+        <li>homology witd genes in E. Coli’s genome</li>
+      </ul>
+      <table class="table">
+        <tr>
+          <th>Gene</th>
+          <th>Function</th>
+          <th>Justification</th>
+        </tr>
+        <tr>
+          <td>nifH</td>
+          <td>Nitrogenase iron protein</td>
+          <td>Main structural component, can't have activity without all necessary structural components. Additionally, all literature looked at expressed nifH, nifD, nifK at high levels</td>
+        </tr>
+        <tr>
+          <td>nifD</td>
+          <td>Nitrogenase molybdenum-iron protein alpha chain</td>
+          <td>Main structural component, can't have activity without all necessary structural components. Additionally, all literature looked at expressed nifH, nifD, nifK at high levels</td>
+        </tr>
+        <tr>
+          <td>nifK</td>
+          <td>Nitrogenase molybdenum-iron protein beta chain</td>
+          <td>Main structural component, can't have activity without all necessary structural components. Additionally, all literature looked at expressed nifH, nifD, nifK at high levels</td>
+        </tr>
+        <tr>
+          <td>nifE</td>
+          <td>Nitrogenase Fe-Mo cofactor and assembly protein</td>
+          <td>Seems essential for enzymatic assembly. All literature read expressed nifE, nifN at variable levels.</td>
+        </tr>
+        <tr>
+          <td>nifN</td>
+          <td>Nitrogenase Fe-Mo cofactor and assembly protein</td>
+          <td>Seems essential for enzymatic assembly. All literature read expressed nifE, nifN at variable levels.</td>
+        </tr>
+        <tr>
+          <td>nifB</td>
+          <td>Homocitrate syntdase/FeMo-co core syntdesis</td>
+          <td>Voigt paper claims nifB is a key component in putting together the FeMo-co core. Nif B was expressed at high levels</td>
+        </tr>
+        <tr>
+          <td>nifU</td>
+          <td>Encodes proteins for early Fe-S formation; proteins for component maturation</td>
+          <td>Voigt expressed nifU at low levels. It could be a necessary component in formation of Fe-S clusters </td>
+        </tr>
+        <tr>
+          <td>nifS</td>
+          <td>Cysteine desulfurase; used in MoFe cluster syntdesis</td>
+          <td>Ludden speculates that cysteine desulfurase plays a key role in Fe-S cluster assembly</td>
+        </tr>
+        <tr>
+          <td>nifV</td>
+          <td>Homocitrate syntdase</td>
+          <td>Included by Voigt in his work, but expressed at low levels. Nitrogenase mutants which didn't contain homocitrate had problems with substrate association</td>
+        </tr>
+        <tr>
+          <td>nifW</td>
+          <td>Nitrogenase-stabilizing/protective protein</td>
+          <td>Also included by Voigt in his work, low expression. It could be a necessary component of nitrogen fixation</td>
+        </tr>
+        <tr>
+          <td>nifZ</td>
+          <td>Encodes proteins for Fe-S formation; proteins for component maturation</td>
+          <td>Also included by Voigt in his work, low expression. Helps maintain enzyme's structural integrity</td>
+        </tr>
+        <tr>
+          <td>hesA</td>
+          <td>Related to molybdenum cofactor; part of tdiF_MoeB_HesA protein family which are involved in molybdopterin and tdiamine biosyntdesis; E. coli has botd tdiF and MoeB</td>
+          <td>May have role in creating Molybdenum cofactor, a necessary component to the FeMo-co core. </td>
+        </tr>
+        <tr>
+          <td>hesB</td>
+          <td>Fe-S cluster biosyntdesis, necessary for enzyme syntdesis</td>
+          <td>Fe-S clusters are important components of the Fe protein and the FeMo protein. Closest match within E. coli had 49% identity. To ensure correct metallocluster synthesis, we need to use this gene.</td>
+        </tr>
+        <tr>
+          <td>cysE2</td>
+          <td>serine O-acetyltransferase</td>
+          <td>Serine O-acetyltransferases are important enzymes in cysteine metabolism. Since the formation of FeS clusters is predicated on cysteine reactions, presence of this enzyme may help increase synthetic efficiency</td>
+        </tr>
+      </table>
+      <p>Our analysis left us with 14 genes to be included in the minimal nif plasmids. We also designed a 15-nucleotide ribosome binding site to insert directly upstream of each gene. </p>
+      <p>RBS sequences were designed by the Penn State Salis Lab's <a href="https://salislab.net/software/">RBS Calculator</a>.Each RBS was designed to have a Translation Initiation Rate close to 50,000 au (Arbitrary Units) as descrbibed in considerations 1.2a &amp; 1.2b of the Salis <a  href="#" data-container="body" data-toggle="popover" data-placement="top" data-content="Howard, Salis. The ribosome binding site calculator." >paper</a>. </p>
+    </section>
+    <section id= "design">
+      <h2>Plasmid Design</h2>
+      <p>The literature also indicated that the expression levels of each gene need to be finely tuned in order to achieve optimal nitrogenase activity. We decided to use 2 different inducible promoters to give us more control over expression levels, and grouped the genes into ones we thought would need to be expressed at higher versus lower levels. </p>
+      <p>We decided to create 2 plasmids with 7 genes each rather than one plasmid with 14 genes, which would simplify cloning greatly. We designed one plasmid containing genes that we generally believed needed to be expressed at higher levels, including the enzyme structural genes. </p>
+      <p>In ordering the genes on the plasmids, we mimicked gene orders we observed in the natural Cyanothece cluster and in other minimal clusters in the literature. Since we did not have the resources to codon optimize, we also considered codon usage in placement of genes on the plasmids. One gene, cysE2, has particularly bad codon usage for E. Coli, so we placed it directly downstream of the promoter. </p>
+    </section>
+    <section id = "cloning">
+      <h2>Primer Design and Cloning Strategy</h2>
+      <p>We designed primers for use with Golden Gate cloning to create the plasmids. Our general strategy for primer design was to add a BsaI site and one intervening base before the fifteen-base RBS before the annealing portion on the forward primer. When possible, we used the first four bases of the RBS as the overhang for ligation, rather than adding in bases and creating a scar. On the reverse primer, we added a BsaI site and one intervening base before adding the reverse complement of the overhang that it should match up with. In designing primers, we considered:</p>
+      <ul>
+        <li>maintaining a primer length of 60 nucleotides or less</li>
+        <li>having a melting temperature (T m) of the primer-template interaction between about 58 and 62 degrees Celsius</li>
+        <li>matching the melting temperature of primers in a primer pair as closely as possible to each other</li>
+        <li>maintaining a hairpin melting temperature as low as possible, and always less than the T m of the primer-template interaction</li>
+        <li>maintaining heterodimer and homodimer interaction delta G values to be less in magnitude than -15 kcal/mol</li>
+        <li>adding up to 6 adenines before the BsaI site where possible</li>
+        <li>having overlap sequences that are distinct enough from other overlap sequences used for the same plasmid</li>
+          <ul>
+            <li>our criterion was to have a maximum of 2 of the same base in the same position. i.e. GACT and CAGT are acceptable as only A and T fall in the same positions. However, GACT and CACT are too similar and one must be changed to avoid improper ligation</li>
+          </ul>
+      </ul>
+      <p>In order to balance all of these constraints, a couple of changes to the coding sequence of the genes were made; however, degenerate codons were used so that the amino acid sequence was not disrupted. </p>
+    </section>
+
     <section id="team"  class="bg-light-gray row sectionNum1 sectionNum2 sectionNum3 sectionNum4 sectionNum5 sectionNum6 ">
       <div class="container">
         Under construction
@@ -170,7 +289,7 @@
   <!-- Footnotes -->
   <script src="js/bootstrap.footnotes.css"></script>
 
-  <!-- Custom Theme JavaScript -->
+  <!-- Custom tdeme JavaScript -->
   <script src="js/agency.js"></script>
 
 

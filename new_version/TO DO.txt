@@ -20,4 +20,7 @@ Add citations to the "Why are we doing this project?" page where necessary.
 
 Replace all instances of uM with the right symbol.
 
-Remove font awesome and replace with images. 
+Remove font awesome and replace with images.
+
+http://www.ncbi.nlm.nih.gov/pubmed/21601672
+<a  href="#" data-container="body" data-toggle="popover" data-placement="top" data-content="Rogers, Oldroyd. Journal of Experimental Botany March 2014 doi:10.1093/jxb/eru098" ><sup>[1]</sup></a>
