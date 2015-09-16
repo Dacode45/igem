@@ -14,13 +14,14 @@
   <title>Washington University - Penn State iGEM</title>
 
   <!-- Bootstrap Core CSS -->
-  <link href="http://2015.igem.org/Team:WashU_StLouis/css/bootstrap.min.css?action=raw&ctype=text/css" rel="stylesheet">
+  <!-- http://2015.igem.org/wiki/index.php?title=Template:Kent/bootstrapjs&action=raw&ctype=text/javascript -->
+  <link href="http://2015.igem.org/wiki/index.php?title=Team:WashU_StLouis/css/bootstrap.min.css&action=raw&ctype=text/css" rel="stylesheet">
 
   <!-- Custom CSS -->
-  <link href="http://2015.igem.org/Team:WashU_StLouis/css/igem.css?action=raw&ctype=text/css" rel="stylesheet">
+  <link href="http://2015.igem.org/wiki/index.php?title=Team:WashU_StLouis/css/igem.css&action=raw&ctype=text/css" rel="stylesheet">
 
   <!-- Custom Fonts -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://2015.igem.org/wiki/index.php?title=Team:WashU_StLouis/css/font-awesome.min.css">
   <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
@@ -34,10 +35,10 @@
   <![endif]-->
 
   <!-- Background Req -->
-  <script src="http://2015.igem.org/Team:WashU_StLouis/js/underscore-min.js?action=raw&ctype=text/javascript"></script>
-  <script src="http://2015.igem.org/Team:WashU_StLouis/js/backbone-min.js?action=raw&ctype=text/javascript"></script>
-  <script src="http://2015.igem.org/Team:WashU_StLouis/js/d3.min.js?action=raw&ctype=text/javascript" charset="utf-8"></script>
-  <script src="http://2015.igem.org/Team:WashU_StLouis/js/module-manager.js?action=raw&ctype=text/javascript"></script>
+  <script src="http://2015.igem.org/wiki/index.php?title=Team:WashU_StLouis/js/underscore-min.js&action=raw&ctype=text/javascript"></script>
+  <script src="http://2015.igem.org/wiki/index.php?title=Team:WashU_StLouis/js/backbone-min.js&action=raw&ctype=text/javascript"></script>
+  <script src="http://2015.igem.org/wiki/index.php?title=Team:WashU_StLouis/js/d3.min.js&action=raw&ctype=text/javascript" charset="utf-8"></script>
+  <script src="http://2015.igem.org/wiki/index.php?title=Team:WashU_StLouis/js/module-manager.js&action=raw&ctype=text/javascript"></script>
 
 
 </head>
@@ -109,10 +110,36 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
+  <div class="row">
+    <h2>Key Terms</h2>
+    <p><strong>FBA</strong>: Flux Balance Analysis (FBA) of metabolic models determines the flow of metabolites through the model in order to optimize an objective function (e.g. biomass production)</p>
+
+    <p><strong>FVA</strong>: Flux variability analysis (FVA) (Mahadevan and Schilling, 2003) shows the range of fluxes that each reaction can achieve. These ranges are found by maximizing and minimizing of each flux individually.</p>
+
+    <p><strong>Fluxes/flux ranges</strong>: “Fluxes” are a way of describing the flow of metabolites through a model. A reaction’s ‘flux range’ has an upper and lower bound which characterizes its production level.</p>
+    Directionality of fluxes: Positive flux range means that the reaction is running in the forward direction, negative flux range means the reaction is running in the reverse direction, a range containing both positive and negative values means it is reversible.  If the flux range contains 0, the reaction is nonessential. </p>
+    Overlapping/nonoverlapping ranges: We discuss flux range overlap when we are comparing two models- for example, wild type vs. N2 fixing WM1788.   Flux ranges that are nonoverlapping for the same reaction indicate that the organism is using a different metabolic pathway. </p>
+
+    <p><strong>“Cycling”</strong>: This means that the flux range is hitting the maximum bound prescribed by our objective function.  Generally when reactions are cycling, they don’t hold as much useful information for our analysis (these reactions shouldn’t behave this way in vivo). </p>
+
+    <p><strong>Biomass</strong></strong>:  The biomass reaction is an artificial reaction created in our model to measure the organism growth rate.  It is made by using experimental results about what the components of biomass are, and then scaled so it matches the exponential growth rate of the organism.  So basically biomass = cell growth. </p>
+    <p><strong>‘Fixed’ Biomass</strong>: In order to normalize our results for ATP production/other metabolite production, we need to set biomass of our strain variations to the same value.  For example, N2 fixing WM1788 obviously has a much lower biomass than the wild type.  But, in order to make comparisons between the two models, we need to set biomass to the same value. </p>
+    <p><strong>‘Max’ Biomass</strong>: The maximum growth for a strain.  </p>
+
+    <p><strong>ATP Maintenance Reaction</strong>: ATP -> ADP + P.  We maximize this reaction to determine the ATP production level for a strain.  Similarly, when we talk about “maximizing flavodoxin”, we created a flavodoxin exporter which we are maximizing in our programs to measure how much flavodoxin the strain can produce. </p>
+
+    <p><strong>GAMS</strong>: A programming language which we use to run FBA and FVA. </p>
+        Loop statement: A statement that iteratively runs through a list of variables (i.e. a list of reactions). </p>
+
+    <p><strong>Python</strong>: We use Python to generate input files for GAMS, and sometimes to iteratively run GAMS.</p>
+
+    <p><strong>BioCyc, EcoCyc,  Model SEED</strong>: These are online databases that have information about all the reactions in our model.  They are helpful for learning about ∆G of a reaction (if we think there is a discrepancy in our model) or generally about what a reaction is/does/what pathway it is a part of. </p>
+
+
+
+  </div>
   <div id= "journal_container" class="container">
-
-
-                  </div>
+  </div>
 
 
                   <footer  class="bg-white row">

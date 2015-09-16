@@ -42,6 +42,21 @@
 
 <body id="page-top" class="index">
 
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Check out our Team!</div>
+        <div class="intro-heading"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Background Canvas -->
+  <div id = "background-canvas"></div>
+
+
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -80,21 +95,6 @@
     </div>
     <!-- /.container-fluid -->
   </nav>
-
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">Check out our Team!</div>
-        <div class="intro-heading"></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Background Canvas -->
-  <div id = "background-canvas"></div>
-
-
 
   <!-- Project Overview -->
   <!-- Main container -->
@@ -188,13 +188,13 @@
       <p>Our analysis left us with 14 genes to be included in the minimal nif plasmids. We also designed a 15-nucleotide ribosome binding site to insert directly upstream of each gene. </p>
       <p>RBS sequences were designed by the Penn State Salis Lab's <a href="https://salislab.net/software/">RBS Calculator</a>.Each RBS was designed to have a Translation Initiation Rate close to 50,000 au (Arbitrary Units) as descrbibed in considerations 1.2a &amp; 1.2b of the Salis <a  href="#" data-container="body" data-toggle="popover" data-placement="top" data-content="Howard, Salis. The ribosome binding site calculator." >paper</a>. </p>
     </section>
-    <section id= "design">
+    <section id= "design"  class="bg-white row sectionNum2">
       <h2>Plasmid Design</h2>
       <p>The literature also indicated that the expression levels of each gene need to be finely tuned in order to achieve optimal nitrogenase activity. We decided to use 2 different inducible promoters to give us more control over expression levels, and grouped the genes into ones we thought would need to be expressed at higher versus lower levels. </p>
       <p>We decided to create 2 plasmids with 7 genes each rather than one plasmid with 14 genes, which would simplify cloning greatly. We designed one plasmid containing genes that we generally believed needed to be expressed at higher levels, including the enzyme structural genes. </p>
       <p>In ordering the genes on the plasmids, we mimicked gene orders we observed in the natural Cyanothece cluster and in other minimal clusters in the literature. Since we did not have the resources to codon optimize, we also considered codon usage in placement of genes on the plasmids. One gene, cysE2, has particularly bad codon usage for E. Coli, so we placed it directly downstream of the promoter. </p>
     </section>
-    <section id = "cloning">
+    <section id = "cloning"  class="bg-light-gray row sectionNum3">
       <h2>Primer Design and Cloning Strategy</h2>
       <p>We designed primers for use with Golden Gate cloning to create the plasmids. Our general strategy for primer design was to add a BsaI site and one intervening base before the fifteen-base RBS before the annealing portion on the forward primer. When possible, we used the first four bases of the RBS as the overhang for ligation, rather than adding in bases and creating a scar. On the reverse primer, we added a BsaI site and one intervening base before adding the reverse complement of the overhang that it should match up with. In designing primers, we considered:</p>
       <ul>
@@ -210,12 +210,6 @@
           </ul>
       </ul>
       <p>In order to balance all of these constraints, a couple of changes to the coding sequence of the genes were made; however, degenerate codons were used so that the amino acid sequence was not disrupted. </p>
-    </section>
-
-    <section id="team"  class="bg-light-gray row sectionNum1 sectionNum2 sectionNum3 sectionNum4 sectionNum5 sectionNum6 ">
-      <div class="container">
-        Under construction
-      </div>
     </section>
 
   </div>

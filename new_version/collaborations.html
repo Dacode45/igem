@@ -42,6 +42,21 @@
 
 <body id="page-top" class="index">
 
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="intro-text">
+        <div class="intro-lead-in">Check out our Team!</div>
+        <div class="intro-heading"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Background Canvas -->
+  <div id = "background-canvas"></div>
+
+
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
     <div class="container">
@@ -63,8 +78,15 @@
             <a href="#page-top"></a>
           </li>
           <li>
-            <a class="page-scroll" href="#Team">Team</a>
+            <a class="page-scroll" href="#Introduction">Introduction</a>
           </li>
+          <li>
+            <a class="page-scroll" href="#Methods_WashU">Washington University Methods</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#Methods_Vanderbilt">Vanderbilt Methods</a>
+          </li>
+
           <li>
             <a href="mailto:ayekedavidr@wustl.edu?subject=Bug">Report Bugs</a>
           </li>
@@ -75,28 +97,13 @@
     <!-- /.container-fluid -->
   </nav>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">Check out our Team!</div>
-        <div class="intro-heading"></div>
-      </div>
-    </div>
-  </header>
-
-  <!-- Background Canvas -->
-  <div id = "background-canvas"></div>
-
-
-
   <!-- Project Overview -->
   <!-- Main container -->
   <div class="container">
     <section id="Introduction"  class="bg-light-gray row sectionNum1 ">
       <div>
         <div class="thumbnail" style="float: left;">
-          <img class="img-responsive" src="http://2015.igem.org/wiki/images/2/2b/Induction_experiment.jpg" />
+          <img class="img-responsive" style="max-width:30%;" src="http://2015.igem.org/wiki/images/2/2b/Induction_experiment.jpg" />
         </div>
         <div class="caption">
           <p class="text-muted">Frozen stock of each strain about to be put into the incubator for overnight growth. </p>
@@ -372,7 +379,7 @@
             </tbody>
           </table>
           <h2>B.</h2>
-          <img class="img-responsive" src="http://placehold.it/400x400"/>
+          <img class="img-responsive" src="http://2015.igem.org/wiki/images/1/1f/Collab1.png"/>
           <blockquote>A.	Finalized component average results for each component in varying inducer concentrations using our lab’s protocol. E. coli strain BL21 is designated by “BL,” and strain MG1655 is designated by “MG.” Values were obtained by taking the average of the fluorescence at each inducer concentration. Negative controls, which consist of the wildtype strain grown in each corresponding inducer concentration, were averaged and then subtracted from each component value. “R0010 BL” showed a 2x increase in fluorescence across inducer concentration; other components remained static.</blockquote>
           <blockquote>B.	Graph of finalized component average results with error bars showing standard deviations. R0010 in BL21 is designated by blue, R0010 in MG1655 orange, K314100 in BL21 gray, and K314100 in MG1655 yellow. No significant change in fluorescence was observed in any component other than R0010 expressed in BL21. </blockquote>
         </div>
@@ -648,7 +655,7 @@
             </tbody>
           </table>
           <h2>B.</h2>
-          <img class="img-responsive" src="http://placehold.it/400x400"/>
+          <img class="img-responsive" src="http://2015.igem.org/wiki/images/7/7b/Collab2.png"/>
           <blockquote>A.	Finalized component average results for each component in varying inducer concentrations using their lab’s protocol. E. coli strain BL21 is designated by “BL,” and strain MG1655 is designated by “MG.” Values were obtained by taking the average of the fluorescence at each inducer concentration. Negative controls, which consist of the wildtype strain grown in each corresponding inducer concentration, were averaged and then subtracted from each component value. Results from this experiment were variable and followed no set pattern.</blockquote>
           <blockquote>B. B.	Graph of finalized component average results with error bars showing standard deviations. R0010 in BL21 is designated by blue, R0010 in MG1655 orange, K314100 in BL21 gray, and K314100 in MG1655 yellow. Steep deviations were common for all cell lines at higher inducer concentrations. The results from this experiment were inconclusive. </blockquote>
         </div>
@@ -703,6 +710,7 @@
       </section>
 
       <section id="Methods_Vanderbilt" class="bg-light-gray row sectionNum3">
+        <h1>Methods</h1>
         <h2>Vanderbilt Induction Protocol</h2>
         <ul>
           <li>Pipette 4 mL sterile LB/CM into four 14 mL culture tubes, R0010-RFP (in BL21 and MG1655) and K314100-RFP (in BL21 and MG1655). Also pipette 4 mL sterile LB to two 14 mL cultures tubes, wild type BL21 and MG1655</li>
