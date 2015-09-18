@@ -4,7 +4,7 @@ from pprint import pprint
 import dateutil.parser
 
 soup = BeautifulSoup("", "html.parser")
-
+gData = dict()
 info = {
     "blake":{
         "img":"http://2015.igem.org/wiki/images/5/5c/Blake_actkinson.png",
@@ -37,11 +37,19 @@ info = {
         "full_name":"Laura Beebe "
     },
     "jessica":{
-        "img":"http://placehold.it/200x200",
+        "img":"http://2015.igem.org/wiki/images/1/1b/Jessica.jpg",
         "school":"Pennsylvania State University",
         "major":"Chemical Engineering",
         "full_name":"Jessica O'Callaghan "
     },
+}
+personKey = {
+    "B":"blake",
+    "D":"david",
+    "C":"charlotte",
+    "M":"mike",
+    "L":"laura",
+    "J":"jessica"
 }
 
 def initTemplate():
@@ -92,7 +100,7 @@ def addTabularScaffold(data, html):
     html.append(tabDiv)
     return tabContent
 
-def addJournalContent(person_var, journal, contentDiv):
+def addJournalContent(person_var, journal, contentDiv, data):
     person = str(person_var)
     header, main, aside = addJournalScaffold(person, contentDiv)
 
@@ -147,11 +155,26 @@ def addJournalContent(person_var, journal, contentDiv):
         dayListList['class'] = "nav"
 
         #Create list of exp
-
-
+        #print day
         for exp in day['what']:
+            #print day["when"], person
+            if "same_as" in exp:
+                other = exp["same_as"]
+                otherDays = data[personKey[other[0]]]
+                foundSame = False
+                for otherDay in otherDays:
+                    if foundSame:
+                        break
+                    for otherExp in otherDay['what']:
+                        if otherExp["id"] == other:
+                            exp = otherExp
+
+                            foundSame = True
+                            break
+
             #Create Lead for Experiment
             #print person, day['when']
+            print person, day['when']
             journalEntry = soup.new_tag('div', id=exp['id'])
             journalEntry['class'] = 'list-group-item journal-entry'
 
@@ -182,16 +205,107 @@ def addJournalContent(person_var, journal, contentDiv):
 
             #add actual content to experiment
             description = soup.new_tag('p')
-            description.append(exp.get("description", ""))
+            #description.append(exp.get("description", ""))
+            appendHTML(description, exp.get("description", ""))
             journalEntry.append(description)
+            #Check if steps exist and append
+            if "steps" in exp:
+                steps = parseSteps(exp.get("steps"))
+                journalEntry.append(steps)
 
-
+            if "result" in exp:
+                result = parseResult(exp.get("result"))
+                journalEntry.append(result)
 
 
         dayList.append(dayListList)
         nav.append(dayList)
         journalSection.append(journalEntry)
         main.append(journalSection)
+def concatList(pre):
+    toReturn = pre
+    if isinstance(pre, list):
+        toReturn = '. '.join(pre)
+    #print toReturn, pre, "hello"
+    return toReturn
+
+def parseSteps(steps):
+    stepDiv = soup.new_tag('div')
+    stepList = soup.new_tag('ul')
+    stepDiv.append(stepList)
+    for step in steps:
+        stepLL = soup.new_tag('li')
+        stepObj = getStepObj(step)
+        print stepObj
+        what = soup.new_tag('p')
+        appendHTML(what, stepObj.get("what", ""))
+        stepLL.append(what)
+
+        why = soup.new_tag('p')
+        why['class']= "text-muted"
+        appendHTML(why, stepObj.get("why", " "))
+        stepLL.append(why)
+
+        if 'precaution' in stepObj:
+            precaution = soup.new_tag('p')
+            precaution['class'] = "text-danger"
+            appendHTML(precaution, concatList(stepObj.get(u'precaution', "")))
+            stepLL.append(precaution)
+
+        if "steps" in stepObj:
+            stepSteps = parseSteps(stepObj.get("steps", " "))
+            stepLL.append(stepSteps)
+        if "result" in stepObj:
+            result = parseResult(stepObj.get("result"))
+            stepLL.append(result)
+        stepList.append(stepLL)
+
+    return stepDiv
+
+def parseResult(steps):
+    if not isinstance(steps, list):
+        steps = [steps]
+    resultDiv = soup.new_tag('div')
+    resultList = soup.new_tag('ul')
+    resultDiv.append(resultList)
+    for step in steps:
+        stepLL = soup.new_tag('li')
+        stepObj = getResultObj(step)
+        print stepObj
+        what = soup.new_tag('p')
+        appendHTML(what, stepObj.get("what", ""))
+        stepLL.append(what)
+
+
+        if "steps" in stepObj:
+            stepSteps = parseSteps(stepObj.get("steps", " "))
+            stepLL.append(stepSteps)
+        resultList.append(stepLL)
+
+    return resultDiv
+
+
+def getStepObj(stp):
+    if isinstance(stp, dict):
+        return stp
+    else:
+        stepObj = dict()
+        stepObj["what"] = stp
+        return stepObj
+
+def getResultObj(stp):
+    if isinstance(stp, dict):
+        return stp
+    else:
+        stepObj = dict()
+        stepObj["what"] = stp
+        return stepObj
+
+def appendHTML(tag, str):
+    print str
+    newSoup = BeautifulSoup(str, "html.parser")
+    for element in newSoup:
+        tag.append(element)
 
 def addJournalScaffold(person, contentDiv):
     header = soup.new_tag("div", id=person+"_content_header")
@@ -222,18 +336,20 @@ def dataToHTML(data, html):
 
     for person, journal in data.iteritems():
         contentDiv = tabContent.find(id=person+"_content")
-        addJournalContent(person, journal, contentDiv)
+        addJournalContent(person, journal, contentDiv, data)
 
 def save(html, filename):
     with open(filename, "w") as journal:
         journal.write(html.prettify(formatter="html").encode('utf-8'))
 
 def main():
-    filenames = ["blake.json", "charlotte.json", "laura.json"]
+    filenames = ["blake.json", "charlotte.json", "laura.json", "david.json", "jessica.json", "mike.json"]
     html = initTemplate()
-    data = parseData(filenames)
-    dataToHTML(data, html)
-    save(html, "../new_version/journal.html")
+    gData = parseData(filenames)
+
+    print gData.keys()
+    dataToHTML(gData, html)
+    save(html, "../new_version/notebook.html")
 
 
 

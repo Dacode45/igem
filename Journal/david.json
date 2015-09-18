@@ -920,7 +920,7 @@
                     ]
                   },{
                     "when":"7/17/15",
-                    "What":[
+                    "what":[
                       {
                         "id":"D_exp62",
                         "lead":"Check  colonies",
@@ -1033,14 +1033,14 @@
                     ]
                   },{
                     "when":"7/25/15",
-                    "what":{
+                    "what":[{
                       "id":"D_exp71",
                       "lead":"Transform the Golden Gate product into chemically competent DH10B"
-                    }
+                    }]
                   },
                   {
                     "when":"7/27/15",
-                    "what":{
+                    "what":[{
                       "id":"D_exp72",
                       "lead":"Check for inserts",
                       "steps":[
@@ -1049,7 +1049,7 @@
                         "Digest pB1t with Spe1 and BamH1 (alone and together) to check for correct insert",
                         "Digest pS8k cysE2-hesB with Pme1 and Pst1 (alone and together) to check for insets"
                       ]
-                    }
+                    }]
                   },
                   {
                     "when":"7/28/15",

@@ -1,46 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>Washington University - Penn State IGEM</title>
-
-  <!-- Bootstrap Core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Custom CSS -->
-  <link href="css/igem.css" rel="stylesheet">
-
-  <!-- Custom Fonts -->
-  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-  <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-  <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
-
-  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-  <script src="http://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-  <![endif]-->
-
-  <!-- Background Req -->
-  <script src="js/underscore-min.js"></script>
-  <script src="js/backbone-min.js"></script>
-  <script src="js/d3.min.js" charset="utf-8"></script>
-  <script src="js/module-manager.js"></script>
-
-
-</head>
-
-<body id="page-top" class="index">
+{{:Team:WashU_StLouis/Header}}
+<html>
 
   <!-- Navigation -->
   <nav class="navbar navbar-default navbar-fixed-top">
@@ -75,37 +34,22 @@
     <!-- /.container-fluid -->
   </nav>
 
-  <!-- Header -->
-  <header>
-    <div class="container">
-      <div class="intro-text">
-        <div class="intro-lead-in">Check out our Team!</div>
-        <div class="intro-heading"></div>
-      </div>
-    </div>
-  </header>
 
-  <!-- Background Canvas -->
-  <div id = "background-canvas"></div>
-
-
-
-  <!-- Project Overview -->
+   <!-- Project Overview -->
   <!-- Main container -->
   <div class="container">
     <section id="description"  class="bg-light-gray row sectionNum1 sectionNum2 sectionNum3 sectionNum4 sectionNum5 sectionNum6 ">
       <div class="container">
         <div class="row">
           <h4 class="text-muted section-heading">IGEM 2015 Project Description.</h4>
-
           <p>
-            The 2014 WashU iGEM team successfully transferred the <em>nif</em> cluster from <em>Cyanothece</em> 51142 to <em>E. coli</em>. However, the nitrogenase activity they measured was minimal. Therefore, the WashU/Penn State 2015 team dedicated itself to increasing the nitrogenase activity of last year’s <em>E. coli</em> strain by knocking down and overexpressing certain genes on the <em>nif</em>-containing plasmid. Additionally, we are using genome-scale metabolic modeling to guide potential genetic interventions and facilitate nitrogen fixation in <em>E. coli</em>. We are performing a systematic analysis of metabolites and genes in our model to optimize nitrogenase activity.
+            The 2014 WashU iGEM team successfully transferred the nif cluster from Cyanothece 51142 to E. coli. However, the nitrogenase activity they measured was minimal. Therefore, the WashU/Penn State 2015 team dedicated itself to increasing the nitrogenase activity of last year’s E. coli strain by knocking down and overexpressing certain genes on the nif-containing plasmid. Additionally, we are using genome-scale metabolic modeling to guide potential genetic interventions and facilitate nitrogen fixation in E. coli. We are performing a systematic analysis of metabolites and genes in our model to optimize nitrogenase activity.
           </p>
           <p>
-            A few weeks into our work, a member of our lab had trouble repeating the 2014 results and we began to consider the notion that <em>E. coli</em> may be incompatible with components of the plasmid—whose parts come directly from <em>Cyanothece</em> 51142—at the transcriptional, translational, or post-translational levels. After an evaluation of our remaining time and resources, we decided to construct a more minimal <em>nif</em> cluster for <em>E. coli</em> in order to reduce the effects of any native regulation present in the original plasmid we used. We plan to continue our analysis of the <em>nif</em> cluster using overexpression, knockdown, and metabolic engineering.
+            A few weeks into our work, a member of our lab had trouble repeating the 2014 results and we began to consider the notion that E. coli may be incompatible with components of the plasmid—whose parts come directly from Cyanothece 51142—at the transcriptional, translational, or post-translational levels. After an evaluation of our remaining time and resources, we decided to construct a more minimal nif cluster for E. coli in order to reduce the effects of any native regulation present in the original plasmid we used. We plan to continue our analysis of the nif cluster using overexpression, knockdown, and metabolic engineering.
           </p>
           <p>
-            Our team is part of a larger project that is seeking to confer nitrogen fixation capabilities to a non-diazotrophic cyanobacterium, <em>Synechocystis</em> pp. 6803. <em>Synechocystis</em> is evolutionarily related by the endosymbiotic theory to plant chloroplasts, so a nitrogen-fixing <em>Synechocystis</em> could be used as a model to engineer plants that fix their own nitrogen. We hope that the results of this year’s iGEM team will be useful to the researchers working on The Nitrogen Project since <em>E. coli</em> is a well-characterized, fast-growing model organism.
+            Our team is part of a larger project that is seeking to confer nitrogen fixation capabilities to a non-diazotrophic cyanobacterium, Synechocystis pp. 6803. Synechocystis is evolutionarily related by the endosymbiotic theory to plant chloroplasts, so a nitrogen-fixing Synechocystis could be used as a model to engineer plants that fix their own nitrogen. We hope that the results of this year’s iGEM team will be useful to the researchers working on The Nitrogen Project since E. coli is a well-characterized, fast-growing model organism.
           </p>
           <br>
 
@@ -115,88 +59,6 @@
 
   </div>
 
-  <footer  class="bg-white row">
-    <div class="container">
-      <!-- sponsors Aside -->
-      <section id="sponsors" class="row  sectionNum5">
-        <div class="container">
-          <div class="row">
-            <h2>Sponsors</h2>
-          </div>
-
-          <div class="row">
-            <div class="col-md-4 col-sm-6">
-
-              <div id="WashULogo" class="logo"></div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div id="ICaresLogo" class="logo"></div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div id="WashUArtLogo" class="logo"></div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div id="SnapGeneLogo" class="logo"></div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div id="Monsanto" class="logo"></div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-              <div id="SigmaAldrichLogo" class="logo"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <div class="row">
-        <div class="col-md-4">
-          <span class="copyright">Copyright &copy; Washington University in St. Louis Igem 2015</span>
-        </div>
-        <div class="col-md-4">
-          <ul class="list-inline social-buttons">
-            <li><a href="http://twitter.com/WashUiGEM"><i class="fa fa-twitter"></i></a>
-            </li>
-            <li><a href="http://www.facebook.com/WashuIgem"><i class="fa fa-facebook"></i></a>
-            </li>
-            <li><a href="http://www.youtube.com/channel/UCjO_tMiJdx6hCyCREsMBYUQ"><i class="fa fa-youtube"></i></a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-  </footer>
-
-  <!-- jQuery -->
-  <script src="js/jquery.js"></script>
-
-  <!-- Bootstrap Core JavaScript -->
-  <script src="js/bootstrap.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-  <script src="js/classie.js"></script>
-  <script src="js/cbpAnimatedHeader.js"></script>
-
-  <!-- Contact Form JavaScript -->
-  <script src="js/jqBootstrapValidation.js"></script>
-  <script src="js/contact_me.js"></script>
-
-  <!-- Footnotes -->
-  <script src="js/bootstrap.footnotes.css"></script>
-
-  <!-- Custom Theme JavaScript -->
-  <script src="js/agency.js"></script>
-
-
-
-  <!-- Background Script -->
-  <script src="js/background.js"></script>
-
-  <!-- Inline script -->
-  <script>
-  // Activate Footnotes
-  $.footnotes();
-  </script>
-</body>
 
 </html>
+{{:Team:WashU_StLouis/Footer}}

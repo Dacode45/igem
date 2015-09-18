@@ -408,7 +408,7 @@ section h3.section-subheading {
 
 #overview .overview-item .overview-link .overview-hover .overview-hover-content {
     position: absolute;
-    top: 20%;
+    
     width: 100%;
     height: 20px;
     margin-top: -12px;
